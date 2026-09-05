@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0E0E0D">
+<title>Verion Logistics — Independent advice on what you pay to import</title>
+<meta name="description" content="We check your freight quotes, customs classification and shipping terms, then tell you in writing where you're overpaying. Fixed fee. No cargo handled. No carrier commission.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Verion Logistics — Independent advice on what you pay to import">
+<meta property="og:description" content="We check your freight quotes, customs classification and shipping terms, then tell you in writing where you're overpaying. Fixed fee, no cargo handled, no carrier commission.">
+<meta property="og:url" content="https://[yourdomain]">
+<meta property="og:image" content="https://[yourdomain]/share.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://[yourdomain]/index.html">
+<link rel="alternate" hreflang="lv" href="https://[yourdomain]/lv.html">
+<link rel="alternate" hreflang="x-default" href="https://[yourdomain]/index.html">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Verion Logistics","legalName":"Verion Logistics SIA","description":"Independent freight cost, customs classification and shipping terms advisory for importers. Advisory only — no cargo handled, no carrier commission.","url":"https://[yourdomain]","email":"info@verionlogistics.lv","telephone":"[phone]","foundingDate":"2024-04-03","vatID":"LV40203552228","taxID":"40203552228","address":{"@type":"PostalAddress","addressCountry":"LV"},"areaServed":["LV","EU","GB"],"serviceType":["Freight cost review","Customs classification review","Carrier sourcing","Incoterms review","Project cargo planning"]}
+</script>
+
+<style>
+  :root{
+    --void:#0E0E0D;      /* deepest */
+    --char:#191918;      /* dark surface */
+    --char-2:#242423;    /* raised dark */
+    --bone:#F4F2ED;      /* warm off-white */
+    --paper:#FAF9F6;
+    --card:#FFFFFF;
+
+    --orange:#FF6B1A;
+    --orange-d:#E55A0D;
+    --orange-ink:#A8480A;
+    --orange-t:#FFF1E7;
+
+    --steel:#C8CACC;
+    --ink:#15150F;
+    --ink-2:#57574F;
+    --ink-3:#8C8C83;
+    --line:#E6E3DB;
+    --line-2:#D2CEC4;
+    --dline:rgba(244,242,237,.12);
+
+    --ez:cubic-bezier(.22,.9,.28,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
+    padding-bottom:calc(74px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+  .mono{font-family:ui-monospace,'SF Mono','Roboto Mono',Menlo,monospace;font-variant-numeric:tabular-nums;}
+  ::selection{background:var(--orange);color:#fff;}
+
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ez),transform .7s var(--ez);}
+  .rv.in{opacity:1;transform:none;}
+  .d1{transition-delay:.06s}.d2{transition-delay:.12s}.d3{transition-delay:.18s}.d4{transition-delay:.24s}.d5{transition-delay:.3s}
+
+  /* ---------------- HEADER ---------------- */
+  header{position:sticky;top:0;z-index:60;background:rgba(14,14,13,.88);backdrop-filter:blur(14px) saturate(150%);border-bottom:1px solid var(--dline);}
+  header .in{display:flex;align-items:center;justify-content:space-between;height:66px;padding-top:env(safe-area-inset-top);gap:16px;}
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none;}
+  .logo svg{width:30px;height:30px;flex-shrink:0;}
+  .logo .wm{display:flex;flex-direction:column;line-height:1;}
+  .logo .wm b{color:var(--bone);font-size:17px;font-weight:760;letter-spacing:-.022em;}
+  .logo .wm i{font-style:normal;color:#8A8A85;font-size:9px;letter-spacing:.3em;text-transform:uppercase;font-weight:680;margin-top:5px;}
+  nav.top{display:none;}
+  .hcta{
+    background:var(--orange);color:#fff;text-decoration:none;padding:11px 18px;border-radius:100px;
+    font-size:14px;font-weight:700;letter-spacing:-.01em;white-space:nowrap;transition:background .2s var(--ez);
+  }
+  .hcta:hover{background:var(--orange-d);}
+  .hact{display:flex;align-items:center;gap:10px;}
+  .lang{display:flex;align-items:center;border:1px solid var(--dline);border-radius:100px;padding:3px;gap:2px;}
+  .lang a{
+    text-decoration:none;font-size:12px;font-weight:780;letter-spacing:.06em;color:#8A8A85;
+    padding:6px 10px;border-radius:100px;transition:color .18s var(--ez),background .18s var(--ez);
+  }
+  .lang a:hover{color:var(--bone);}
+  .lang a[aria-current="true"]{background:var(--orange);color:#fff;}
+
+  /* ---------------- DARK HERO ---------------- */
+  .hero{background:var(--void);color:var(--bone);position:relative;overflow:hidden;padding:56px 0 130px;}
+  .hero::after{
+    content:"";position:absolute;left:-10%;top:-30%;width:70%;height:120%;pointer-events:none;
+    background:radial-gradient(closest-side, rgba(255,107,26,.15), transparent 70%);
+  }
+  .hero .wrap{position:relative;z-index:1;}
+  .tagline{
+    display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:.05em;
+    color:#D9D6CF;border:1px solid var(--dline);padding:8px 15px;border-radius:100px;margin-bottom:26px;
+  }
+  .tagline i{width:6px;height:6px;border-radius:50%;background:var(--orange);display:block;}
+  h1{
+    font-size:clamp(34px,8.6vw,68px);line-height:1.03;font-weight:760;letter-spacing:-.045em;max-width:14ch;
+  }
+  h1 .o{color:var(--orange);}
+  .hero .sub{margin-top:22px;font-size:clamp(16px,4vw,19px);color:#B4B1A9;max-width:52ch;line-height:1.6;}
+  .hero .btns{margin-top:30px;display:flex;flex-direction:column;gap:11px;}
+  .btn{
+    display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;border-radius:100px;
+    text-decoration:none;font-size:16px;font-weight:700;letter-spacing:-.012em;border:1px solid transparent;
+    font-family:inherit;cursor:pointer;background:var(--orange);color:#fff;
+    transition:background .2s var(--ez),transform .12s var(--ez),border-color .2s var(--ez);
+  }
+  .btn:hover{background:var(--orange-d);} .btn:active{transform:translateY(1px);}
+  .btn.ghost{background:transparent;color:var(--bone);border-color:rgba(244,242,237,.28);}
+  .btn.ghost:hover{background:rgba(244,242,237,.07);border-color:rgba(244,242,237,.5);}
+  .btn.dark{background:var(--void);color:#fff;}
+  .btn.dark:hover{background:#000;}
+  .btn svg{width:18px;height:18px;}
+  .hero .fine{margin-top:18px;font-size:14px;color:#83817B;}
+  .hero .fine b{color:#C9C6BE;font-weight:640;}
+
+  /* ---------------- FLOATING PROMISE BAR ---------------- */
+  .floatbar{margin-top:-88px;position:relative;z-index:5;}
+  .fb{
+    background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;
+    box-shadow:0 24px 60px -34px rgba(0,0,0,.5);
+    display:grid;grid-template-columns:1fr 1fr;
+  }
+  .fbi{padding:20px 18px 22px;border-top:1px solid var(--line);}
+  .fbi:nth-child(-n+2){border-top:none;}
+  .fbi:nth-child(even){border-left:1px solid var(--line);}
+  .fbi .n{font-size:10px;font-weight:800;letter-spacing:.16em;color:var(--orange);margin-bottom:10px;}
+  .fbi b{display:block;font-size:16px;font-weight:720;letter-spacing:-.022em;margin-bottom:4px;}
+  .fbi span{font-size:13px;color:var(--ink-2);line-height:1.5;}
+
+  /* ---------------- SECTIONS ---------------- */
+  section{padding:64px 0;}
+  .shead{margin-bottom:30px;max-width:46ch;}
+  .kick{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-ink);font-weight:800;margin-bottom:14px;}
+  .kick::after{content:"";flex:1;height:1px;background:var(--line-2);max-width:70px;}
+  h2{font-size:clamp(26px,6vw,40px);font-weight:750;letter-spacing:-.038em;line-height:1.08;}
+  .shead p{margin-top:14px;font-size:17px;color:var(--ink-2);}
+
+  /* ---------------- FINDER ---------------- */
+  .finder{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 20px 50px -38px rgba(0,0,0,.45);}
+  .fbar{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);}
+  .ftrack{flex:1;height:3px;background:var(--line);border-radius:99px;overflow:hidden;}
+  .ftrack i{display:block;height:100%;background:var(--orange);width:0;transition:width .5s var(--ez);}
+  .fstep{font-size:11.5px;color:var(--ink-3);font-weight:760;letter-spacing:.09em;white-space:nowrap;}
+  .fbody{padding:24px 18px 26px;}
+  .fq{font-size:clamp(20px,5vw,25px);font-weight:740;letter-spacing:-.032em;margin-bottom:5px;line-height:1.15;}
+  .fh{font-size:14.5px;color:var(--ink-3);margin-bottom:20px;}
+  .opts{display:grid;gap:10px;}
+  .opt{
+    display:flex;align-items:flex-start;gap:13px;text-align:left;width:100%;
+    background:var(--paper);border:1px solid var(--line-2);border-radius:16px;padding:16px 17px;
+    font-family:inherit;font-size:16px;cursor:pointer;color:var(--ink);
+    transition:border-color .18s var(--ez),background .18s var(--ez),transform .12s var(--ez);
+  }
+  .opt:hover{border-color:var(--orange);background:var(--orange-t);}
+  .opt:active{transform:scale(.994);}
+  .opt:focus-visible{outline:2px solid var(--orange);outline-offset:2px;}
+  .opt .dot{width:19px;height:19px;border-radius:50%;border:2px solid var(--line-2);flex-shrink:0;margin-top:2px;transition:border-color .18s,background .18s;}
+  .opt:hover .dot{border-color:var(--orange);background:rgba(255,107,26,.16);}
+  .opt b{display:block;font-weight:680;letter-spacing:-.018em;}
+  .opt .s{display:block;font-size:13.5px;color:var(--ink-2);margin-top:3px;line-height:1.5;font-weight:400;}
+  .fback{margin-top:18px;background:none;border:none;font-family:inherit;font-size:14px;color:var(--ink-3);cursor:pointer;padding:8px 0;font-weight:650;}
+  .fback:hover{color:var(--ink);}
+
+  .fres{display:none;}
+  .fres.on{display:block;animation:pop .45s var(--ez);}
+  @keyframes pop{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .rtag{display:inline-block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--orange-ink);background:var(--orange-t);padding:6px 13px;border-radius:100px;margin-bottom:14px;}
+  .rname{font-size:clamp(24px,6vw,32px);font-weight:750;letter-spacing:-.036em;margin-bottom:10px;line-height:1.1;}
+  .rwhy{font-size:16px;color:var(--ink-2);margin-bottom:22px;}
+  .rlist{border-top:1px solid var(--line);margin-bottom:22px;}
+  .rlist div{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px;}
+  .rlist svg{width:18px;height:18px;color:var(--orange);flex-shrink:0;margin-top:3px;}
+  .rmeta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px;}
+  .rm{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 15px;}
+  .rm b{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);font-weight:800;margin-bottom:5px;}
+  .rm span{font-size:15px;font-weight:680;letter-spacing:-.018em;}
+  .rnote{font-size:13.5px;color:var(--ink-3);margin-top:14px;line-height:1.55;}
+
+  /* ---------------- DARK REPORT BAND ---------------- */
+  .band{background:var(--char);color:var(--bone);}
+  .band .kick{color:var(--orange);} .band .kick::after{background:var(--dline);}
+  .band .shead p{color:#A9A69F;}
+  .rgrid{display:grid;gap:0;border-top:1px solid var(--dline);}
+  .rrow{padding:20px 0;border-bottom:1px solid var(--dline);display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;}
+  .rrow .num{font-size:12px;font-weight:800;color:var(--orange);letter-spacing:.06em;padding-top:4px;}
+  .rrow b{display:block;font-size:18px;font-weight:700;letter-spacing:-.026em;margin-bottom:6px;}
+  .rrow p{font-size:15px;color:#A9A69F;line-height:1.6;}
+  .bnote{margin-top:22px;font-size:14.5px;color:#83817B;line-height:1.6;}
+
+  /* ---------------- SERVICES ---------------- */
+  .svcs{display:grid;gap:12px;}
+  .svc{
+    background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 22px 26px;
+    transition:border-color .2s var(--ez),transform .2s var(--ez);
+  }
+  .svc:hover{border-color:var(--line-2);transform:translateY(-2px);}
+  .svc .top{display:flex;align-items:baseline;gap:12px;margin-bottom:9px;}
+  .svc .top i{font-style:normal;font-size:12px;font-weight:800;color:var(--orange);letter-spacing:.08em;}
+  .svc h3{font-size:20px;font-weight:720;letter-spacing:-.028em;}
+  .svc p{font-size:15.5px;color:var(--ink-2);line-height:1.6;}
+  .svc .for{margin-top:13px;padding-top:13px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-3);}
+  .svc .for b{color:var(--ink-2);font-weight:680;}
+
+  /* ---------------- PRICING ---------------- */
+  .price{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
+  .prow{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 20px;border-bottom:1px solid var(--line);}
+  .prow:last-of-type{border-bottom:none;}
+  .prow .pn{font-size:16px;font-weight:680;letter-spacing:-.02em;}
+  .prow .pv{font-size:16px;font-weight:780;white-space:nowrap;color:var(--orange-ink);letter-spacing:-.02em;}
+  .pfoot{padding:16px 20px;background:var(--paper);border-top:1px solid var(--line);font-size:14px;color:var(--ink-2);}
+
+  /* ---------------- STEPS ---------------- */
+  .steps{display:grid;gap:24px;}
+  .step{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;}
+  .step .n{
+    width:38px;height:38px;border-radius:100px;background:var(--void);color:var(--orange);
+    display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;
+  }
+  .step h4{font-size:18px;font-weight:720;margin-bottom:5px;letter-spacing:-.026em;padding-top:6px;}
+  .step p{font-size:15.5px;color:var(--ink-2);line-height:1.6;}
+
+  /* ---------------- FAQ ---------------- */
+  .faq{border-top:1px solid var(--line);}
+  details{border-bottom:1px solid var(--line);}
+  summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;align-items:flex-start;gap:16px;font-size:17px;font-weight:660;letter-spacing:-.022em;min-height:60px;}
+  summary::-webkit-details-marker{display:none;}
+  summary:focus-visible{outline:2px solid var(--orange);outline-offset:2px;}
+  summary .pl{width:19px;height:19px;flex-shrink:0;color:var(--orange);margin-top:4px;transition:transform .3s var(--ez);}
+  details[open] summary .pl{transform:rotate(45deg);}
+  .fa{padding:0 0 20px 35px;font-size:15.5px;color:var(--ink-2);max-width:62ch;line-height:1.62;}
+
+  /* ---------------- CONTACT ---------------- */
+  .contact{background:var(--void);color:var(--bone);}
+  .contact .kick{color:var(--orange);} .contact .kick::after{background:var(--dline);}
+  .contact .shead p{color:#A9A69F;}
+  .cgrid{display:grid;gap:32px;}
+  form .f{margin-bottom:14px;}
+  form label{display:block;font-size:12.5px;font-weight:740;letter-spacing:.06em;text-transform:uppercase;color:#8A8A85;margin-bottom:8px;}
+  form input,form select,form textarea{
+    width:100%;font-family:inherit;font-size:16px;color:var(--bone);background:var(--char);
+    border:1px solid var(--dline);border-radius:14px;padding:15px 16px;min-height:54px;
+    transition:border-color .18s var(--ez),box-shadow .18s var(--ez),background .18s var(--ez);
+  }
+  form textarea{min-height:120px;resize:vertical;line-height:1.55;}
+  form input::placeholder,form textarea::placeholder{color:#6E6E69;}
+  form input:focus,form select:focus,form textarea:focus{
+    outline:none;border-color:var(--orange);background:var(--char-2);box-shadow:0 0 0 3px rgba(255,107,26,.18);
+  }
+  .fnote{font-size:13px;color:#7C7A75;margin-top:12px;line-height:1.55;}
+  .direct .dh{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#8A8A85;margin-bottom:14px;}
+  .dline-r{display:flex;align-items:center;gap:13px;padding:16px 0;border-top:1px solid var(--dline);}
+  .dline-r:last-of-type{border-bottom:1px solid var(--dline);}
+  .dline-r svg{width:19px;height:19px;color:var(--orange);flex-shrink:0;}
+  .dline-r a{text-decoration:none;color:var(--bone);font-size:16.5px;font-weight:660;flex:1;word-break:break-all;letter-spacing:-.018em;}
+  .copy{background:transparent;border:1px solid var(--dline);border-radius:100px;font-family:inherit;font-size:12px;
+    font-weight:740;color:#A9A69F;padding:9px 14px;cursor:pointer;white-space:nowrap;transition:all .18s var(--ez);}
+  .copy:hover{border-color:var(--orange);color:var(--orange);}
+  .copy.done{background:rgba(255,107,26,.14);border-color:var(--orange);color:var(--orange);}
+
+  /* ---------------- FOOTER ---------------- */
+  footer{background:var(--void);color:#7C7A75;padding:8px 0 40px;border-top:1px solid var(--dline);}
+  footer .fl{display:flex;align-items:center;gap:12px;margin:30px 0 18px;}
+  footer .fl svg{width:28px;height:28px;}
+  footer .fl b{color:var(--bone);font-size:16px;font-weight:740;letter-spacing:-.022em;}
+  footer p{font-size:13px;line-height:1.9;}
+
+  /* ---------------- DOCK ---------------- */
+  .dock{
+    position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:70;
+    background:rgba(14,14,13,.94);backdrop-filter:blur(16px);border:1px solid var(--dline);border-radius:100px;
+    padding:9px 9px 9px 18px;display:flex;align-items:center;gap:12px;
+    transform:translateY(160%);transition:transform .35s var(--ez);
+  }
+  .dock.up{transform:none;}
+  .dock .t{flex:1;min-width:0;}
+  .dock .t b{display:block;font-size:13.5px;font-weight:720;color:var(--bone);letter-spacing:-.022em;}
+  .dock .t span{display:block;font-size:12px;color:#83817B;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .dock a{background:var(--orange);color:#fff;text-decoration:none;padding:0 20px;min-height:46px;display:flex;align-items:center;border-radius:100px;font-size:14.5px;font-weight:700;white-space:nowrap;}
+
+  @media(min-width:820px){
+    body{padding-bottom:0;}
+    .dock{display:none;}
+    nav.top{display:flex;gap:28px;align-items:center;}
+    nav.top a{color:#A9A69F;text-decoration:none;font-size:14.5px;font-weight:600;letter-spacing:-.01em;transition:color .18s;}
+    nav.top a:hover{color:var(--bone);}
+    .hero{padding:96px 0 160px;}
+    .hero .btns{flex-direction:row;}
+    .btn{padding:0 30px;}
+    .floatbar{margin-top:-104px;}
+    .fb{grid-template-columns:repeat(4,1fr);}
+    .fbi{border-top:none;border-left:1px solid var(--line);padding:26px 24px 28px;}
+    .fbi:first-child{border-left:none;}
+    section{padding:96px 0;}
+    .finder,.price{max-width:720px;}
+    .fbody{padding:32px 30px 34px;}
+    .rmeta{grid-template-columns:repeat(3,1fr);}
+    .rgrid{grid-template-columns:1fr 1fr;column-gap:48px;}
+    .rrow{grid-template-columns:44px 1fr;}
+    .svcs{grid-template-columns:1fr 1fr;}
+    .steps{grid-template-columns:repeat(3,1fr);gap:34px;}
+    .step{grid-template-columns:1fr;}
+    .step h4{padding-top:14px;}
+    .cgrid{grid-template-columns:1.3fr 1fr;gap:56px;}
+    .shead{margin-bottom:44px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none!important;animation:none!important;}
+    .rv{opacity:1;transform:none;}
+    .dock{transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <g id="vmark">
+    <path d="M14 10 h15 a3 3 0 0 1 2.7 1.7 L55 62 a3 3 0 0 1 -2.7 4.3 h-13 a3 3 0 0 1 -2.7 -1.7 L11.3 14.3 A3 3 0 0 1 14 10 Z" fill="#C8CACC"/>
+    <path d="M11 40 h12 a3 3 0 0 1 2.7 1.7 L38 68 a3 3 0 0 1 -2.7 4.3 h-11 a3 3 0 0 1 -2.7 -1.7 L8.3 44.3 A3 3 0 0 1 11 40 Z" fill="#C8CACC" opacity=".9"/>
+    <path d="M69 10 h13 a3 3 0 0 1 2.7 4.3 L57 79 a3 3 0 0 1 -2.7 1.7 h-12 a3 3 0 0 1 -2.7 -4.3 L66.3 11.7 A3 3 0 0 1 69 10 Z" fill="#FF6B1A"/>
+  </g>
+  <g id="ck" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></g>
+  <g id="ar" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15"/><path d="M13.5 6l6 6-6 6"/></g>
+  <g id="ml" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.8" width="18.8" height="14.4" rx="2.4"/><path d="M3.4 6.6 12 12.8l8.6-6.2"/></g>
+  <g id="ph" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 16.9v2.8a1.9 1.9 0 0 1-2.1 1.9 18.6 18.6 0 0 1-8.1-2.9 18.3 18.3 0 0 1-5.6-5.6A18.6 18.6 0 0 1 2.7 5a1.9 1.9 0 0 1 1.9-2.1h2.8a1.9 1.9 0 0 1 1.9 1.6c.12.9.35 1.79.68 2.63a1.9 1.9 0 0 1-.43 2L8.4 10.3a15 15 0 0 0 5.6 5.6l1.17-1.17a1.9 1.9 0 0 1 2-.43c.84.33 1.73.56 2.63.68a1.9 1.9 0 0 1 1.6 1.92z"/></g>
+  <g id="pl" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></g>
+</defs></svg>
+
+<header>
+  <div class="wrap in">
+    <a href="#top" class="logo" aria-label="Verion Logistics home">
+      <svg viewBox="0 0 96 96" aria-hidden="true"><use href="#vmark"/></svg>
+      <span class="wm"><b>Verion</b><i>Logistics</i></span>
+    </a>
+    <nav class="top">
+      <a href="#finder">What you need</a>
+      <a href="#report">The report</a>
+      <a href="#services">Services</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <div class="hact">
+      <div class="lang" role="group" aria-label="Language">
+        <a href="index.html" aria-current="true">EN</a>
+        <a href="lv.html" hreflang="lv" lang="lv">LV</a>
+      </div>
+      <a href="#contact" class="hcta">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <h1 class="rv">Whoever quotes your freight is <span class="o">selling</span> you the freight.</h1>
+    <p class="sub rv d1">We're the outside opinion. We check your quotes, customs classification and shipping terms — from China or across Europe — then tell you in writing where you're overpaying. We handle no cargo and take no commission from carriers.</p>
+    <div class="btns rv d2">
+      <a href="#finder" class="btn">Find out what you need<svg viewBox="0 0 24 24"><use href="#ar"/></svg></a>
+      <a href="#report" class="btn ghost">See what you'd get</a>
+    </div>
+    <p class="fine rv d3">Three questions, about 30 seconds. No account, no call. <b>We reply within one working day.</b></p>
+  </div>
+</section>
+
+<div class="wrap floatbar">
+  <div class="fb rv">
+    <div class="fbi"><div class="n mono">01</div><b>Fixed fee</b><span>Quoted in full before we start. Never a share of your spend.</span></div>
+    <div class="fbi"><div class="n mono">02</div><b>No cargo handled</b><span>Advice only. Your goods never come into our hands.</span></div>
+    <div class="fbi"><div class="n mono">03</div><b>No commission</b><span>No carrier pays us, so we've no reason to favour one.</span></div>
+    <div class="fbi"><div class="n mono">04</div><b>You keep control</b><span>You contract with carriers directly. Nothing ties you to us.</span></div>
+  </div>
+</div>
+
+<!-- ============ FINDER ============ -->
+<section id="finder">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">Start here</div>
+      <h2>Which check do you actually need?</h2>
+      <p>Three questions. You'll get a straight answer about which service fits, what we'd look at for your route, and what to send us.</p>
+    </div>
+
+    <div class="finder rv d1">
+      <div class="fbar">
+        <div class="ftrack"><i id="bar"></i></div>
+        <span class="fstep mono" id="stepn">1 / 3</span>
+      </div>
+      <div class="fbody">
+        <div id="quiz">
+          <div class="fq" id="q"></div>
+          <div class="fh" id="qh"></div>
+          <div class="opts" id="opts"></div>
+          <button class="fback" id="back" hidden>← Back</button>
+        </div>
+        <div class="fres" id="res" role="region" aria-live="polite" aria-label="Your recommendation">
+          <span class="rtag">Recommended</span>
+          <div class="rname" id="rname"></div>
+          <p class="rwhy" id="rwhy"></p>
+          <div class="rlist" id="rlist"></div>
+          <div class="rmeta">
+            <div class="rm"><b>You send</b><span id="rsend"></span></div>
+            <div class="rm"><b>You get</b><span id="rget"></span></div>
+            <div class="rm"><b>Reply</b><span>1 working day</span></div>
+          </div>
+          <a class="btn" id="rcta" href="#contact">Send this to us<svg viewBox="0 0 24 24"><use href="#ar"/></svg></a>
+          <p class="rnote">We'll come back with a fixed price and a turnaround before any work starts. If we don't think we'd find anything worth the fee, we'll say so.</p>
+          <button class="fback" id="again">← Start again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DARK REPORT BAND ============ -->
+<section class="band" id="report">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">The deliverable</div>
+      <h2>What lands in your inbox</h2>
+      <p>Every job ends the same way — a short written report you can act on without us. Here's how one is laid out.</p>
+    </div>
+    <div class="rgrid rv d1">
+      <div class="rrow"><span class="num mono">01</span><div><b>Summary</b><p>Our answer in one paragraph, at the top. What we found, what we'd do about it, and roughly what it's worth. If you read nothing else, you read this.</p></div></div>
+      <div class="rrow"><span class="num mono">02</span><div><b>What you're paying now</b><p>Your current costs set out line by line, from the documents you sent — so you can check we've read them correctly before trusting anything that follows.</p></div></div>
+      <div class="rrow"><span class="num mono">03</span><div><b>Findings</b><p>Each issue with the amount attached and the evidence behind it: the comparison quotes we obtained, the tariff line we checked, the clause in your terms. Nothing asserted without a source.</p></div></div>
+      <div class="rrow"><span class="num mono">04</span><div><b>Options</b><p>Usually three, costed and compared, with the trade-off named for each — including the one we recommend. We tell you what it costs you, not only what it saves.</p></div></div>
+      <div class="rrow"><span class="num mono">05</span><div><b>Who to contact</b><p>Named carriers or forwarders with their quotes and contact details. You approach them directly; we're not in the chain and take nothing from them.</p></div></div>
+      <div class="rrow"><span class="num mono">06</span><div><b>What we couldn't check</b><p>Anything we couldn't verify with the information available, stated plainly so you know the limits of the answer.</p></div></div>
+    </div>
+    <p class="bnote rv d2">Reports run to a few pages, not fifty. Ask and we'll send a fully worked example before you commit to anything.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">Services</div>
+      <h2>Five things we do</h2>
+      <p>Each is a defined piece of work with a fixed price and a written result.</p>
+    </div>
+    <div class="svcs">
+      <div class="svc rv">
+        <div class="top"><i class="mono">01</i><h3>Quote check</h3></div>
+        <p>You've been quoted for a shipment and want to know whether the price is reasonable. We compare it against the market and tell you plainly whether it holds up.</p>
+        <p class="for"><b>Best first step.</b> Cheapest way to find out where you stand.</p>
+      </div>
+      <div class="svc rv d1">
+        <div class="top"><i class="mono">02</i><h3>Import cost review</h3></div>
+        <p>Everything you currently pay to import — freight, duty, clearance charges, contract terms — worked through and listed where it looks wrong or expensive, with the amounts attached.</p>
+        <p class="for"><b>For regular importers.</b> Most useful if you ship the same goods repeatedly.</p>
+      </div>
+      <div class="svc rv d2">
+        <div class="top"><i class="mono">03</i><h3>Route and carrier sourcing</h3></div>
+        <p>For a specific shipment: the sensible route options, what each should cost, and carriers who can actually do it within your budget. You get their quotes and contact details.</p>
+        <p class="for"><b>For new lanes.</b> New supplier, new country, or a shipment you've not made before.</p>
+      </div>
+      <div class="svc rv d3">
+        <div class="top"><i class="mono">04</i><h3>HS code and incoterms check</h3></div>
+        <p>A short, focused review of how your goods are classified for customs and which trade terms you buy on. Both are common sources of quiet, repeated overpayment.</p>
+        <p class="for"><b>Smallest job.</b> Often finds the single largest error.</p>
+      </div>
+      <div class="svc rv d4">
+        <div class="top"><i class="mono">05</i><h3>Project and oversized cargo planning</h3></div>
+        <p>For heavy or out-of-gauge shipments: whether the route works, what permits and paperwork are needed, roughly what it should cost, and whether the operator quotes you have are reasonable.</p>
+        <p class="for"><b>Planning only.</b> We assess before you commit; we don't run the move.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">Pricing</div>
+      <h2>How pricing works</h2>
+      <p>We don't publish a rate card, because the work varies too much to make one honest. Here's what you can rely on instead.</p>
+    </div>
+    <div class="price rv d1">
+      <div class="prow"><span class="pn">Fixed, and agreed in writing first</span><span class="pv">always</span></div>
+      <div class="prow"><span class="pn">The quote itself</span><span class="pv">free</span></div>
+      <div class="prow"><span class="pn">Priced by lanes and product lines</span><span class="pv">not by hours</span></div>
+      <div class="prow"><span class="pn">Share of what you save</span><span class="pv">never</span></div>
+      <div class="pfoot">Send us the quote or invoice you're asking about and you'll have an exact figure within one working day, with nothing to pay if you decide not to go ahead. If we don't think we'd find enough to justify the fee, we'll tell you that instead of quoting.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW ============ -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">How it works</div>
+      <h2>Three steps, no meetings</h2>
+      <p>Everything happens over email, on your schedule.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><span class="n mono">01</span><div><h4>You send the details</h4><p>Your quote or invoice, what the goods are, and roughly how much you ship.</p></div></div>
+      <div class="step rv d1"><span class="n mono">02</span><div><h4>We check</h4><p>We get comparison quotes, verify your customs classification, and read the terms behind the price.</p></div></div>
+      <div class="step rv d2"><span class="n mono">03</span><div><h4>You get it in writing</h4><p>What we found, what we'd do, and who to contact. You take it from there yourself.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" style="padding-top:0;">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">Questions</div>
+      <h2>Before you get in touch</h2>
+    </div>
+    <div class="faq rv d1">
+      <details>
+        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Are you a freight forwarder or customs broker?</summary>
+        <div class="fa">No. We don't move cargo and we don't file customs declarations — your own forwarder and broker keep doing that. We're the outside opinion on what they're charging you and whether the setup makes sense.</div>
+      </details>
+      <details>
+        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Why don't you publish prices?</summary>
+        <div class="fa">Because a rate card would be wrong for most people who read it. Checking one quote on one lane and reviewing a year of imports across six product lines are very different jobs, and pricing them the same would mean overcharging the first to cover the second. Send us what you're asking about and you'll have a fixed figure within a working day, free and with no obligation.</div>
+      </details>
+      <details>
+        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>What if you don't find anything?</summary>
+        <div class="fa">Then we tell you that, in writing, with the comparisons that led us there. Confirming you're already paying a fair price is a useful answer, and it's the one we'd rather give than invent a problem.</div>
+      </details>
+      <details>
+        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Will my forwarder find out?</summary>
+        <div class="fa">Not from us. We work from the documents you send and gather comparison quotes independently. What you do with the report afterwards is entirely your decision.</div>
+      </details>
+      <details>
+        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Do you work with small importers and online sellers?</summary>
+        <div class="fa">Yes — including Amazon and direct-to-consumer sellers importing from Asia, where there's usually no in-house logistics person to check anything. A small shipment carries the same classification and contract-term mistakes as a large one, and they repeat on every order.</div>
+      </details>
+      <details>
+        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>What do you need from me to start?</summary>
+        <div class="fa">Whatever you already have: a quote, a recent invoice, a packing list, or just a description of the goods and the route. If something's missing we'll tell you what else we need before quoting.</div>
+      </details>
+      <details>
+        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Who are we?</summary>
+        <div class="fa">Verion Logistics SIA is a Latvian company, registered on 3 April 2024 and VAT-registered in the EU under LV40203552228 — you can verify both on the Latvian business register and in the EU VIES system. We're deliberately small, which is why our fees are fixed and quoted upfront, why we take nothing from carriers, and why you keep every carrier relationship yourself.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">Get in touch</div>
+      <h2>Send us what you're paying now</h2>
+      <p>A quote you've just received, or a recent invoice. We'll tell you what it would cost to look at properly — and whether we think it's worth doing.</p>
+    </div>
+
+    <div class="cgrid">
+      <form class="rv d1" action="[form-endpoint]" method="POST">
+        <div class="f">
+          <label for="fname">Your name</label>
+          <input id="fname" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="f">
+          <label for="femail">Email</label>
+          <input id="femail" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="f">
+          <label for="fserv">What do you need?</label>
+          <select id="fserv" name="service">
+            <option>Not sure yet</option>
+            <option>Quote check</option>
+            <option>Import cost review</option>
+            <option>Route and carrier sourcing</option>
+            <option>HS code and incoterms check</option>
+            <option>Project and oversized cargo planning</option>
+          </select>
+        </div>
+        <div class="f">
+          <label for="fmsg">What are you shipping, and from where?</label>
+          <textarea id="fmsg" name="message" placeholder="Goods, origin and destination, roughly how often you ship, and anything that looks wrong."></textarea>
+        </div>
+        <button type="submit" class="btn">Send<svg viewBox="0 0 24 24"><use href="#ar"/></svg></button>
+        <p class="fnote">We reply within one working day. We don't add you to any list, and we don't pass your details to carriers.</p>
+      </form>
+
+      <div class="direct rv d2">
+        <div class="dh">Or reach us directly</div>
+        <div class="dline-r">
+          <svg viewBox="0 0 24 24"><use href="#ml"/></svg>
+          <a href="mailto:info@verionlogistics.lv" id="mailLink">info@verionlogistics.lv</a>
+          <button class="copy" id="copyBtn" type="button">Copy</button>
+        </div>
+        <div class="dline-r">
+          <svg viewBox="0 0 24 24"><use href="#ph"/></svg>
+          <a href="tel:[phone]">[phone]</a>
+        </div>
+        <p class="fnote">Attachments welcome — a PDF quote or invoice is the fastest way for us to give you a price.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fl">
+      <svg viewBox="0 0 96 96" aria-hidden="true"><use href="#vmark"/></svg>
+      <b>Verion Logistics</b>
+    </div>
+    <p>Independent freight, customs and route advisory. Advisory only — we handle no cargo, file no declarations, and accept no carrier commission.</p>
+    <p style="margin-top:14px;">Verion Logistics SIA · Established 3 April 2024 · Reg. No. 40203552228 · VAT LV40203552228 · Latvia, European Union</p>
+  </div>
+</footer>
+
+<div class="dock" id="dock">
+  <div class="t"><b>Fixed fee, quoted upfront</b><span>Reply within one working day</span></div>
+  <a href="#finder">Start</a>
+</div>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+  var Q=[
+    { q:"What's prompting this?", h:"Pick whichever is closest.",
+      o:[
+        {k:"quote", t:"I've been given a quote", s:"And I want to know if it's a fair price."},
+        {k:"regular", t:"I import regularly", s:"And nobody outside has ever checked the costs."},
+        {k:"new", t:"I'm planning a new shipment", s:"New supplier, new country, or a first move."},
+        {k:"odd", t:"Something looks wrong", s:"Charges I don't recognise, or duty that seems high."}
+      ]},
+    { q:"Where are the goods coming from?", h:"This changes which rules and costs we check.",
+      o:[
+        {k:"asia", t:"Asia", s:"China, Vietnam, India, Turkey and similar."},
+        {k:"eu", t:"Within Europe", s:"EU, UK, or the Baltics."},
+        {k:"other", t:"Elsewhere, or several places", s:"Or a mix of origins."}
+      ]},
+    { q:"How often do you ship?", h:"This changes what's worth checking.",
+      o:[
+        {k:"once", t:"This is a one-off", s:"Or my first time."},
+        {k:"few", t:"A few times a year", s:"Occasional, not routine."},
+        {k:"often", t:"Monthly or more", s:"It's a regular part of the business."}
+      ]}
+  ];
+
+  var ORIGIN={
+    asia:{
+      quote:"Destination handling and deconsolidation charges, which often undo an attractive sea rate",
+      review:"Whether a preferential duty rate applies to your origin, and whether the supplier paperwork exists to claim it",
+      source:"Transhipment options and the trade-off between consolidated and express air on this corridor",
+      codes:"Whether your supplier set the HS code — the most common source of repeated duty overpayment on Asian imports"
+    },
+    eu:{
+      quote:"Whether road, rail or short-sea has been priced fairly for this lane",
+      review:"Whether goods in free circulation are being charged clearance they don't need",
+      source:"Road and rail options, transit times, and permits where the load is unusual",
+      codes:"Classification for excise or restricted goods, and the terms in your supply contract"
+    },
+    other:{
+      quote:"Which charges belong to origin and which to destination under your terms",
+      review:"How duty is calculated across your different origins, and whether any qualify for a lower rate",
+      source:"Multimodal options and the customs treatment at each border you'd cross",
+      codes:"Whether one product is classified differently across your origins — a common and expensive inconsistency"
+    }
+  };
+
+  var SVC={
+    quote:{key:"quote",n:"Quote check",
+      w:"You have a specific price in front of you, so the fastest useful thing is finding out whether it's competitive before you accept it.",
+      l:["Your quote compared against current market rates on the same lane","Whether the charges listed are normal, or padded","Anything missing that will turn up on a later invoice"],
+      send:"The quote", get:"A written verdict"},
+    review:{key:"review",n:"Import cost review",
+      w:"You ship often enough that any error repeats on every shipment, so it's worth going through the whole cost base rather than a single quote.",
+      l:["Freight rates benchmarked across your main lanes","Customs classification checked against what you actually import","The trade terms you buy on, and what they're costing you"],
+      send:"Recent invoices", get:"A written review"},
+    source:{key:"source",n:"Route and carrier sourcing",
+      w:"There's nothing to compare against yet, so the useful work is mapping the sensible options and finding carriers who can actually do it.",
+      l:["Route and transport mode options for this shipment","A realistic cost estimate for each","A shortlist of carriers, with their quotes and contacts"],
+      send:"Shipment details", get:"Options and contacts"},
+    codes:{key:"codes",n:"HS code and incoterms check",
+      w:"What you're describing usually traces back to classification or contract terms rather than the freight rate itself — and that's the cheapest thing to check.",
+      l:["Whether your goods sit under the correct HS code","What the correct code would mean for your duty rate","Which incoterm you're buying on, and who should be paying what"],
+      send:"Product details", get:"A written check"}
+  };
+
+  var i=0, ans=[],
+      qEl=document.getElementById('q'), hEl=document.getElementById('qh'),
+      oEl=document.getElementById('opts'), bar=document.getElementById('bar'),
+      stepn=document.getElementById('stepn'), back=document.getElementById('back'),
+      quiz=document.getElementById('quiz'), res=document.getElementById('res');
+
+  function paint(){
+    var s=Q[i];
+    qEl.textContent=s.q; hEl.textContent=s.h;
+    oEl.innerHTML=s.o.map(function(o){
+      return '<button class="opt" data-k="'+o.k+'"><span class="dot"></span><span><b>'+o.t+'</b><span class="s">'+o.s+'</span></span></button>';
+    }).join('');
+    bar.style.width=(i/Q.length*100)+'%';
+    stepn.textContent=(i+1)+' / '+Q.length;
+    back.hidden = i===0;
+  }
+  function decide(){
+    var a=ans[0], freq=ans[2];
+    if(a==='odd') return SVC.codes;
+    if(a==='new') return SVC.source;
+    if(a==='quote') return (freq==='often') ? SVC.review : SVC.quote;
+    return SVC.review;
+  }
+  function label(step,key){
+    var m=Q[step].o.filter(function(o){return o.k===key;});
+    return m.length?m[0].t:'';
+  }
+  function finish(){
+    var r=decide(), origin=ans[1]||'other';
+    var bullets=r.l.slice();
+    var extra=ORIGIN[origin] && ORIGIN[origin][r.key];
+    if(extra) bullets.push(extra);
+    document.getElementById('rname').textContent=r.n;
+    document.getElementById('rwhy').textContent=r.w;
+    document.getElementById('rlist').innerHTML=bullets.map(function(x){
+      return '<div><svg viewBox="0 0 24 24"><use href="#ck"/></svg><span>'+x+'</span></div>';
+    }).join('');
+    document.getElementById('rsend').textContent=r.send;
+    document.getElementById('rget').textContent=r.get;
+    try{
+      var sel=document.getElementById('fserv');
+      for(var j=0;j<sel.options.length;j++){ if(sel.options[j].text===r.n){ sel.selectedIndex=j; } }
+      document.getElementById('fmsg').value =
+        "Situation: "+label(0,ans[0])+"\nOrigin: "+label(1,ans[1])+"\nFrequency: "+label(2,ans[2])+"\n\nDetails:\n";
+    }catch(e){}
+    bar.style.width='100%'; stepn.textContent='Done';
+    quiz.style.display='none'; res.classList.add('on');
+  }
+  oEl.addEventListener('click',function(e){
+    var b=e.target.closest('.opt'); if(!b) return;
+    ans[i]=b.dataset.k; i++;
+    if(i<Q.length) paint(); else finish();
+  });
+  back.addEventListener('click',function(){ if(i>0){i--;paint();} });
+  document.getElementById('again').addEventListener('click',function(){
+    i=0;ans=[];res.classList.remove('on');quiz.style.display='';paint();
+  });
+  paint();
+
+  var cb=document.getElementById('copyBtn');
+  if(cb){
+    cb.addEventListener('click',function(){
+      var v=document.getElementById('mailLink').textContent.trim();
+      var done=function(){ cb.textContent='Copied'; cb.classList.add('done');
+        setTimeout(function(){cb.textContent='Copy';cb.classList.remove('done');},1800); };
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(v).then(done,done); }
+      else{
+        var t=document.createElement('textarea'); t.value=v; document.body.appendChild(t);
+        t.select(); try{document.execCommand('copy');}catch(e){} document.body.removeChild(t); done();
+      }
+    });
+  }
+
+  var dock=document.getElementById('dock'), foot=document.getElementById('contact'), tk=false;
+  function sc(){
+    var y=window.scrollY||window.pageYOffset;
+    var near=foot.getBoundingClientRect().top < window.innerHeight;
+    dock.classList.toggle('up', y>420 && !near);
+    tk=false;
+  }
+  window.addEventListener('scroll',function(){if(!tk){requestAnimationFrame(sc);tk=true;}},{passive:true});
+  sc();
+})();
+</script>
+
+</body>
+</html>
