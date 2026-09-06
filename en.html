@@ -206,6 +206,22 @@
   .svc .for{margin-top:13px;padding-top:13px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-3);}
   .svc .for b{color:var(--ink-2);font-weight:680;}
 
+  /* ---------------- LADDERS (services / cargo comparison) ---------------- */
+  .ladder{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 22px 26px;margin-bottom:12px;}
+  .ladder:last-child{margin-bottom:0;}
+  .lfor{font-size:12.5px;font-weight:780;letter-spacing:.07em;text-transform:uppercase;color:var(--orange-ink);margin-bottom:18px;}
+  .ltiers{display:grid;gap:22px;}
+  .ltier{border-top:1px solid var(--line);padding-top:20px;}
+  .ltier:first-child{border-top:none;padding-top:0;}
+  .lname{font-size:19px;font-weight:740;letter-spacing:-.024em;margin-right:10px;}
+  .lfee{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-ink);background:var(--orange-t);padding:4px 10px;border-radius:100px;vertical-align:middle;}
+  .lchecks{margin-top:14px;display:grid;gap:10px;}
+  .lchecks li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;line-height:1.5;}
+  .lchecks li svg{width:17px;height:17px;flex-shrink:0;margin-top:2px;}
+  .lchecks li.y svg{color:var(--orange);}
+  .lchecks li.n{color:var(--ink-3);}
+  .lchecks li.n svg{color:var(--line-2);}
+
   /* ---------------- PRICING ---------------- */
   .price{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
   .prow{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 20px;border-bottom:1px solid var(--line);}
@@ -302,6 +318,9 @@
     .rgrid{grid-template-columns:1fr 1fr;column-gap:48px;}
     .rrow{grid-template-columns:44px 1fr;}
     .svcs{grid-template-columns:1fr 1fr;}
+    .ltiers{grid-template-columns:1fr 1fr;gap:0;}
+    .ltier{border-top:none;border-left:1px solid var(--line);padding:0 0 0 30px;}
+    .ltier:first-child{border-left:none;padding-left:0;padding-right:30px;}
     .steps{grid-template-columns:repeat(3,1fr);gap:34px;}
     .step{grid-template-columns:1fr;}
     .step h4{padding-top:14px;}
@@ -325,6 +344,7 @@
     <path d="M69 10 h13 a3 3 0 0 1 2.7 4.3 L57 79 a3 3 0 0 1 -2.7 1.7 h-12 a3 3 0 0 1 -2.7 -4.3 L66.3 11.7 A3 3 0 0 1 69 10 Z" fill="#FF6B1A"/>
   </g>
   <g id="ck" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></g>
+  <g id="xk" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></g>
   <g id="ar" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15"/><path d="M13.5 6l6 6-6 6"/></g>
   <g id="ml" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.8" width="18.8" height="14.4" rx="2.4"/><path d="M3.4 6.6 12 12.8l8.6-6.2"/></g>
   <g id="ph" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 16.9v2.8a1.9 1.9 0 0 1-2.1 1.9 18.6 18.6 0 0 1-8.1-2.9 18.3 18.3 0 0 1-5.6-5.6A18.6 18.6 0 0 1 2.7 5a1.9 1.9 0 0 1 1.9-2.1h2.8a1.9 1.9 0 0 1 1.9 1.6c.12.9.35 1.79.68 2.63a1.9 1.9 0 0 1-.43 2L8.4 10.3a15 15 0 0 0 5.6 5.6l1.17-1.17a1.9 1.9 0 0 1 2-.43c.84.33 1.73.56 2.63.68a1.9 1.9 0 0 1 1.6 1.92z"/></g>
@@ -357,8 +377,8 @@
 
 <section class="hero">
   <div class="wrap">
-    <h1 class="rv">An outside check on how your goods get from A to B — <span class="o">and what that's costing you.</span></h1>
-    <p class="sub rv d1">We review your routes, carriers, customs classification and contract terms, then tell you in writing where you're overpaying and what to do about it. We handle no cargo and take no commission from carriers.</p>
+    <h1 class="rv">An <span class="o">independent</span> check on your freight costs and shipping plans.</h1>
+    <p class="sub rv d1">We audit what you're already paying and plan what you haven't shipped yet — routes, carriers, customs classification, and contract terms, reviewed and put in writing. We handle no cargo and take no commission from carriers.</p>
     <div class="btns rv d2">
       <a href="#finder" class="btn">Find out what you need<svg viewBox="0 0 24 24"><use href="#ar"/></svg></a>
       <a href="#report" class="btn ghost">See what you'd get</a>
@@ -441,34 +461,96 @@
   <div class="wrap">
     <div class="shead rv">
       <div class="kick">Services</div>
-      <h2>Five things we do</h2>
-      <p>Each is a defined piece of work with a fixed price and a written result.</p>
+      <h2>Two ways we help</h2>
+      <p>Two fixed-fee tracks — one for costs you're already paying, one for a shipment you haven't made yet.</p>
     </div>
-    <div class="svcs">
-      <div class="svc rv">
-        <div class="top"><i class="mono">01</i><h3>Quote check</h3></div>
-        <p>You've been quoted for a shipment and want to know whether the price is reasonable. We compare it against the market and tell you plainly whether it holds up.</p>
-        <p class="for"><b>Best first step.</b> Cheapest way to find out where you stand.</p>
+    <div class="ladder rv">
+      <p class="lfor">For freight you're already paying for.</p>
+      <div class="ltiers">
+        <div class="ltier">
+          <span class="lname">Check</span><span class="lfee">Fixed fee</span>
+          <ul class="lchecks">
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Quote benchmarked against market rate</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Charges reviewed for padding</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Missing charges flagged</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>HS code checked</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Incoterm reviewed</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Multi-lane cost review</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Duty refund review (1–3yr lookback)</li>
+          </ul>
+        </div>
+        <div class="ltier">
+          <span class="lname">Full Audit</span><span class="lfee">Fixed fee</span>
+          <ul class="lchecks">
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Quote benchmarked against market rate</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Charges reviewed for padding</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Missing charges flagged</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>HS code checked</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Incoterm reviewed</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Multi-lane cost review</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Duty refund review (1–3yr lookback)</li>
+          </ul>
+        </div>
       </div>
-      <div class="svc rv d1">
-        <div class="top"><i class="mono">02</i><h3>Import cost review</h3></div>
-        <p>Everything you currently pay to import — freight, duty, clearance charges, contract terms — worked through and listed where it looks wrong or expensive, with the amounts attached.</p>
-        <p class="for"><b>For regular importers.</b> Most useful if you ship the same goods repeatedly.</p>
+    </div>
+    <div class="ladder rv d1">
+      <p class="lfor">For a shipment you haven't made yet.</p>
+      <div class="ltiers">
+        <div class="ltier">
+          <span class="lname">Mapping</span><span class="lfee">Fixed fee</span>
+          <ul class="lchecks">
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Route and mode options mapped</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Realistic cost estimate per option</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Customs/paperwork needs at each border</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Carrier shortlist with live quotes</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Carrier contact details included</li>
+          </ul>
+        </div>
+        <div class="ltier">
+          <span class="lname">Mapping + Sourcing</span><span class="lfee">Fixed fee</span>
+          <ul class="lchecks">
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Route and mode options mapped</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Realistic cost estimate per option</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Customs/paperwork needs at each border</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Carrier shortlist with live quotes</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Carrier contact details included</li>
+          </ul>
+        </div>
       </div>
-      <div class="svc rv d2">
-        <div class="top"><i class="mono">03</i><h3>Route and carrier sourcing</h3></div>
-        <p>For a specific shipment: the sensible route options, what each should cost, and carriers who can actually do it within your budget. You get their quotes and contact details.</p>
-        <p class="for"><b>For new lanes.</b> New supplier, new country, or a shipment you've not made before.</p>
-      </div>
-      <div class="svc rv d3">
-        <div class="top"><i class="mono">04</i><h3>HS code and incoterms check</h3></div>
-        <p>A short, focused review of how your goods are classified for customs and which trade terms you buy on. Both are common sources of quiet, repeated overpayment.</p>
-        <p class="for"><b>Smallest job.</b> Often finds the single largest error.</p>
-      </div>
-      <div class="svc rv d4">
-        <div class="top"><i class="mono">05</i><h3>Project and oversized cargo planning</h3></div>
-        <p>For heavy or out-of-gauge shipments: whether the route works, what permits and paperwork are needed, roughly what it should cost, and whether the operator quotes you have are reasonable.</p>
-        <p class="for"><b>Planning only.</b> We assess before you commit; we don't run the move.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARGO SCOPE ============ -->
+<section id="cargo">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">Scope</div>
+      <h2>Cargo we work with</h2>
+      <p>Standard, non-hazardous freight of any size. If it needs a special license or certification to move, it's outside what we check.</p>
+    </div>
+    <div class="ladder rv">
+      <div class="ltiers">
+        <div class="ltier">
+          <span class="lname">Covered</span>
+          <ul class="lchecks">
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Parcels &amp; small packages (e-commerce, FBA prep)</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Palletized general cargo</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Full container load (FCL)</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Less than container load (LCL) / consolidated</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Non-hazardous bulk goods</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Oversized / project / heavy-lift cargo</li>
+          </ul>
+        </div>
+        <div class="ltier">
+          <span class="lname">Outside scope</span>
+          <ul class="lchecks">
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Dangerous / hazardous goods (DG)</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Temperature-controlled / perishable</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Live animals</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Restricted or licensed goods (arms, precursors)</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -637,22 +719,22 @@
   };
 
   var SVC={
-    quote:{key:"quote",n:"Quote check",
-      w:"You have a specific price in front of you, so the fastest useful thing is finding out whether it's competitive before you accept it.",
-      l:["Your quote compared against current market rates on the same lane","Whether the charges listed are normal, or padded","Anything missing that will turn up on a later invoice"],
+    check:{key:"quote",n:"Check",
+      w:"You have a specific price in front of you, so the fastest useful thing is checking it against the market before you accept it.",
+      l:["Quote benchmarked against market rate","Charges reviewed for padding","Missing charges flagged","HS code checked","Incoterm reviewed"],
       send:"The quote", get:"A written verdict"},
-    review:{key:"review",n:"Import cost review",
+    fullAudit:{key:"review",n:"Full Audit",
       w:"You ship often enough that any error repeats on every shipment, so it's worth going through the whole cost base rather than a single quote.",
-      l:["Freight rates benchmarked across your main lanes","Customs classification checked against what you actually import","The trade terms you buy on, and what they're costing you"],
-      send:"Recent invoices", get:"A written review"},
-    source:{key:"source",n:"Route and carrier sourcing",
-      w:"There's nothing to compare against yet, so the useful work is mapping the sensible options and finding carriers who can actually do it.",
-      l:["Route and transport mode options for this shipment","A realistic cost estimate for each","A shortlist of carriers, with their quotes and contacts"],
-      send:"Shipment details", get:"Options and contacts"},
-    codes:{key:"codes",n:"HS code and incoterms check",
-      w:"What you're describing usually traces back to classification or contract terms rather than the freight rate itself — and that's the cheapest thing to check.",
-      l:["Whether your goods sit under the correct HS code","What the correct code would mean for your duty rate","Which incoterm you're buying on, and who should be paying what"],
-      send:"Product details", get:"A written check"}
+      l:["Quote benchmarked against market rate","Charges reviewed for padding","Missing charges flagged","HS code checked","Incoterm reviewed","Multi-lane cost review","Duty refund review (1–3yr lookback)"],
+      send:"Recent invoices", get:"A written audit"},
+    mapping:{key:"source",n:"Mapping",
+      w:"There's nothing to compare against yet, so the useful work is mapping the sensible route options and what they'd realistically cost.",
+      l:["Route and mode options mapped","Realistic cost estimate per option","Customs/paperwork needs at each border"],
+      send:"Shipment details", get:"A route map"},
+    mappingSourcing:{key:"codes",n:"Mapping + Sourcing",
+      w:"Once the route is mapped, the next useful step is naming carriers who can actually run it within budget.",
+      l:["Route and mode options mapped","Realistic cost estimate per option","Customs/paperwork needs at each border","Carrier shortlist with live quotes","Carrier contact details included"],
+      send:"Shipment details", get:"A route map and carrier shortlist"}
   };
 
   var i=0, ans=[],
@@ -673,10 +755,10 @@
   }
   function decide(){
     var a=ans[0], freq=ans[2];
-    if(a==='odd') return SVC.codes;
-    if(a==='new') return SVC.source;
-    if(a==='quote') return (freq==='often') ? SVC.review : SVC.quote;
-    return SVC.review;
+    if(a==='quote') return (freq==='often') ? SVC.fullAudit : SVC.check;
+    if(a==='regular') return SVC.fullAudit;
+    if(a==='new') return (freq==='once') ? SVC.mapping : SVC.mappingSourcing;
+    return SVC.check;
   }
   function label(step,key){
     var m=Q[step].o.filter(function(o){return o.k===key;});

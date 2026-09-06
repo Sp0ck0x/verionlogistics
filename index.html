@@ -206,6 +206,22 @@
   .svc .for{margin-top:13px;padding-top:13px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-3);}
   .svc .for b{color:var(--ink-2);font-weight:680;}
 
+  /* ---------------- LADDERS (services / cargo comparison) ---------------- */
+  .ladder{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 22px 26px;margin-bottom:12px;}
+  .ladder:last-child{margin-bottom:0;}
+  .lfor{font-size:12.5px;font-weight:780;letter-spacing:.07em;text-transform:uppercase;color:var(--orange-ink);margin-bottom:18px;}
+  .ltiers{display:grid;gap:22px;}
+  .ltier{border-top:1px solid var(--line);padding-top:20px;}
+  .ltier:first-child{border-top:none;padding-top:0;}
+  .lname{font-size:19px;font-weight:740;letter-spacing:-.024em;margin-right:10px;}
+  .lfee{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-ink);background:var(--orange-t);padding:4px 10px;border-radius:100px;vertical-align:middle;}
+  .lchecks{margin-top:14px;display:grid;gap:10px;}
+  .lchecks li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;line-height:1.5;}
+  .lchecks li svg{width:17px;height:17px;flex-shrink:0;margin-top:2px;}
+  .lchecks li.y svg{color:var(--orange);}
+  .lchecks li.n{color:var(--ink-3);}
+  .lchecks li.n svg{color:var(--line-2);}
+
   /* ---------------- PRICING ---------------- */
   .price{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
   .prow{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 20px;border-bottom:1px solid var(--line);}
@@ -302,6 +318,9 @@
     .rgrid{grid-template-columns:1fr 1fr;column-gap:48px;}
     .rrow{grid-template-columns:44px 1fr;}
     .svcs{grid-template-columns:1fr 1fr;}
+    .ltiers{grid-template-columns:1fr 1fr;gap:0;}
+    .ltier{border-top:none;border-left:1px solid var(--line);padding:0 0 0 30px;}
+    .ltier:first-child{border-left:none;padding-left:0;padding-right:30px;}
     .steps{grid-template-columns:repeat(3,1fr);gap:34px;}
     .step{grid-template-columns:1fr;}
     .step h4{padding-top:14px;}
@@ -325,6 +344,7 @@
     <path d="M69 10 h13 a3 3 0 0 1 2.7 4.3 L57 79 a3 3 0 0 1 -2.7 1.7 h-12 a3 3 0 0 1 -2.7 -4.3 L66.3 11.7 A3 3 0 0 1 69 10 Z" fill="#FF6B1A"/>
   </g>
   <g id="ck" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></g>
+  <g id="xk" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></g>
   <g id="ar" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15"/><path d="M13.5 6l6 6-6 6"/></g>
   <g id="ml" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.8" width="18.8" height="14.4" rx="2.4"/><path d="M3.4 6.6 12 12.8l8.6-6.2"/></g>
   <g id="ph" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 16.9v2.8a1.9 1.9 0 0 1-2.1 1.9 18.6 18.6 0 0 1-8.1-2.9 18.3 18.3 0 0 1-5.6-5.6A18.6 18.6 0 0 1 2.7 5a1.9 1.9 0 0 1 1.9-2.1h2.8a1.9 1.9 0 0 1 1.9 1.6c.12.9.35 1.79.68 2.63a1.9 1.9 0 0 1-.43 2L8.4 10.3a15 15 0 0 0 5.6 5.6l1.17-1.17a1.9 1.9 0 0 1 2-.43c.84.33 1.73.56 2.63.68a1.9 1.9 0 0 1 1.6 1.92z"/></g>
@@ -357,8 +377,8 @@
 
 <section class="hero">
   <div class="wrap">
-    <h1 class="rv">Neatkarīgs skatiens uz to, kā jūsu preces nonāk no A līdz B — <span class="o">un ko tas maksā.</span></h1>
-    <p class="sub rv d1">Pārskatām jūsu maršrutus, pārvadātājus, muitas klasifikāciju un līguma noteikumus, un rakstiski pasakām, kur jūs pārmaksājat un kas ar to darāms. Kravu neapstrādājam un komisiju no pārvadātājiem nesaņemam.</p>
+    <h1 class="rv"><span class="o">Neatkarīga</span> pārbaude jūsu kravas izmaksām un piegādes plāniem.</h1>
+    <p class="sub rv d1">Pārbaudām, ko jau maksājat, un palīdzam plānot to, ko vēl neesat sūtījis — maršrutus, pārvadātājus, muitas klasifikāciju un līguma noteikumus, izvērtētus un rakstiski aprakstītus. Kravu neapstrādājam un komisiju no pārvadātājiem nesaņemam.</p>
     <div class="btns rv d2">
       <a href="#finder" class="btn">Uzziniet, kas jums vajadzīgs<svg viewBox="0 0 24 24"><use href="#ar"/></svg></a>
       <a href="#report" class="btn ghost">Apskatiet, ko saņemsiet</a>
@@ -440,35 +460,97 @@
 <section id="services">
   <div class="wrap">
     <div class="shead rv">
-      <div class="kick">Services</div>
-      <h2>Pieci pakalpojumi</h2>
-      <p>Katrs ir skaidri norobežots darbs ar fiksētu cenu un rakstisku rezultātu.</p>
+      <div class="kick">Pakalpojumi</div>
+      <h2>Divi veidi, kā varam palīdzēt</h2>
+      <p>Divi fiksētas maksas risinājumi — viens jau esošām izmaksām, otrs sūtījumam, ko vēl neesat veicis.</p>
     </div>
-    <div class="svcs">
-      <div class="svc rv">
-        <div class="top"><i class="mono">01</i><h3>Piedāvājuma pārbaude</h3></div>
-        <p>Jums ir dots cenu piedāvājums par sūtījumu, un vēlaties zināt, vai cena ir samērīga. Salīdzinām to ar tirgu un tieši pasakām, vai tā ir pamatota.</p>
-        <p class="for"><b>Labākais pirmais solis.</b> Lētākais veids, kā noskaidrot savu situāciju.</p>
+    <div class="ladder rv">
+      <p class="lfor">Kravai, par kuru jau maksājat.</p>
+      <div class="ltiers">
+        <div class="ltier">
+          <span class="lname">Pārbaude</span><span class="lfee">Fiksēta maksa</span>
+          <ul class="lchecks">
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Piedāvājums salīdzināts ar tirgus likmi</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Izmaksas pārbaudītas, vai nav uzpūstas</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Trūkstošās izmaksas atklātas</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>HS kods pārbaudīts</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Incoterm noteikums pārbaudīts</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Vairāku maršrutu izmaksu pārskats</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Pārmaksātā muitas nodokļa atgūšanas pārbaude (1–3 gadi)</li>
+          </ul>
+        </div>
+        <div class="ltier">
+          <span class="lname">Pilns audits</span><span class="lfee">Fiksēta maksa</span>
+          <ul class="lchecks">
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Piedāvājums salīdzināts ar tirgus likmi</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Izmaksas pārbaudītas, vai nav uzpūstas</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Trūkstošās izmaksas atklātas</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>HS kods pārbaudīts</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Incoterm noteikums pārbaudīts</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Vairāku maršrutu izmaksu pārskats</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Pārmaksātā muitas nodokļa atgūšanas pārbaude (1–3 gadi)</li>
+          </ul>
+        </div>
       </div>
-      <div class="svc rv d1">
-        <div class="top"><i class="mono">02</i><h3>Importa izmaksu pārskats</h3></div>
-        <p>Viss, ko šobrīd maksājat par importu — krava, muitas nodoklis, noformēšanas izmaksas, līguma noteikumi — izskatīts un uzskaitīts tur, kur izskatās nepareizi vai dārgi, ar summām.</p>
-        <p class="for"><b>Regulāriem importētājiem.</b> Visnoderīgākais, ja atkārtoti vedat vienas un tās pašas preces.</p>
+    </div>
+    <div class="ladder rv d1">
+      <p class="lfor">Sūtījumam, ko vēl neesat veicis.</p>
+      <div class="ltiers">
+        <div class="ltier">
+          <span class="lname">Kartēšana</span><span class="lfee">Fiksēta maksa</span>
+          <ul class="lchecks">
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Maršruta un transporta veida varianti izkartēti</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Reālistisks izmaksu novērtējums katram variantam</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Muitas un dokumentu prasības katrā robežā</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Pārvadātāju saraksts ar aktuāliem piedāvājumiem</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Pārvadātāju kontakti iekļauti</li>
+          </ul>
+        </div>
+        <div class="ltier">
+          <span class="lname">Kartēšana + atlase</span><span class="lfee">Fiksēta maksa</span>
+          <ul class="lchecks">
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Maršruta un transporta veida varianti izkartēti</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Reālistisks izmaksu novērtējums katram variantam</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Muitas un dokumentu prasības katrā robežā</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Pārvadātāju saraksts ar aktuāliem piedāvājumiem</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Pārvadātāju kontakti iekļauti</li>
+          </ul>
+        </div>
       </div>
-      <div class="svc rv d2">
-        <div class="top"><i class="mono">03</i><h3>Maršruta un pārvadātāju atlase</h3></div>
-        <p>Konkrētam sūtījumam: saprātīgie maršruta varianti, cik katram vajadzētu maksāt, un pārvadātāji, kas to reāli var izdarīt jūsu budžeta ietvaros. Saņemat viņu piedāvājumus un kontaktus.</p>
-        <p class="for"><b>Jauniem virzieniem.</b> Jauns piegādātājs, jauna valsts vai sūtījums, kādu vēl neesat veicis.</p>
-      </div>
-      <div class="svc rv d3">
-        <div class="top"><i class="mono">04</i><h3>HS koda un Incoterms pārbaude</h3></div>
-        <p>Īsa, mērķtiecīga pārbaude, kā jūsu preces klasificētas muitā un ar kādiem piegādes noteikumiem pērkat. Abi ir biežs klusas, atkārtotas pārmaksas avots.</p>
-        <p class="for"><b>Mazākais darbs.</b> Bieži atrod pašu lielāko kļūdu.</p>
-      </div>
-      <div class="svc rv d4">
-        <div class="top"><i class="mono">05</i><h3>Projektu un negabarīta kravu plānošana</h3></div>
-        <p>Smagām vai negabarīta kravām: vai maršruts ir izpildāms, kādas atļaujas un dokumenti vajadzīgi, aptuveni cik tam būtu jāmaksā un vai jūsu rīcībā esošie pārvadātāju piedāvājumi ir samērīgi.</p>
-        <p class="for"><b>Tikai plānošana.</b> Izvērtējam pirms jūs uzņematies saistības; pašu pārvadājumu neorganizējam.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARGO SCOPE ============ -->
+<section id="cargo">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">Tvērums</div>
+      <h2>Ar kādām kravām strādājam</h2>
+      <p>Standarta, bīstamībai nepakļautas kravas jebkurā apjomā. Ja tās pārvadāšanai nepieciešama īpaša licence vai sertifikācija, tas ir ārpus mūsu pārbaudes jomas.</p>
+    </div>
+    <div class="ladder rv">
+      <div class="ltiers">
+        <div class="ltier">
+          <span class="lname">Strādājam</span>
+          <ul class="lchecks">
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Sīkpakas un mazas sūtījumu vienības (e-komercija, FBA sagatavošana)</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Paletētas vispārējas kravas</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Pilna konteinera krava (FCL)</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Nepilna konteinera krava (LCL) / konsolidētas kravas</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Bīstamībai nepakļautas beramkravas</li>
+            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Negabarīta / projektu / smagsvara kravas</li>
+          </ul>
+        </div>
+        <div class="ltier">
+          <span class="lname">Ārpus mūsu darbības jomas</span>
+          <ul class="lchecks">
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Bīstamas kravas (DG)</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Temperatūru kontrolētas / ātrbojīgas preces</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Dzīvi dzīvnieki</li>
+            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Ierobežotas vai licencējamas preces (ieroči, prekursori)</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -637,22 +719,22 @@
   };
 
   var SVC={
-    quote:{key:"quote",n:"Piedāvājuma pārbaude",
-      w:"Jums priekšā ir konkrēta cena, tāpēc ātrākais noderīgais solis ir noskaidrot, vai tā ir konkurētspējīga, pirms to pieņemat.",
-      l:["Jūsu piedāvājums salīdzināts ar pašreizējām tirgus likmēm tajā pašā maršrutā","Vai uzskaitītās izmaksas ir normālas vai uzpūstas","Viss, kas trūkst un parādīsies vēlākā rēķinā"],
+    check:{key:"quote",n:"Pārbaude",
+      w:"Jums priekšā ir konkrēta cena, tāpēc ātrākais noderīgais solis ir salīdzināt to ar tirgu, pirms to pieņemat.",
+      l:["Piedāvājums salīdzināts ar tirgus likmi","Izmaksas pārbaudītas, vai nav uzpūstas","Trūkstošās izmaksas atklātas","HS kods pārbaudīts","Incoterm noteikums pārbaudīts"],
       send:"Cenu piedāvājumu", get:"Rakstisku vērtējumu"},
-    review:{key:"review",n:"Importa izmaksu pārskats",
-      w:"Vedat pietiekami bieži, lai jebkura kļūda atkārtotos katrā sūtījumā, tāpēc ir vērts izskatīt visas izmaksas, nevis vienu piedāvājumu.",
-      l:["Kravas likmes salīdzinātas jūsu galvenajos maršrutos","Muitas klasifikācija pārbaudīta pret to, ko patiesībā importējat","Piegādes noteikumi, ar kuriem pērkat, un ko tie jums maksā"],
-      send:"Nesenus rēķinus", get:"Rakstisku pārskatu"},
-    source:{key:"source",n:"Maršruta un pārvadātāju atlase",
-      w:"Vēl nav ar ko salīdzināt, tāpēc noderīgākais ir izkartēt saprātīgos variantus un atrast pārvadātājus, kas to reāli var izdarīt.",
-      l:["Maršruta un transporta veida varianti šim sūtījumam","Reālistisks izmaksu novērtējums katram","Pārvadātāju saraksts ar viņu piedāvājumiem un kontaktiem"],
-      send:"Sūtījuma informāciju", get:"Variantus un kontaktus"},
-    codes:{key:"codes",n:"HS koda un Incoterms pārbaude",
-      w:"Tas, ko aprakstāt, parasti izriet no klasifikācijas vai līguma noteikumiem, nevis no pašas kravas likmes — un to pārbaudīt ir vislētāk.",
-      l:["Vai jūsu preces atbilst pareizajam HS kodam","Ko pareizais kods nozīmētu jūsu nodokļa likmei","Ar kuru Incoterms noteikumu pērkat un kam kas būtu jāmaksā"],
-      send:"Preču informāciju", get:"Rakstisku pārbaudi"}
+    fullAudit:{key:"review",n:"Pilns audits",
+      w:"Vedat pietiekami bieži, lai jebkura kļūda atkārtotos katrā sūtījumā, tāpēc ir vērts izskatīt visu izmaksu bāzi, nevis vienu piedāvājumu.",
+      l:["Piedāvājums salīdzināts ar tirgus likmi","Izmaksas pārbaudītas, vai nav uzpūstas","Trūkstošās izmaksas atklātas","HS kods pārbaudīts","Incoterm noteikums pārbaudīts","Vairāku maršrutu izmaksu pārskats","Pārmaksātā muitas nodokļa atgūšanas pārbaude (1–3 gadi)"],
+      send:"Nesenus rēķinus", get:"Rakstisku audita atskaiti"},
+    mapping:{key:"source",n:"Kartēšana",
+      w:"Vēl nav ar ko salīdzināt, tāpēc noderīgākais ir izkartēt saprātīgos maršruta variantus un to, cik katram vajadzētu maksāt.",
+      l:["Maršruta un transporta veida varianti izkartēti","Reālistisks izmaksu novērtējums katram variantam","Muitas un dokumentu prasības katrā robežā"],
+      send:"Sūtījuma informāciju", get:"Maršruta karti"},
+    mappingSourcing:{key:"codes",n:"Kartēšana + atlase",
+      w:"Kad maršruts ir izkartēts, nākamais noderīgais solis ir atrast pārvadātājus, kas to reāli var izdarīt jūsu budžeta ietvaros.",
+      l:["Maršruta un transporta veida varianti izkartēti","Reālistisks izmaksu novērtējums katram variantam","Muitas un dokumentu prasības katrā robežā","Pārvadātāju saraksts ar aktuāliem piedāvājumiem","Pārvadātāju kontakti iekļauti"],
+      send:"Sūtījuma informāciju", get:"Maršruta karti un pārvadātāju sarakstu"}
   };
 
   var i=0, ans=[],
@@ -673,10 +755,10 @@
   }
   function decide(){
     var a=ans[0], freq=ans[2];
-    if(a==='odd') return SVC.codes;
-    if(a==='new') return SVC.source;
-    if(a==='quote') return (freq==='often') ? SVC.review : SVC.quote;
-    return SVC.review;
+    if(a==='quote') return (freq==='often') ? SVC.fullAudit : SVC.check;
+    if(a==='regular') return SVC.fullAudit;
+    if(a==='new') return (freq==='once') ? SVC.mapping : SVC.mappingSourcing;
+    return SVC.check;
   }
   function label(step,key){
     var m=Q[step].o.filter(function(o){return o.k===key;});
