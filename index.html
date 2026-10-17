@@ -1,827 +1,410 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0E0E0D">
-<title>Verion Logistics — Neatkarīgs vērtējums par to, ko maksājat par importu</title>
-<meta name="description" content="Pārbaudām jūsu kravas piedāvājumus, muitas klasifikāciju un piegādes noteikumus, un rakstiski pasakām, kur jūs pārmaksājat. Fiksēta maksa. Kravu neapstrādājam. Komisiju no pārvadātājiem nesaņemam.">
-
+<title>Verion Logistics — your representative in the Baltic market</title>
+<meta name="description" content="Verion Logistics represents European manufacturers in Latvia and the Baltic states: localisation, specification outreach, tender support and delivery coordination.">
+<meta name="theme-color" content="#F7F6F2">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Verion Logistics — Neatkarīgs vērtējums par to, ko maksājat par importu">
-<meta property="og:description" content="Pārbaudām jūsu kravas piedāvājumus, muitas klasifikāciju un piegādes noteikumus un rakstiski pasakām, kur jūs pārmaksājat. Fiksēta maksa, kravu neapstrādājam, komisiju nesaņemam.">
 <meta property="og:url" content="https://www.verionlogistics.lv">
+<meta property="og:title" content="Verion Logistics — your representative in the Baltic market">
+<meta property="og:description" content="We help European manufacturers get specified, quoted and delivered in Latvia and the Baltic states.">
 <meta property="og:image" content="https://www.verionlogistics.lv/share.png">
-<meta property="og:locale" content="lv_LV">
+<meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="alternate" hreflang="en" href="https://www.verionlogistics.lv/en.html">
-<link rel="alternate" hreflang="lv" href="https://www.verionlogistics.lv">
-<link rel="alternate" hreflang="x-default" href="https://www.verionlogistics.lv">
-
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Verion Logistics","legalName":"Verion Logistics SIA","description":"Neatkarīgas konsultācijas importētājiem par kravas izmaksām, muitas klasifikāciju un piegādes noteikumiem. Tikai konsultācijas — kravas neapstrādājam, komisiju no pārvadātājiem nesaņemam.","inLanguage":"lv","url":"https://www.verionlogistics.lv","email":"info@verionlogistics.lv","foundingYear":"2024","vatID":"LV40203552228","taxID":"40203552228","address":{"@type":"PostalAddress","addressCountry":"LV"},"areaServed":["LV","EU","GB"],"serviceType":["Kravas izmaksu pārbaude","Muitas klasifikācijas pārbaude","Pārvadātāju atlase","Incoterms pārbaude","Projektu kravu plānošana"]}
-</script>
-
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjEuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMkY1RDUwIiBzdHJva2Utd2lkdGg9IjIuNiIvPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJGNUQ1MCIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMi41IDE2IEwxOC41IDMyIEwyNC41IDE2Ii8+PHBhdGggZD0iTTI5LjUgMTYgTDI5LjUgMzIgTDM2LjUgMzIiLz48L2c+PC9zdmc+Cg==" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --void:#0E0E0D;      /* deepest */
-    --char:#191918;      /* dark surface */
-    --char-2:#242423;    /* raised dark */
-    --bone:#F4F2ED;      /* warm off-white */
-    --paper:#FAF9F6;
-    --card:#FFFFFF;
+:root{
+  --bg:#F7F6F2; --bg2:#FFFFFF; --line:#E3E0D7; --text:#16181A; --muted:#5E625F;
+  --accent:#2F5D50; --accent-soft:#E6EEEA; --steel:#5B6670; --amber:#A8661A; --amber-soft:#FBF1E3;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+@media(max-width:600px){.wrap{padding:0 16px}}
 
-    --orange:#FF6B1A;
-    --orange-d:#E55A0D;
-    --orange-ink:#A8480A;
-    --orange-t:#FFF1E7;
+header{position:sticky;top:0;z-index:20;background:rgba(247,246,242,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:21px;letter-spacing:-.03em;text-decoration:none;white-space:nowrap}
+.logo .mk{width:44px;height:44px;display:block;flex:none}
+.logo i{font-style:normal;font-weight:400;color:var(--muted)}
+nav{display:flex;gap:26px;font-size:14px}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--text)}
+.btn{display:inline-block;background:var(--accent);color:#fff;font:600 14px/1 var(--sans);padding:13px 19px;border-radius:999px;text-decoration:none;border:1px solid var(--accent);cursor:pointer;text-align:center}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--line)}
+.btn.small{padding:10px 15px;font-size:13px}
+@media(max-width:940px){nav{display:none}}
 
-    --steel:#C8CACC;
-    --ink:#15150F;
-    --ink-2:#57574F;
-    --ink-3:#8C8C83;
-    --line:#E6E3DB;
-    --line-2:#D2CEC4;
-    --dline:rgba(244,242,237,.12);
+h1,h2,h3{letter-spacing:-.03em;font-weight:600}
+.hero{padding-top:88px;padding-bottom:64px}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:18px}
+h1{font-size:clamp(38px,6vw,70px);line-height:1.03;max-width:16ch}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{font-size:clamp(18px,2vw,20px);color:var(--muted);max-width:60ch;margin:26px 0 32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:600px){.hero{padding-top:56px;padding-bottom:44px}}
 
-    --ez:cubic-bezier(.22,.9,.28,1);
-  }
-  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--paper);color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
-    padding-bottom:calc(74px + env(safe-area-inset-bottom));
-  }
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
-  .mono{font-family:ui-monospace,'SF Mono','Roboto Mono',Menlo,monospace;font-variant-numeric:tabular-nums;}
-  ::selection{background:var(--orange);color:#fff;}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pillar{padding:30px 24px 32px;border-right:1px solid var(--line)}
+.pillar:last-child{border-right:0}
+.num{font-size:14px;font-weight:600;color:var(--accent);display:block;margin-bottom:12px}
+.pillar strong{display:block;font-weight:600;margin-bottom:6px}
+.pillar p{color:var(--muted);font-size:15px}
+@media(max-width:900px){.pillars{grid-template-columns:1fr 1fr}.pillar:nth-child(2){border-right:0}.pillar:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:520px){.pillars{grid-template-columns:1fr}.pillar{border-right:0;border-bottom:1px solid var(--line);padding:22px 0}.pillar:last-child{border-bottom:0}}
 
-  .rv{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ez),transform .7s var(--ez);}
-  .rv.in{opacity:1;transform:none;}
-  .d1{transition-delay:.06s}.d2{transition-delay:.12s}.d3{transition-delay:.18s}.d4{transition-delay:.24s}.d5{transition-delay:.3s}
+section{padding:84px 0;border-bottom:1px solid var(--line)}
+section.alt{background:var(--bg2)}
+@media(max-width:600px){section{padding:56px 0}}
+.sec-label{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:600}
+h2{font-size:clamp(28px,4vw,44px);line-height:1.1;max-width:24ch;margin-bottom:16px}
+.intro{color:var(--muted);max-width:64ch;margin-bottom:40px}
 
-  /* ---------------- HEADER ---------------- */
-  header{position:sticky;top:0;z-index:60;background:rgba(14,14,13,.88);backdrop-filter:blur(14px) saturate(150%);border-bottom:1px solid var(--dline);}
-  header .in{display:flex;align-items:center;justify-content:space-between;height:66px;padding-top:env(safe-area-inset-top);gap:16px;}
-  .logo{display:flex;align-items:center;gap:11px;text-decoration:none;}
-  .logo svg{width:30px;height:30px;flex-shrink:0;}
-  .logo .wm{display:flex;flex-direction:column;line-height:1;}
-  .logo .wm b{color:var(--bone);font-size:17px;font-weight:760;letter-spacing:-.022em;}
-  .logo .wm i{font-style:normal;color:#8A8A85;font-size:9px;letter-spacing:.3em;text-transform:uppercase;font-weight:680;margin-top:5px;}
-  nav.top{display:none;}
-  .hcta{
-    background:var(--orange);color:#fff;text-decoration:none;padding:11px 18px;border-radius:100px;
-    font-size:14px;font-weight:700;letter-spacing:-.01em;white-space:nowrap;transition:background .2s var(--ez);
-  }
-  .hcta:hover{background:var(--orange-d);}
-  .hact{display:flex;align-items:center;gap:10px;}
-  .lang{display:flex;align-items:center;border:1px solid var(--dline);border-radius:100px;padding:3px;gap:2px;}
-  .lang a{
-    text-decoration:none;font-size:12px;font-weight:780;letter-spacing:.06em;color:#8A8A85;
-    padding:6px 10px;border-radius:100px;transition:color .18s var(--ez),background .18s var(--ez);
-  }
-  .lang a:hover{color:var(--bone);}
-  .lang a[aria-current="true"]{background:var(--orange);color:#fff;}
+/* market stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.stats{grid-template-columns:1fr}}
+.stat{border:1px solid var(--line);border-radius:var(--radius);padding:26px;background:var(--bg)}
+.stat .big{font-size:clamp(30px,3.6vw,40px);font-weight:600;letter-spacing:-.03em;color:var(--accent);line-height:1.1;margin-bottom:8px}
+.stat.date .big{color:var(--amber)}
+.stat p{color:var(--muted);font-size:15px}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
 
-  /* ---------------- DARK HERO ---------------- */
-  .hero{background:var(--void);color:var(--bone);position:relative;overflow:hidden;padding:56px 0 130px;}
-  .hero::after{
-    content:"";position:absolute;left:-10%;top:-30%;width:70%;height:120%;pointer-events:none;
-    background:radial-gradient(closest-side, rgba(255,107,26,.15), transparent 70%);
-  }
-  .hero .wrap{position:relative;z-index:1;}
-  .tagline{
-    display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:.05em;
-    color:#D9D6CF;border:1px solid var(--dline);padding:8px 15px;border-radius:100px;margin-bottom:26px;
-  }
-  .tagline i{width:6px;height:6px;border-radius:50%;background:var(--orange);display:block;}
-  h1{
-    font-size:clamp(34px,8.6vw,68px);line-height:1.03;font-weight:760;letter-spacing:-.045em;max-width:14ch;
-  }
-  h1 .o{color:var(--orange);}
-  .hero .sub{margin-top:22px;font-size:clamp(16px,4vw,19px);color:#B4B1A9;max-width:52ch;line-height:1.6;}
-  .hero .btns{margin-top:30px;display:flex;flex-direction:column;gap:11px;}
-  .btn{
-    display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;border-radius:100px;
-    text-decoration:none;font-size:16px;font-weight:700;letter-spacing:-.012em;border:1px solid transparent;
-    font-family:inherit;cursor:pointer;background:var(--orange);color:#fff;
-    transition:background .2s var(--ez),transform .12s var(--ez),border-color .2s var(--ez);
-  }
-  .btn:hover{background:var(--orange-d);} .btn:active{transform:translateY(1px);}
-  .btn.ghost{background:transparent;color:var(--bone);border-color:rgba(244,242,237,.28);}
-  .btn.ghost:hover{background:rgba(244,242,237,.07);border-color:rgba(244,242,237,.5);}
-  .btn.dark{background:var(--void);color:#fff;}
-  .btn.dark:hover{background:#000;}
-  .btn svg{width:18px;height:18px;}
-  .hero .fine{margin-top:18px;font-size:14px;color:#83817B;}
-  .hero .fine b{color:#C9C6BE;font-weight:640;}
+/* service cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.grid3{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid3{grid-template-columns:1fr}}
+.scard{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+section.alt .scard{background:var(--bg)}
+.scard svg{width:34px;height:34px;color:var(--accent);margin-bottom:14px}
+.scard h3{font-size:19px;margin-bottom:8px}
+.scard p{color:var(--muted);font-size:15px}
 
-  /* ---------------- FLOATING PROMISE BAR ---------------- */
-  .floatbar{margin-top:-88px;position:relative;z-index:5;}
-  .fb{
-    background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;
-    box-shadow:0 24px 60px -34px rgba(0,0,0,.5);
-    display:grid;grid-template-columns:1fr 1fr;
-  }
-  .fbi{padding:20px 18px 22px;border-top:1px solid var(--line);}
-  .fbi:nth-child(-n+2){border-top:none;}
-  .fbi:nth-child(even){border-left:1px solid var(--line);}
-  .fbi .n{font-size:10px;font-weight:800;letter-spacing:.16em;color:var(--orange);margin-bottom:10px;}
-  .fbi b{display:block;font-size:16px;font-weight:720;letter-spacing:-.022em;margin-bottom:4px;}
-  .fbi span{font-size:13px;color:var(--ink-2);line-height:1.5;}
+/* two columns */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:800px){.grid2{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:28px;background:var(--bg2)}
+section.alt .card{background:var(--bg)}
+.card h3{font-size:22px;margin-bottom:14px}
+ul.ticks{list-style:none}
+ul.ticks li{padding:10px 0 10px 28px;border-top:1px solid var(--line);position:relative;font-size:16px;font-weight:500}
+ul.ticks li:first-child{border-top:0}
+ul.ticks li::before{content:"";position:absolute;left:2px;top:19px;width:12px;height:6px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+ul.ticks.no li::before{height:0;border-left:0;border-bottom-color:var(--muted);transform:none;top:22px}
+ul.ticks li > span{display:block;color:var(--muted);font-size:14px;font-weight:400}
 
-  /* ---------------- SECTIONS ---------------- */
-  section{padding:64px 0;}
-  .shead{margin-bottom:30px;max-width:46ch;}
-  .kick{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-ink);font-weight:800;margin-bottom:14px;}
-  .kick::after{content:"";flex:1;height:1px;background:var(--line-2);max-width:70px;}
-  h2{font-size:clamp(26px,6vw,40px);font-weight:750;letter-spacing:-.038em;line-height:1.08;}
-  .shead p{margin-top:14px;font-size:17px;color:var(--ink-2);}
+/* sectors */
+.sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+@media(max-width:820px){.sectors{grid-template-columns:1fr}}
+.sector{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--bg2)}
+.sector .pri{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:4px 10px;margin-bottom:12px}
+.pri.p1{background:var(--accent);color:#fff}
+.pri.p2{background:var(--accent-soft);color:var(--accent)}
+.sector h3{font-size:19px;margin-bottom:8px}
+.sector p{color:var(--muted);font-size:15px;margin-bottom:10px}
+.sector .ex{font-size:13px;color:var(--steel)}
 
-  /* ---------------- FINDER ---------------- */
-  .finder{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 20px 50px -38px rgba(0,0,0,.45);}
-  .fbar{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);}
-  .ftrack{flex:1;height:3px;background:var(--line);border-radius:99px;overflow:hidden;}
-  .ftrack i{display:block;height:100%;background:var(--orange);width:0;transition:width .5s var(--ez);}
-  .fstep{font-size:11.5px;color:var(--ink-3);font-weight:760;letter-spacing:.09em;white-space:nowrap;}
-  .fbody{padding:24px 18px 26px;}
-  .fq{font-size:clamp(20px,5vw,25px);font-weight:740;letter-spacing:-.032em;margin-bottom:5px;line-height:1.15;}
-  .fh{font-size:14.5px;color:var(--ink-3);margin-bottom:20px;}
-  .opts{display:grid;gap:10px;}
-  .opt{
-    display:flex;align-items:flex-start;gap:13px;text-align:left;width:100%;
-    background:var(--paper);border:1px solid var(--line-2);border-radius:16px;padding:16px 17px;
-    font-family:inherit;font-size:16px;cursor:pointer;color:var(--ink);
-    transition:border-color .18s var(--ez),background .18s var(--ez),transform .12s var(--ez);
-  }
-  .opt:hover{border-color:var(--orange);background:var(--orange-t);}
-  .opt:active{transform:scale(.994);}
-  .opt:focus-visible{outline:2px solid var(--orange);outline-offset:2px;}
-  .opt .dot{width:19px;height:19px;border-radius:50%;border:2px solid var(--line-2);flex-shrink:0;margin-top:2px;transition:border-color .18s,background .18s;}
-  .opt:hover .dot{border-color:var(--orange);background:rgba(255,107,26,.16);}
-  .opt b{display:block;font-weight:680;letter-spacing:-.018em;}
-  .opt .s{display:block;font-size:13.5px;color:var(--ink-2);margin-top:3px;line-height:1.5;font-weight:400;}
-  .fback{margin-top:18px;background:none;border:none;font-family:inherit;font-size:14px;color:var(--ink-3);cursor:pointer;padding:8px 0;font-weight:650;}
-  .fback:hover{color:var(--ink);}
+/* models */
+.models{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.models{grid-template-columns:1fr}}
+.model{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--bg)}
+.model .step{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;display:block}
+.model h3{font-size:19px;margin-bottom:8px}
+.model p{color:var(--muted);font-size:15px}
 
-  .fres{display:none;}
-  .fres.on{display:block;animation:pop .45s var(--ez);}
-  @keyframes pop{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-  .rtag{display:inline-block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--orange-ink);background:var(--orange-t);padding:6px 13px;border-radius:100px;margin-bottom:14px;}
-  .rname{font-size:clamp(24px,6vw,32px);font-weight:750;letter-spacing:-.036em;margin-bottom:10px;line-height:1.1;}
-  .rwhy{font-size:16px;color:var(--ink-2);margin-bottom:22px;}
-  .rlist{border-top:1px solid var(--line);margin-bottom:22px;}
-  .rlist div{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px;}
-  .rlist svg{width:18px;height:18px;color:var(--orange);flex-shrink:0;margin-top:3px;}
-  .rmeta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px;}
-  .rm{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 15px;}
-  .rm b{display:block;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);font-weight:800;margin-bottom:5px;}
-  .rm span{font-size:15px;font-weight:680;letter-spacing:-.018em;}
-  .rnote{font-size:13.5px;color:var(--ink-3);margin-top:14px;line-height:1.55;}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.st{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:var(--bg2)}
+.st h4{font-size:17px;font-weight:600;margin:8px 0 6px}
+.st p{color:var(--muted);font-size:15px}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
 
-  /* ---------------- DARK REPORT BAND ---------------- */
-  .band{background:var(--char);color:var(--bone);}
-  .band .kick{color:var(--orange);} .band .kick::after{background:var(--dline);}
-  .band .shead p{color:#A9A69F;}
-  .rgrid{display:grid;gap:0;border-top:1px solid var(--dline);}
-  .rrow{padding:20px 0;border-bottom:1px solid var(--dline);display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;}
-  .rrow .num{font-size:12px;font-weight:800;color:var(--orange);letter-spacing:.06em;padding-top:4px;}
-  .rrow b{display:block;font-size:18px;font-weight:700;letter-spacing:-.026em;margin-bottom:6px;}
-  .rrow p{font-size:15px;color:#A9A69F;line-height:1.6;}
-  .bnote{margin-top:22px;font-size:14.5px;color:#83817B;line-height:1.6;}
+/* about */
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:28px}}
+.about p{color:var(--muted);margin-bottom:14px;max-width:58ch}
+.facts{border:1px solid var(--line);border-radius:var(--radius);background:var(--bg)}
+.fact{display:flex;justify-content:space-between;gap:16px;padding:14px 20px;border-top:1px solid var(--line);font-size:15px}
+.fact:first-child{border-top:0}
+.fact span:first-child{color:var(--muted)}
+.fact span:last-child{text-align:right}
 
-  /* ---------------- SERVICES ---------------- */
-  .svcs{display:grid;gap:12px;}
-  .svc{
-    background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 22px 26px;
-    transition:border-color .2s var(--ez),transform .2s var(--ez);
-  }
-  .svc:hover{border-color:var(--line-2);transform:translateY(-2px);}
-  .svc .top{display:flex;align-items:baseline;gap:12px;margin-bottom:9px;}
-  .svc .top i{font-style:normal;font-size:12px;font-weight:800;color:var(--orange);letter-spacing:.08em;}
-  .svc h3{font-size:20px;font-weight:720;letter-spacing:-.028em;}
-  .svc p{font-size:15.5px;color:var(--ink-2);line-height:1.6;}
-  .svc .for{margin-top:13px;padding-top:13px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-3);}
-  .svc .for b{color:var(--ink-2);font-weight:680;}
+details{border-top:1px solid var(--line);padding:20px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;font-weight:500;font-size:18px;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px;max-width:72ch}
 
-  /* ---------------- LADDERS (services / cargo comparison) ---------------- */
-  .ladder{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px 22px 26px;margin-bottom:12px;}
-  .ladder:last-child{margin-bottom:0;}
-  .lfor{font-size:12.5px;font-weight:780;letter-spacing:.07em;text-transform:uppercase;color:var(--orange-ink);margin-bottom:18px;}
-  .ltiers{display:grid;gap:22px;}
-  .ltier{border-top:1px solid var(--line);padding-top:20px;}
-  .ltier:first-child{border-top:none;padding-top:0;}
-  .lname{font-size:19px;font-weight:740;letter-spacing:-.024em;margin-right:10px;}
-  .lfee{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--orange-ink);background:var(--orange-t);padding:4px 10px;border-radius:100px;vertical-align:middle;}
-  .lchecks{margin-top:14px;display:grid;gap:10px;}
-  .lchecks li{display:flex;align-items:flex-start;gap:10px;font-size:14.5px;line-height:1.5;}
-  .lchecks li svg{width:17px;height:17px;flex-shrink:0;margin-top:2px;}
-  .lchecks li.y svg{color:var(--orange);}
-  .lchecks li.n{color:var(--ink-3);}
-  .lchecks li.n svg{color:var(--line-2);}
+.mailrow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:24px 0 8px}
+.mail{font-weight:600;font-size:clamp(24px,4vw,40px);letter-spacing:-.03em;text-decoration:none;border-bottom:1px solid var(--line);word-break:break-all}
+.mail:hover{border-color:var(--accent)}
+.send{color:var(--muted);max-width:62ch;margin-top:20px}
+.send ol{margin:12px 0 0 20px}.send li{margin:6px 0}
+.small-note{font-size:13px;color:var(--muted)}
 
-  /* ---------------- PRICING ---------------- */
-  .price{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
-  .prow{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 20px;border-bottom:1px solid var(--line);}
-  .prow:last-of-type{border-bottom:none;}
-  .prow .pn{font-size:16px;font-weight:680;letter-spacing:-.02em;}
-  .prow .pv{font-size:16px;font-weight:780;white-space:nowrap;color:var(--orange-ink);letter-spacing:-.02em;}
-  .pfoot{padding:16px 20px;background:var(--paper);border-top:1px solid var(--line);font-size:14px;color:var(--ink-2);}
-
-  /* ---------------- STEPS ---------------- */
-  .steps{display:grid;gap:24px;}
-  .step{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;}
-  .step .n{
-    width:38px;height:38px;border-radius:100px;background:var(--void);color:var(--orange);
-    display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0;
-  }
-  .step h4{font-size:18px;font-weight:720;margin-bottom:5px;letter-spacing:-.026em;padding-top:6px;}
-  .step p{font-size:15.5px;color:var(--ink-2);line-height:1.6;}
-
-  /* ---------------- FAQ ---------------- */
-  .faq{border-top:1px solid var(--line);}
-  details{border-bottom:1px solid var(--line);}
-  summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;align-items:flex-start;gap:16px;font-size:17px;font-weight:660;letter-spacing:-.022em;min-height:60px;}
-  summary::-webkit-details-marker{display:none;}
-  summary:focus-visible{outline:2px solid var(--orange);outline-offset:2px;}
-  summary .pl{width:19px;height:19px;flex-shrink:0;color:var(--orange);margin-top:4px;transition:transform .3s var(--ez);}
-  details[open] summary .pl{transform:rotate(45deg);}
-  .fa{padding:0 0 20px 35px;font-size:15.5px;color:var(--ink-2);max-width:62ch;line-height:1.62;}
-
-  /* ---------------- CONTACT ---------------- */
-  .contact{background:var(--void);color:var(--bone);}
-  .contact .kick{color:var(--orange);} .contact .kick::after{background:var(--dline);}
-  .contact .shead p{color:#A9A69F;}
-  .cgrid{display:grid;gap:32px;}
-  form .f{margin-bottom:14px;}
-  form label{display:block;font-size:12.5px;font-weight:740;letter-spacing:.06em;text-transform:uppercase;color:#8A8A85;margin-bottom:8px;}
-  form input,form select,form textarea{
-    width:100%;font-family:inherit;font-size:16px;color:var(--bone);background:var(--char);
-    border:1px solid var(--dline);border-radius:14px;padding:15px 16px;min-height:54px;
-    transition:border-color .18s var(--ez),box-shadow .18s var(--ez),background .18s var(--ez);
-  }
-  form textarea{min-height:120px;resize:vertical;line-height:1.55;}
-  form input::placeholder,form textarea::placeholder{color:#6E6E69;}
-  form input:focus,form select:focus,form textarea:focus{
-    outline:none;border-color:var(--orange);background:var(--char-2);box-shadow:0 0 0 3px rgba(255,107,26,.18);
-  }
-  .fnote{font-size:13px;color:#7C7A75;margin-top:12px;line-height:1.55;}
-  .direct .dh{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#8A8A85;margin-bottom:14px;}
-  .dline-r{display:flex;align-items:center;gap:13px;padding:16px 0;border-top:1px solid var(--dline);}
-  .dline-r:last-of-type{border-bottom:1px solid var(--dline);}
-  .dline-r svg{width:19px;height:19px;color:var(--orange);flex-shrink:0;}
-  .dline-r a{text-decoration:none;color:var(--bone);font-size:16.5px;font-weight:660;flex:1;word-break:break-all;letter-spacing:-.018em;}
-  .copy{background:transparent;border:1px solid var(--dline);border-radius:100px;font-family:inherit;font-size:12px;
-    font-weight:740;color:#A9A69F;padding:9px 14px;cursor:pointer;white-space:nowrap;transition:all .18s var(--ez);}
-  .copy:hover{border-color:var(--orange);color:var(--orange);}
-  .copy.done{background:rgba(255,107,26,.14);border-color:var(--orange);color:var(--orange);}
-
-  /* ---------------- FOOTER ---------------- */
-  footer{background:var(--void);color:#7C7A75;padding:8px 0 40px;border-top:1px solid var(--dline);}
-  footer .fl{display:flex;align-items:center;gap:12px;margin:30px 0 18px;}
-  footer .fl svg{width:28px;height:28px;}
-  footer .fl b{color:var(--bone);font-size:16px;font-weight:740;letter-spacing:-.022em;}
-  footer p{font-size:13px;line-height:1.9;}
-
-  /* ---------------- DOCK ---------------- */
-  .dock{
-    position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:70;
-    background:rgba(14,14,13,.94);backdrop-filter:blur(16px);border:1px solid var(--dline);border-radius:100px;
-    padding:9px 9px 9px 18px;display:flex;align-items:center;gap:12px;
-    transform:translateY(160%);transition:transform .35s var(--ez);
-  }
-  .dock.up{transform:none;}
-  .dock .t{flex:1;min-width:0;}
-  .dock .t b{display:block;font-size:13.5px;font-weight:720;color:var(--bone);letter-spacing:-.022em;}
-  .dock .t span{display:block;font-size:12px;color:#83817B;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .dock a{background:var(--orange);color:#fff;text-decoration:none;padding:0 20px;min-height:46px;display:flex;align-items:center;border-radius:100px;font-size:14.5px;font-weight:700;white-space:nowrap;}
-
-  @media(min-width:820px){
-    body{padding-bottom:0;}
-    .dock{display:none;}
-    nav.top{display:flex;gap:28px;align-items:center;}
-    nav.top a{color:#A9A69F;text-decoration:none;font-size:14.5px;font-weight:600;letter-spacing:-.01em;transition:color .18s;}
-    nav.top a:hover{color:var(--bone);}
-    .hero{padding:96px 0 160px;}
-    .hero .btns{flex-direction:row;}
-    .btn{padding:0 30px;}
-    .floatbar{margin-top:-104px;}
-    .fb{grid-template-columns:repeat(4,1fr);}
-    .fbi{border-top:none;border-left:1px solid var(--line);padding:26px 24px 28px;}
-    .fbi:first-child{border-left:none;}
-    section{padding:96px 0;}
-    .finder,.price{max-width:720px;}
-    .fbody{padding:32px 30px 34px;}
-    .rmeta{grid-template-columns:repeat(3,1fr);}
-    .rgrid{grid-template-columns:1fr 1fr;column-gap:48px;}
-    .rrow{grid-template-columns:44px 1fr;}
-    .svcs{grid-template-columns:1fr 1fr;}
-    .ltiers{grid-template-columns:1fr 1fr;gap:0;}
-    .ltier{border-top:none;border-left:1px solid var(--line);padding:0 0 0 30px;}
-    .ltier:first-child{border-left:none;padding-left:0;padding-right:30px;}
-    .steps{grid-template-columns:repeat(3,1fr);gap:34px;}
-    .step{grid-template-columns:1fr;}
-    .step h4{padding-top:14px;}
-    .cgrid{grid-template-columns:1.3fr 1fr;gap:56px;}
-    .shead{margin-bottom:44px;}
-  }
-  @media (prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto;}
-    *{transition:none!important;animation:none!important;}
-    .rv{opacity:1;transform:none;}
-    .dock{transform:none;}
-  }
+footer{padding:40px 0 56px;color:var(--muted);font-size:14px}
+footer .seal{width:80px;height:80px;display:block;margin-bottom:14px}
+footer p{margin-top:6px;max-width:80ch}
 </style>
 </head>
-<body>
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-  <g id="vmark">
-    <path d="M14 10 h15 a3 3 0 0 1 2.7 1.7 L55 62 a3 3 0 0 1 -2.7 4.3 h-13 a3 3 0 0 1 -2.7 -1.7 L11.3 14.3 A3 3 0 0 1 14 10 Z" fill="#C8CACC"/>
-    <path d="M11 40 h12 a3 3 0 0 1 2.7 1.7 L38 68 a3 3 0 0 1 -2.7 4.3 h-11 a3 3 0 0 1 -2.7 -1.7 L8.3 44.3 A3 3 0 0 1 11 40 Z" fill="#C8CACC" opacity=".9"/>
-    <path d="M69 10 h13 a3 3 0 0 1 2.7 4.3 L57 79 a3 3 0 0 1 -2.7 1.7 h-12 a3 3 0 0 1 -2.7 -4.3 L66.3 11.7 A3 3 0 0 1 69 10 Z" fill="#FF6B1A"/>
-  </g>
-  <g id="ck" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></g>
-  <g id="xk" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></g>
-  <g id="ar" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15"/><path d="M13.5 6l6 6-6 6"/></g>
-  <g id="ml" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2.6" y="4.8" width="18.8" height="14.4" rx="2.4"/><path d="M3.4 6.6 12 12.8l8.6-6.2"/></g>
-  <g id="ph" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21.4 16.9v2.8a1.9 1.9 0 0 1-2.1 1.9 18.6 18.6 0 0 1-8.1-2.9 18.3 18.3 0 0 1-5.6-5.6A18.6 18.6 0 0 1 2.7 5a1.9 1.9 0 0 1 1.9-2.1h2.8a1.9 1.9 0 0 1 1.9 1.6c.12.9.35 1.79.68 2.63a1.9 1.9 0 0 1-.43 2L8.4 10.3a15 15 0 0 0 5.6 5.6l1.17-1.17a1.9 1.9 0 0 1 2-.43c.84.33 1.73.56 2.63.68a1.9 1.9 0 0 1 1.6 1.92z"/></g>
-  <g id="pl" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></g>
-</defs></svg>
+<body id="top">
 
 <header>
-  <div class="wrap in">
-    <a href="#top" class="logo" aria-label="Verion Logistics sākumlapa">
-      <svg viewBox="0 0 96 96" aria-hidden="true"><use href="#vmark"/></svg>
-      <span class="wm"><b>Verion</b><i>Logistics</i></span>
-    </a>
-    <nav class="top">
-      <a href="#finder">Kas jums vajadzīgs</a>
-      <a href="#report">Atskaite</a>
-      <a href="#services">Pakalpojumi</a>
-      <a href="#faq">Jautājumi</a>
+  <div class="wrap bar">
+    <a class="logo" href="#top"><svg class="mk" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" stroke="#2F5D50" stroke-width="1.3"/><circle cx="24" cy="24" r="13" fill="none" stroke="#2F5D50" stroke-width=".9"/><circle cx="6.5" cy="24" r=".9" fill="#2F5D50"/><circle cx="41.5" cy="24" r=".9" fill="#2F5D50"/><g fill="none" stroke="#2F5D50" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 19 L20.5 29 L24.5 19"/><path d="M28 19 L28 29 L32.5 29"/></g><path fill="#2F5D50" d="M4.920553113147564 20.7814878649516 7.16955116140017 20.545088088294566 7.1748632575739295 20.519315931925167 5.202932962384263 19.41149428952553 5.33713328677398 18.760408233877495 7.91771414708238 20.290635358122607 7.761706269979333 21.047522897813447 4.786073204748702 21.433930349882235Z M8.469601435781648 18.34708815589282 5.864343508655656 17.225665037336256 6.619989945964276 15.470168973159563 7.0741291451752035 15.66565142107201 6.555580466819215 16.870328792648337 7.176364582267206 17.13754289511689 7.656035798993548 16.023184523943858 8.110174998204476 16.218666971856308 7.630503781478134 17.333025343029338 8.252559995523354 17.600787015380003 8.773298953407773 16.39102124941476 9.2274381526187 16.586503697327206Z M9.788870524247818 15.55244210784711 7.446078871751531 13.953603169529785 8.07687079663454 13.02929865038086Q8.257989270115798 12.763904283496515 8.480786788027977 12.640132303797072Q8.703584305940158 12.51636032409763 8.943276548061808 12.534902209974499Q9.182968790183459 12.553444095851368 9.41518886120726 12.71192276014747Q9.648552873467633 12.871182107518923 9.747440153994381 13.086219006875934Q9.846327434521129 13.301255906232946 9.805961460465483 13.552043431380962Q9.802730394658262 13.566605576048067 9.801423953162962 13.580804462553953L11.049673690938482 13.70497701078583L10.676507180921059 14.251780921866507L9.54310080993501 14.128854208951555L9.29640495812433 14.490339639707818L10.126906295874479 15.057115552412105ZM8.898313407797813 14.218661929485929 9.12783423195079 13.882343205934216Q9.22463893329422 13.740494492599481 9.249760943429546 13.620148086638796Q9.274882953564871 13.49980168067811 9.228712614029767 13.400385611473187Q9.182542274494661 13.300969542268266 9.067004209601045 13.222120551657891Q8.95032220347086 13.142490877972165 8.838628652359242 13.13417268277875Q8.726935101247625 13.125854487585336 8.620774892396408 13.191734707352113Q8.51461468354519 13.25761492711889 8.417029299126408 13.400607581690199L8.189069841124132 13.73463842276877Z M10.082348010402095 10.57303417979848 12.15383981133379 12.510527507879564 11.744203770777585 12.948494280244516 9.67271196984589 11.011000952163432Z M14.201166982455955 8.939849884292126Q14.482248798440981 9.30896795622196 14.540042203388317 9.674041378984994Q14.597835608335652 10.039114801748028 14.461807022154794 10.357686075957215Q14.325778435973934 10.676257350166402 14.027178443457561 10.903639953545333Q13.726374760959517 11.132700657318205 13.383232173523945 11.178145771197165Q13.040089586088373 11.223590885076124 12.704080320955118 11.070377637048072Q12.368071055821863 10.91716438902002 12.087828290033807 10.549148162081023Q11.806746474048781 10.18003009015119 11.748402146606029 9.81537619248664Q11.690057819163275 9.450722294822091 11.825535482848718 9.132570545711388Q11.961013146534158 8.814418796600688 12.261816829032202 8.585358092827814Q12.560416821548575 8.357975489448883 12.90369080638108 8.31155992797602Q13.246964791213585 8.265144366503158 13.583524978842258 8.417938089432726Q13.92008516647093 8.570731812362293 14.201166982455955 8.939849884292126ZM13.717457031479249 9.308192920762057Q13.535383138736709 9.06909255775079 13.339295657479267 8.959036391820907Q13.143208176221826 8.848980225891024 12.949685447127386 8.862307034642221Q12.756162718032945 8.875633843393418 12.5831730544718 9.007364724317743Q12.410183390910653 9.139095605242069 12.345874392149629 9.322106542581906Q12.281565393388604 9.505117479921742 12.33551487082829 9.723411121260785Q12.389464348267975 9.941704762599828 12.571538241010513 10.180805125611093Q12.753612133753053 10.419905488622357 12.949699615010495 10.529961654552242Q13.145787096267938 10.640017820482125 13.339309825362378 10.626691011730927Q13.532832554456819 10.61336420297973 13.705822218017964 10.481633322055405Q13.878811881579109 10.349902441131078 13.943120880340135 10.166891503791241Q14.00742987910116 9.983880566451406 13.953480401661475 9.765586925112363Q13.89953092422179 9.547293283773321 13.717457031479249 9.308192920762057Z M17.032974114268235 5.923469741719225 18.213066998900022 8.50268269557305 17.742058383303668 8.71818793915327 15.877205614663955 7.608254961950799 15.858314894787096 7.616898220383161 16.60105890274138 9.240240748467917 16.055746788962715 9.489742808548758 14.875653904330928 6.910529854694934 15.354218807878024 6.69156730774177 17.209679690013047 7.804274424220885 17.232348553865275 7.793902514102051 16.490180763139815 6.171819367342418Z M20.918769260462025 7.7674492872019165 20.535591078565496 4.957087538493324 21.129774006881327 4.876073792027896 21.446157945156244 7.196543380439141 22.650990765159243 7.0322707028487335 22.717785008780858 7.5221628631460815Z M26.514008333791658 6.209412260664537Q26.483227374862842 6.672346025764967 26.286825444613658 6.985467349627969Q26.090423514364474 7.298588673490971 25.778514432761334 7.449267662813017Q25.466605351158194 7.5999466521350625 25.092112663569488 7.575046234613541Q24.714856192308538 7.549962050173043 24.42637921284699 7.358668751784964Q24.137902233385436 7.167375453396884 23.985376475014146 6.831053556012908Q23.832850716642856 6.4947316586289325 23.863539792112185 6.033179785364623Q23.894320751041 5.570246020264193 24.090031735372122 5.257078754671447Q24.285742719703247 4.9439114890787 24.59696085538833 4.79318655802691Q24.90817899107341 4.64246162697512 25.285435462334355 4.667545811415618Q25.65992814992306 4.692446228937139 25.94914201703242 4.8830945231369025Q26.238355884141775 5.073742817336665 26.391572588431124 5.410110656450386Q26.544789292720477 5.746478495564107 26.514008333791658 6.209412260664537ZM25.907357817734677 6.169075421948863Q25.927296528443794 5.869204893510674 25.851855140477873 5.657376526791651Q25.77641375251195 5.445548160072628 25.621807434066483 5.328392123931121Q25.467201115621016 5.211236087789615 25.250244097350066 5.196810384649841Q25.03328707907912 5.182384681510067 24.864530707872348 5.278039988131146Q24.695774336665572 5.373695294752225 24.592951677771925 5.573670695197166Q24.490129018878278 5.773646095642108 24.470190308169165 6.0735166240802965Q24.45025159746005 6.373387152518486 24.52569298542597 6.585215519237509Q24.601134373391893 6.797043885956532 24.75574069183736 6.914199922098039Q24.910347010282827 7.031355958239545 25.127304028553777 7.045781661379319Q25.344261046824723 7.060207364519093 25.513017418031495 6.964552057898015Q25.68177378923827 6.868896751276935 25.784596448131918 6.668921350831994Q25.887419107025565 6.468945950387052 25.907357817734677 6.169075421948863Z M29.90388499684436 6.540389248777072Q29.905044129353552 6.435194635981857 29.877090816002443 6.345132139561962Q29.84913750265133 6.255069643142068 29.792536315485805 6.181001357420998Q29.735935128320275 6.1069330716999275 29.652079783477973 6.051445279648192Q29.56822443863567 5.995957487596456 29.456784463607242 5.962565616276329Q29.248497843613627 5.900154618689903 29.060281141186973 5.956528205603982Q28.87206443876032 6.012901792518061 28.72547240015419 6.183675278048938Q28.578880361548055 6.354448763579814 28.49381059413726 6.638355366628435Q28.408740826726458 6.922261969677056 28.43534579909347 7.147100873130304Q28.461950771460483 7.3719397765835515 28.588618570624213 7.523388237617204Q28.715286369787943 7.674836698650856 28.93020632162849 7.7392353076253855Q29.125226277928242 7.797671082435606 29.284732833104165 7.769562176054185Q29.444239388280092 7.741453269672763 29.556694843617286 7.636354545758451Q29.66185602208883 7.536299064580586 29.714731261344316 7.37431166797896L29.13099805881444 7.199401865825918L29.26059032131874 6.766908629406056L30.39754339988261 7.107585221326867L30.294982652256508 7.449865144628475Q30.187651637298963 7.808065064362717 29.959491110469372 8.01945746719018Q29.73133058363978 8.230849870017645 29.42445623175122 8.28998205009438Q29.117581879862655 8.349114230171114 28.775301956561048 8.246553482545012Q28.393222042177857 8.132067066590295 28.15469286404831 7.8762572479722905Q27.916163685918765 7.620447429354285 27.848590218417996 7.2597185426329665Q27.781016750917228 6.898989655911648 27.909813968866285 6.4691497522305585Q28.008797015993803 6.138809826253425 28.18269593304911 5.908266916165936Q28.35659485010442 5.6777240060784475 28.58445117425039 5.549372798210233Q28.81230749839636 5.4210215903420185 29.071371528380595 5.395997154421583Q29.330435558364833 5.370972718501146 29.599748831350208 5.451669740858117Q29.830588779623387 5.5208386171640935 30.00951386001146 5.647463610461173Q30.188438940399536 5.774088603758252 30.306423522891922 5.9424532550845655Q30.42440810538431 6.110817906410879 30.47229484859988 6.308057850682138Q30.52018159181545 6.505297794953398 30.487618199374236 6.715299050930113Z M32.793898774840955 6.776417550977696 31.543346913638903 9.322213835076257 31.005099945370016 9.057814930827972 32.25565180657207 6.512018646729412Z M35.0200505965693 9.106019976982795Q35.1023653047893 8.959108716263952 35.05215832222309 8.810875850917032Q35.001951339656884 8.66264298557011 34.82481208882557 8.538950708774271Q34.704448238901726 8.45490339248992 34.59816562687504 8.430519236678556Q34.49188301484835 8.406135080867195 34.40693519721765 8.434654878217122Q34.32198737958695 8.46317467556705 34.26965603171179 8.538118204764913Q34.22377555911285 8.598985347342675 34.22022214595624 8.665760105947662Q34.21666873279963 8.732534864552647 34.24437606691458 8.801712815548395Q34.27208340102953 8.870890766544143 34.32203104108041 8.94208524233791Q34.37197868113129 9.01327971813168 34.43616423019386 9.083436585489313L34.61021014028325 9.279292392970163Q34.738581238408386 9.419606127685432 34.826113175929635 9.565186240138637Q34.91364511345089 9.71076635259184 34.94887512859238 9.85867617315559Q34.98410514373386 10.006585993719339 34.95727373674692 10.155078201581588Q34.93044232975998 10.30357040944384 34.830086738868715 10.4497083349772Q34.679886179327376 10.66239094317907 34.46355703020566 10.74359432030791Q34.24722788108395 10.824797697436752 33.985811317490075 10.769788942991257Q33.7243947538962 10.714780188545761 33.44051774935883 10.516555385988326Q33.15891176085777 10.319916381851352 33.0108063795048 10.088120767394834Q32.86270099815184 9.856325152938318 32.864849858220865 9.605294535176425Q32.866998718289885 9.354263917414531 33.03655190365991 9.09935214935235L33.51232976326454 9.431576918438612Q33.43860970073792 9.554084538779616 33.44391027579003 9.673494046559917Q33.449210850842135 9.792903554340215 33.522348287695436 9.902250161071704Q33.595485724548745 10.011596767803193 33.72266262258148 10.100401479348923Q33.84756850457792 10.187620392474194 33.965485182784455 10.215905421527136Q34.08340186099099 10.244190450580076 34.17969497679081 10.215146958005896Q34.27598809259063 10.186103465431714 34.334662634147634 10.102075872088655Q34.38937267965348 10.023725818836342 34.38065086779923 9.938244523969011Q34.371929055944975 9.852763229101683 34.31009285847597 9.753841775709946Q34.24825666100697 9.654920322318208 34.14248804165043 9.535456894282442L33.93367210937597 9.29505192138484Q33.68952818291973 9.01815402079192 33.625450474368094 8.74706106482543Q33.561372765816465 8.475968108858941 33.74249639455676 8.219000687949244Q33.888840139641346 8.007003297363214 34.1131716856873 7.928854053468528Q34.33750323173325 7.850704809573841 34.59919878132548 7.901685445158617Q34.8608943309177 7.952666080743393 35.11524812698318 8.130275503834856Q35.37414395512126 8.311056523767236 35.505901933817825 8.534815464527066Q35.637659912514394 8.758574405286895 35.635320184016656 8.991735444781495Q35.63298045551892 9.224896484276096 35.491286424101325 9.435073149228137Z M36.8212612239737 10.143935057495874 37.17880905670559 9.80244516451145 38.787733426452924 11.48702626998776 38.430185593721035 11.828516162972182 37.830426033773605 11.20055400296407 36.136831117388084 12.818087361610171 35.727425867535615 12.389430576150087 37.42102078392113 10.771897217503986Z M40.04344106204856 13.202201755496983 37.71516237536537 14.82210207181979 37.37267368543969 14.329843931520072 39.700952372122885 12.709943615197265Z M41.119709168918476 17.288883246441934 40.85946709032454 16.740938153919977Q40.95867354676573 16.675422359877174 41.01988220371718 16.58962312095067Q41.08109086066863 16.503823882024168 41.105427341924525 16.40333942298264Q41.129763823180426 16.302854963941115 41.11618014824711 16.193549241451947Q41.102596473313795 16.08424351896278 41.05031039359629 15.974154093981198Q40.95583895410671 15.775242519298569 40.787523303337174 15.674264168275812Q40.61920765256764 15.573285817253057 40.39356033192691 15.58079668422992Q40.16791301128619 15.588307551206782 39.90144656218304 15.71486363052301Q39.62747401592206 15.844984669819974 39.47999008295889 16.015456069981354Q39.33250614999572 16.185927470142733 39.30753979895101 16.378703540669513Q39.282573447906294 16.571479611196292 39.374668247408714 16.76538712110703Q39.426360167129424 16.87422552989564 39.49939845932863 16.953760556345927Q39.57243675152784 17.03329558279621 39.662568251928924 17.07941440213147Q39.75269975233001 17.12553322146673 39.85563994855666 17.135671105101622Q39.958580144783305 17.14580898873652 40.070075872558895 17.115853111894342L40.32781591876688 17.664986524409876Q40.14132191561233 17.727495808676707 39.93795850264611 17.720590095232133Q39.734595089679885 17.713684381787555 39.53892877026456 17.63259544355613Q39.34326245084924 17.551506505324706 39.17584094786977 17.391074990933504Q39.00841944489031 17.230643476542298 38.89136992552272 16.984193286526715Q38.72857008640231 16.64141484965225 38.7556546150227 16.29814502046474Q38.78273914364309 15.95487519127723 39.002755029391295 15.659496076006551Q39.222770915139506 15.364116960735872 39.64061032359232 15.165667521808079Q40.05970074823811 14.966623922883496 40.42855371318216 14.98462436395243Q40.797406678126215 15.002624805021362 41.08024573726492 15.199465543099883Q41.36308479640362 15.396306281178404 41.52350799553686 15.73408065328098Q41.62926847496545 15.956761535630086 41.65732706482727 16.177249504897883Q41.685385654689085 16.39773747416568 41.63602448788141 16.60209966462986Q41.58666332107373 16.806461855094042 41.45828800620436 16.981656641027485Q41.329912691335 17.15685142696093 41.119709168918476 17.288883246441934Z M42.13107467619387 20.187351686391153Q42.29019368585688 20.13221757282063 42.351132601830884 19.988064279458058Q42.41207151780488 19.84391098609549 42.36182865397884 19.633783053257954Q42.32768927214832 19.491003816842706 42.2644424575457 19.402175774443528Q42.20119564294308 19.31334773204435 42.11875331752734 19.27823685707454Q42.03631099211161 19.243125982104726 41.94741071283419 19.26438257833882Q41.872683007489854 19.27940246067701 41.8256698522413 19.326955151088708Q41.77865669699274 19.374507841500407 41.753414099899565 19.444622722657826Q41.72817150280639 19.514737603815245 41.71821367209953 19.601133562851622Q41.70825584139267 19.687529521888 41.70962989833999 19.782607819692522L41.70962385923192 20.0446220866826Q41.712371973126565 20.234778682291648 41.68109507637426 20.4017432442731Q41.64981817962195 20.56870780625455 41.57789879331808 20.702670752100573Q41.5059794070142 20.836633697946592 41.387283156714005 20.92980590604202Q41.26858690641381 21.022978114137445 41.09649631321266 21.06555000197444Q40.842943145024954 21.12475212034918 40.627298648892115 21.041747659598755Q40.411654152759276 20.958743198848335 40.252790260077504 20.743971584362463Q40.093926367395724 20.52919996987659 40.013408957418086 20.192456487765153Q39.93353568672027 19.85840695351061 39.97680592635856 19.586759945007614Q40.02007616599685 19.31511293650462 40.188436630208656 19.1288986976723Q40.356797094420465 18.942684458839985 40.65286798440742 18.864772198777526L40.78781516352994 19.429154274796293Q40.65133133637941 19.4717562652062 40.57597227837618 19.564534166783474Q40.50061322037295 19.657312068360746 40.48264578297365 19.787630663605107Q40.464678345574356 19.91794925884947 40.50075014524434 20.068810338835394Q40.5361778056345 20.216977470964427 40.605529646997475 20.316449617655614Q40.67488148836045 20.415921764346805 40.766152136077835 20.458177621651963Q40.857422783795215 20.50043347895712 40.957098854500195 20.47660032560374Q41.05004005556295 20.454377520449913 41.10030400978353 20.384687803272065Q41.1505679640041 20.314998086094214 41.17005770654974 20.19997930852262Q41.18954744909538 20.08496053095103 41.189843945493436 19.92540357068752L41.19345295578634 19.60699248480913Q41.19489627654159 19.237835850027317 41.32708033696674 18.992632429012442Q41.459264397391884 18.747429007997567 41.76534954878898 18.67566617366632Q42.01556462983998 18.614414246714507 42.23516200470495 18.705017446575738Q42.454759379569914 18.79562064643697 42.61650760261294 19.007566625930394Q42.77825582565596 19.219512605423823 42.85039942499593 19.521234765395672Q42.923831302895536 19.828344821081302 42.87368021008152 20.083125307794322Q42.8235291172675 20.337905794507343 42.666896357005044 20.510635997657253Q42.51026359674258 20.683366200807168 42.26473357675675 20.74634586669614Z"/><path fill="#2F5D50" d="M5.330303700719003 30.34584232332434 7.8379344855054605 29.36973803446559 8.472783564001483 31.000677587852095 8.091986115725806 31.148904362185625 7.633960616900971 29.97222800272284 6.953178040562461 30.237225065518476 7.378317213248987 31.329415817486016 6.997519764973308 31.477642591819546 6.572380592286783 30.385451839852006 5.88792472866587 30.651878742914526 6.3497631348690575 31.838350535130385 5.96896568659338 31.986577309463915Z M8.951001699002362 33.42476284566655Q9.09022872348308 33.32190015012478 9.104265124411945 33.15607981275609Q9.118301525340812 32.9902594753874 9.008734046076839 32.80318769104378Q8.931704787927622 32.67167055780827 8.836907131982553 32.600809367952024Q8.742109476037486 32.52994817809577 8.644865378169413 32.51990508866983Q8.547621280301342 32.50986199924388 8.45965706894545 32.559859721177105Q8.387095891987926 32.60235862222495 8.353398114861484 32.66701492018582Q8.319700337735043 32.73167121814669 8.3167191768338 32.81107487922307Q8.313738015932557 32.890478540299455 8.329965921743508 32.97538117771225Q8.346193827554458 33.060283815125054 8.371022157424008 33.141671903625706L8.444097977849397 33.39122961028416Q8.490515489469658 33.54067596739923 8.509747016385237 33.69310215444821Q8.528978543300816 33.845528341497186 8.506390631622128 33.98894871185996Q8.48380271994344 34.13236908222273 8.404761915780899 34.25479798927918Q8.325721111618355 34.37722689633563 8.1749299157535 34.465544925075676Q7.970851605560464 34.58507308427274 7.755000050074469 34.5714085797874Q7.539148494588474 34.55774407530207 7.337203348197045 34.411834727302534Q7.135258201805616 34.26592537930299 6.971903050902967 33.987018355372506Q6.813196217302426 33.71604771017175 6.780555122942429 33.46793200339697Q6.747914028582433 33.21981629662219 6.843500675062993 33.0138456735111Q6.9390873215435525 32.80787505040001 7.16506371046468 32.66333965619032L7.407440255503164 33.077165118526196Q7.291439400408283 33.15728811583525 7.249456473795638 33.27019390080296Q7.207473547182993 33.38309968577067 7.2298798917839315 33.512348616742585Q7.25228623638487 33.64159754771451 7.329315494534086 33.77311468095002Q7.409664979327665 33.91030065613534 7.5118076731530925 33.98980280931295Q7.61395036697852 34.06930496249056 7.722742553622359 34.0847659497274Q7.831534740266198 34.10022693696424 7.931970403911666 34.04292471641342Q8.0220078297797 33.98866732171365 8.05098458512453 33.901651596009614Q8.07996134046936 33.81463587030559 8.065426378681002 33.697526368958805Q8.050891416892643 33.58041686761202 8.009591945635577 33.43710907550784L7.922895487405951 33.133098320914506Q7.82858696454868 32.80309197187758 7.881528635538724 32.54900889667263Q7.934470306528769 32.294925821467686 8.183899352320259 32.14883584911572Q8.389111430903256 32.028643644589785 8.60871239683194 32.050009666274306Q8.828313362760627 32.071375687958835 9.02680058211104 32.213980891922375Q9.225287801461455 32.35658609588592 9.368057547169055 32.600346299727605Q9.512819428863272 32.847507808739174 9.536455372020729 33.08414813121769Q9.560091315178184 33.3207884536962 9.471153496032368 33.51601273375705Q9.382215676886554 33.7112370138179 9.188065881409866 33.829518160882735Z M9.9179728651891 34.306591677991065 10.232248905327078 34.04542421478445 11.604427795615251 35.69663659287273 11.290151755477273 35.957804056079354 10.758579394674083 35.31813610300109 9.00328202580055 36.776810969849656 8.694247857118759 36.4049344979179 10.44954522599229 34.94625963106933Z M10.586985874643037 38.46792292951078Q10.499303229370176 38.38663354434308 10.493843325062446 38.26690278243798Q10.488383420754717 38.14717202053289 10.57152964142176 38.05941911965448Q10.65096219109011 37.971806729987165 10.770763208600755 37.968203661178784Q10.8905642261114 37.9646005923704 10.978246871384261 38.045889977538096Q11.063038879999777 38.124499492865105 11.06898055708373 38.244676899743645Q11.074922234167685 38.364854306622185 10.995489684499335 38.4524666962895Q10.940035452186121 38.51034968504199 10.865982815491538 38.53128161928406Q10.791930178796953 38.55221355352613 10.71788262051724 38.53642029495194Q10.64383506223753 38.52062703637774 10.586985874643037 38.46792292951078Z M13.187612435586967 40.49276722592357 13.366871197386915 40.18967926279127 14.637165595751204 39.87699519315152Q14.821414195396313 39.82873524352827 14.951827189564195 39.783744791109655Q15.082240183732077 39.738754338691045 15.170857340006311 39.676676729236846Q15.259474496280543 39.61459911978265 15.316328954314107 39.518470474759354Q15.381209924070058 39.408770726909225 15.377936094097205 39.300740880055145Q15.37466226412435 39.19271103320107 15.31299830810648 39.09823242403084Q15.251334352088609 39.0037538148606 15.140503679002917 38.938203969127784Q15.02628023021052 38.87064749546437 14.912571559267413 38.86674631849868Q14.798862888324305 38.862845141532986 14.701094916806445 38.921037106396255Q14.603326945288586 38.97922907125953 14.53309496771771 39.097976220994205L14.133878359562104 38.86186300116069Q14.264309175050872 38.641332580224876 14.46127966168508 38.53800930824407Q14.658250148319285 38.43468603626326 14.888081149858095 38.45002203303281Q15.117912151396904 38.46535802980237 15.347489974217266 38.601139853106055Q15.580460572744334 38.73892830434035 15.705381459274346 38.93035419987012Q15.830302345804357 39.12178009539989 15.83849799778104 39.3311818489649Q15.846693649757725 39.54058360252992 15.731646981736862 39.73510274304766Q15.654726244397333 39.865159145138016 15.530720300600262 39.96126130330401Q15.406714356803189 40.05736346147002 15.191448861396054 40.1361275728281Q14.976183365988918 40.214891684186185 14.622705056552658 40.29892301001907L13.983361972702346 40.46881194975457L13.973997709026229 40.484644903052526L14.982783019153143 41.08128227441653L14.775431466324846 41.4318690974427Z M16.811519488258792 42.396666652884115Q16.509238567824937 42.278550662275066 16.353250609787935 42.0405598612348Q16.197262651750936 41.80256906019452 16.195185731866932 41.466724203046354Q16.193108811982928 41.130879345898194 16.353306613011405 40.72090319875107Q16.514728223434346 40.31140525399506 16.742994874322733 40.068388267559364Q16.97126152521112 39.825371281123665 17.246560979835 39.75802163824391Q17.52186043445888 39.690671995364156 17.822917545498264 39.80830978358208Q18.12397465653765 39.9259475718 18.28129182285858 40.162341759944134Q18.43860898917951 40.398735948088266 18.441403212650208 40.73274509114472Q18.44419743612091 41.066754234201184 18.284477837483564 41.47550657195385Q18.123801834063958 41.88670652849545 17.89457877839331 42.132171133720085Q17.665355722722666 42.37763573894472 17.389578065707656 42.44620919121894Q17.113800408692647 42.51478264349317 16.811519488258792 42.396666652884115ZM16.96119683668241 42.01361431241531Q17.19616824042047 42.10542917151222 17.42324234102286 41.92683685787131Q17.65031644162525 41.74824454423039 17.826773123952137 41.29665887767131Q17.943454507387802 40.99804938542086 17.96042182519742 40.77050870399138Q17.977389143007045 40.5429680225619 17.90398297137189 40.395083306354195Q17.830576799736733 40.247198590146496 17.675153006639164 40.18646688647301Q17.441405412295577 40.09513022976723 17.21494321639042 40.27396164460371Q16.988481020485263 40.45279305944019 16.812235135937296 40.90022909542473Q16.693851740716035 41.199584194678515 16.67579431581805 41.4281095843069Q16.657736890920063 41.65663497393529 16.73114306255522 41.804519690142996Q16.804549234190375 41.952404406350695 16.96119683668241 42.01361431241531Z M18.985447020568284 43.072843365058205 19.05916536432025 42.728515581003236 20.164384543641905 42.028580047127626Q20.32376672043317 41.924302096773296 20.433138947358152 41.840222338007386Q20.542511174283135 41.75614257924148 20.606824683384875 41.66913451910507Q20.671138192486616 41.58212645896867 20.69451901046765 41.472918019996015Q20.721200649810715 41.34829191905075 20.683786479632893 41.24689494846528Q20.646372309455067 41.145497977879806 20.55789491277724 41.07549511122686Q20.469417516099412 41.00549224457391 20.34350660998976 40.97853553678401Q20.213741288386956 40.950753623653604 20.104680755350074 40.98316783601604Q19.995620222313192 41.01558204837846 19.921395606031734 41.10181190032798Q19.847170989750275 41.1880417522775 19.818288802832527 41.32294629453784L19.364752579804904 41.225847132804844Q19.418390926937864 40.97531012574992 19.5723484429124 40.81477927384697Q19.726305958886936 40.654248421944025 19.949108374413086 40.595797025887464Q20.171910789939233 40.537345629830895 20.432726238309225 40.59318452453854Q20.697396102172373 40.649848624586696 20.876645437409962 40.79168929995065Q21.055894772647548 40.9335299753146 21.1301712474908 41.12948728799337Q21.20444772233405 41.32544460067214 21.15713594947831 41.54643108894623Q21.1255030780922 41.69418368285041 21.038439053260532 41.824694044436285Q20.951375028428867 41.95520440602216 20.772269817441593 42.09825803983868Q20.59316460645432 42.24131167365521 20.284675236949408 42.43325564429667L19.732389441507763 42.7974015365776L19.728538483252066 42.81538880887898L20.874584689882777 43.06074986345642L20.789313471363712 43.45903946441553Z M22.011608991597605 43.12584227034445 22.030754027674423 42.738708840034455 23.2602627919892 40.99329472659422 23.86655311335604 41.02327780004334 23.7780965568384 42.81196547974681 24.12192353562219 42.82896886772012 24.10212951527158 43.22922546515927 23.75830253648779 43.21222207718596 23.73364113408375 43.71090242809375 23.269081017711756 43.687928384801566 23.293742420115795 43.189248033893776ZM23.318785707318064 42.789251030164145 23.379984924336505 41.55173636988507 23.35898785692986 41.55069799504701 22.53112173769407 42.72925000790269 22.530083362856004 42.75024707530934Z M27.149633448765197 42.54491334375426Q27.03175470685054 42.5649336491367 26.933475390708466 42.496330136689664Q26.83519607456639 42.42772662424263 26.816251136618373 42.308332508181856Q26.795155463801517 42.19196914041331 26.86527435039467 42.09476519170566Q26.935393236987824 41.99756124299801 27.053271978902483 41.97754093761557Q27.16726460844633 41.95818064230069 27.26619160998354 42.02667415306979Q27.36511861152075 42.0951676638389 27.386214284337605 42.211531031607436Q27.398339118254242 42.29076865316982 27.369830476943523 42.36224729503682Q27.341321835632804 42.433725936903826 27.283691080511993 42.48282954133144Q27.226060325391185 42.531933145759055 27.149633448765197 42.54491334375426Z M30.516179444577748 42.607541202154714 29.52679888777715 40.10511880588302 29.980118569914257 39.92589019915792 30.819256278489764 42.048306069433266 31.921397392472706 41.61255349998301 32.071640240697796 41.992560025979344Z M33.47369289084164 41.28782805301174 33.026945629087 41.554552595885056 32.46091762888635 38.75847484971039 32.97761016899652 38.44999040365994 35.17155811543946 40.274140080728046 34.724810853684815 40.54086462360136 34.192884266186546 40.085652010223505 33.32420903499697 40.60428306581051ZM33.879352347116566 39.8168180968004 33.01117876283242 39.072667105457796 32.99312836841809 39.0834438546648 33.2363070461061 40.20073978729987Z M34.52228480551593 37.921596270327406 34.256307300576175 37.61138047429404 35.88618707780615 36.21392953194177 36.1521645827459 36.52414532797514 35.520760727796954 37.06550790233805 37.006300683039235 38.79812795928325 36.63922861570715 39.11285375290971 35.153688660464866 37.380233695964506Z M36.64707537888122 35.39603796868201 38.72517756580276 36.207229268496015 38.7427728148891 36.185975001645936 37.55700111734646 34.29688874014924 37.89885167102401 33.88394869849053 39.36670732191094 36.33064635537586 38.98296331802781 36.79419179429668 36.30606269420778 35.80796590239549Z M38.56633875325475 32.78582238395736 40.85035168272152 34.20859315733085 40.592613422505906 34.62234745265906 38.30860049303914 33.19957667928556Z M41.66729778450487 32.74565290725128 41.45384248729776 33.2201652187359 39.38843858670639 31.252286872118333 39.63531365266814 30.703482229037636 42.47853571959751 30.942266470927148 42.26508042239041 31.41677878241177 41.56832254909511 31.348274155802677 41.15327058230352 32.27093698368944ZM41.157337199238725 31.307469995653047 40.01945898130645 31.194690425161586 40.01083452485364 31.213862639767022 40.85009093810729 31.99048014097182Z"/></svg><span>Verion<i>Logistics</i></span></a>
+    <nav>
+      <a href="#market">Why the Baltics</a>
+      <a href="#representation">How we represent</a>
+      <a href="#sectors">What we look for</a>
+      <a href="#models">Partnership</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <div class="hact">
-      <div class="lang" role="group" aria-label="Language">
-        <a href="en.html" hreflang="en" lang="en">EN</a>
-        <a href="index.html" aria-current="true">LV</a>
-      </div>
-      <a href="#contact" class="hcta">Sazināties</a>
-    </div>
+    <a class="btn small" href="#contact">Partner with us</a>
   </div>
 </header>
 
-<main id="top">
-
-<section class="hero">
-  <div class="wrap">
-    <h1 class="rv"><span class="o">Neatkarīga</span> pārbaude jūsu kravas izmaksām un piegādes plāniem.</h1>
-    <p class="sub rv d1">Pārbaudām, ko jau maksājat, un palīdzam plānot to, ko vēl neesat sūtījis — maršrutus, pārvadātājus, muitas klasifikāciju un līguma noteikumus, izvērtētus un rakstiski aprakstītus. Kravu neapstrādājam un komisiju no pārvadātājiem nesaņemam.</p>
-    <div class="btns rv d2">
-      <a href="#finder" class="btn">Uzziniet, kas jums vajadzīgs<svg viewBox="0 0 24 24"><use href="#ar"/></svg></a>
-      <a href="#report" class="btn ghost">Apskatiet, ko saņemsiet</a>
+<main>
+  <div class="wrap hero">
+    <p class="eyebrow">Manufacturer representation · Latvia · Lithuania · Estonia</p>
+    <h1>Your representative in the <em>Baltic</em> market.</h1>
+    <p class="lede">We help European manufacturers get specified, quoted and delivered in Latvia and the Baltic states. Local language, local standards, local buyers, with freight handled by people who have done it for fifteen years.</p>
+    <div class="cta">
+      <a class="btn" href="mailto:info@verionlogistics.lv?subject=Partner%20call%20request&amp;body=Company%3A%0AWebsite%3A%0AProducts%3A%0ACertificates%3A%0APreferred%20time%20for%20a%2020-minute%20call%3A">Request a 20-minute partner call</a>
+      <a class="btn ghost" href="#representation">How we represent</a>
     </div>
-    <p class="fine rv d3">Trīs jautājumi, apmēram 30 sekundes. Bez reģistrācijas un zvaniem. <b>Atbildam vienas darba dienas laikā.</b></p>
   </div>
-</section>
 
-<div class="wrap floatbar">
-  <div class="fb rv">
-    <div class="fbi"><div class="n mono">01</div><b>Fiksēta maksa</b><span>Nosaucam pilnu cenu, pirms sākam darbu. Nekad ne procentus no jūsu izdevumiem.</span></div>
-    <div class="fbi"><div class="n mono">02</div><b>Kravu neapstrādājam</b><span>Tikai konsultācija. Jūsu prece nekad nenonāk mūsu rokās.</span></div>
-    <div class="fbi"><div class="n mono">03</div><b>Bez komisijas</b><span>Neviens pārvadātājs mums nemaksā, tāpēc nevienu neizceļam.</span></div>
-    <div class="fbi"><div class="n mono">04</div><b>Kontrole paliek jums</b><span>Līgumu ar pārvadātāju slēdzat pats. Nekas jūs pie mums nesaista.</span></div>
-  </div>
-</div>
-
-<!-- ============ FINDER ============ -->
-<section id="finder">
   <div class="wrap">
-    <div class="shead rv">
-      <div class="kick">Sāciet šeit</div>
-      <h2>Kāda pārbaude jums patiesībā vajadzīga?</h2>
-      <p>Trīs jautājumi. Saņemsiet skaidru atbildi par to, kurš pakalpojums der, ko tieši pārbaudītu jūsu maršrutā un kas mums jāatsūta.</p>
+    <div class="pillars">
+      <div class="pillar"><span class="num">01</span><strong>Localisation</strong><p>Your documents in the local language, matched to the standards buyers check against.</p></div>
+      <div class="pillar"><span class="num">02</span><strong>Specification</strong><p>We work with designers and contractors so your product is named in the project.</p></div>
+      <div class="pillar"><span class="num">03</span><strong>Tenders</strong><p>We follow public procurement and prepare the technical documents bidders need.</p></div>
+      <div class="pillar"><span class="num">04</span><strong>Delivery</strong><p>Fifteen years in international freight: from your factory to the customer's site.</p></div>
     </div>
+  </div>
 
-    <div class="finder rv d1">
-      <div class="fbar">
-        <div class="ftrack"><i id="bar"></i></div>
-        <span class="fstep mono" id="stepn">1 / 3</span>
-      </div>
-      <div class="fbody">
-        <div id="quiz">
-          <div class="fq" id="q"></div>
-          <div class="fh" id="qh"></div>
-          <div class="opts" id="opts"></div>
-          <button class="fback" id="back" hidden>← Atpakaļ</button>
-        </div>
-        <div class="fres" id="res" role="region" aria-live="polite" aria-label="Jūsu ieteikums">
-          <span class="rtag">Ieteicams</span>
-          <div class="rname" id="rname"></div>
-          <p class="rwhy" id="rwhy"></p>
-          <div class="rlist" id="rlist"></div>
-          <div class="rmeta">
-            <div class="rm"><b>Jūs atsūtat</b><span id="rsend"></span></div>
-            <div class="rm"><b>Jūs saņemat</b><span id="rget"></span></div>
-            <div class="rm"><b>Atbilde</b><span>1 darba diena</span></div>
-          </div>
-          <a class="btn" id="rcta" href="#contact">Nosūtiet to mums<svg viewBox="0 0 24 24"><use href="#ar"/></svg></a>
-          <p class="rnote">Pirms darba sākšanas atsūtīsim fiksētu cenu un izpildes termiņu. Ja neuzskatīsim, ka atradīsim kaut ko, kas atsver samaksu, mēs to pateiksim.</p>
-          <button class="fback" id="again">← Sākt no jauna</button>
-        </div>
+  <!-- MARKET -->
+  <section id="market" class="alt">
+    <div class="wrap">
+      <p class="sec-label">Why the Baltics</p>
+      <h2>A compact market that rewards a local partner.</h2>
+      <p class="intro">Latvia, Lithuania and Estonia are small enough to cover from one base, but each has its own language, standards and buying habits. Buyers expect documents in their language and a contact they can call. That is hard to provide from a distance and simple to provide from here.</p>
+      <div class="stats">
+        <div class="stat"><div class="big">3 markets</div><p>Latvia, Lithuania and Estonia, covered through one partner.</p></div>
+        <div class="stat"><div class="big">EU &amp; euro</div><p>Single market rules, no customs and one currency across all three countries.</p></div>
+        <div class="stat"><div class="big">1 contact</div><p>One accountable person for your products, your buyers and your deliveries.</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ DARK REPORT BAND ============ -->
-<section class="band" id="report">
-  <div class="wrap">
-    <div class="shead rv">
-      <div class="kick">Rezultāts</div>
-      <h2>Kas nonāk jūsu e-pastā</h2>
-      <p>Katrs darbs beidzas vienādi — ar īsu rakstisku atskaiti, pēc kuras varat rīkoties arī bez mums. Lūk, kā tā ir veidota.</p>
+  <!-- REPRESENTATION -->
+  <section id="representation">
+    <div class="wrap">
+      <p class="sec-label">How we represent your brand</p>
+      <h2>We turn your catalogue into something a Baltic buyer can specify.</h2>
+      <p class="intro">Entering a new market from a distance usually fails on the details: documents nobody local can read, products that never get written into a design, tenders missed by a week. That is the work we take on.</p>
+      <div class="grid3">
+        <div class="scard">
+          <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h14l8 8v14H6z"/><path d="M20 6v8h8M11 19h12M11 24h8"/></svg>
+          <h3>Localised documentation</h3>
+          <p>Datasheets, installation guides and certificates translated into the local language, with each product matched to the local standards it must meet.</p>
+        </div>
+        <div class="scard">
+          <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 29l6-2 16-16-4-4L7 23z"/><path d="M19 9l4 4"/></svg>
+          <h3>Specification outreach</h3>
+          <p>Direct contact with designers, architects and contractors, so your product is named in the design rather than substituted at tender.</p>
+        </div>
+        <div class="scard">
+          <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="22" height="25" rx="2"/><path d="M12 5v4h10V5M11 16l3 3 6-6M11 25h12"/></svg>
+          <h3>Tender support</h3>
+          <p>We monitor municipal and state procurement and prepare compliance statements and technical files for bidders.</p>
+        </div>
+        <div class="scard">
+          <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h17v14H3zM20 14h6l5 5v4h-11"/><circle cx="9" cy="25" r="2.5"/><circle cx="25" cy="25" r="2.5"/></svg>
+          <h3>Delivery coordination</h3>
+          <p>Transport planned from your factory to the customer's site, with the documents intra-EU deliveries need.</p>
+        </div>
+        <div class="scard">
+          <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="12" r="5"/><path d="M7 29c1-6 5-9 10-9s9 3 10 9"/></svg>
+          <h3>One local contact</h3>
+          <p>Customers deal with someone in their own language and time zone, from first question to after-delivery follow-up.</p>
+        </div>
+        <div class="scard">
+          <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 27V7M5 27h24"/><path d="M9 21l6-6 4 4 8-8"/></svg>
+          <h3>Market feedback</h3>
+          <p>Clear feedback on upcoming projects, competing products and what Baltic buyers ask for.</p>
+        </div>
+      </div>
     </div>
-    <div class="rgrid rv d1">
-      <div class="rrow"><span class="num mono">01</span><div><b>Kopsavilkums</b><p>Mūsu atbilde vienā rindkopā, pašā sākumā. Ko atradām, ko darītu lietas labā un aptuveni cik tas ir vērts. Ja izlasāt tikai vienu daļu, tad šo.</p></div></div>
-      <div class="rrow"><span class="num mono">02</span><div><b>Ko maksājat šobrīd</b><p>Jūsu pašreizējās izmaksas pa pozīcijām, no jūsu atsūtītajiem dokumentiem — lai varat pārliecināties, ka esam tos izlasījuši pareizi, pirms uzticaties tam, kas seko.</p></div></div>
-      <div class="rrow"><span class="num mono">03</span><div><b>Konstatējumi</b><p>Katra problēma ar summu un pamatojumu: salīdzinošie piedāvājumi, ko ieguvām, tarifa pozīcija, ko pārbaudījām, punkts jūsu līgumā. Neko neapgalvojam bez avota.</p></div></div>
-      <div class="rrow"><span class="num mono">04</span><div><b>Varianti</b><p>Parasti trīs, ar cenām un salīdzinājumu, katram nosaucot arī trūkumu — arī tam, ko iesakām. Pasakām, ko variants jums maksā, ne tikai to, ko ietaupa.</p></div></div>
-      <div class="rrow"><span class="num mono">05</span><div><b>Ar ko sazināties</b><p>Konkrēti pārvadātāji vai ekspeditori ar cenām un kontaktiem. Jūs vēršaties pie viņiem tieši; mēs neesam ķēdē un neko no viņiem nesaņemam.</p></div></div>
-      <div class="rrow"><span class="num mono">06</span><div><b>Ko nevarējām pārbaudīt</b><p>Viss, ko ar pieejamo informāciju nevarējām pārliecinoši noskaidrot, pateikts tieši, lai zinātu atbildes robežas.</p></div></div>
-    </div>
-    <p class="bnote rv d2">Atskaites ir dažas lappuses, ne piecdesmit. Pajautājiet, un pirms jebkādām saistībām atsūtīsim pilnu paraugu.</p>
-  </div>
-</section>
+  </section>
 
-<!-- ============ SERVICES ============ -->
-<section id="services">
-  <div class="wrap">
-    <div class="shead rv">
-      <div class="kick">Pakalpojumi</div>
-      <h2>Divi veidi, kā varam palīdzēt</h2>
-      <p>Divi fiksētas maksas risinājumi — viens jau esošām izmaksām, otrs sūtījumam, ko vēl neesat veicis.</p>
-    </div>
-    <div class="ladder rv">
-      <p class="lfor">Kravai, par kuru jau maksājat.</p>
-      <div class="ltiers">
-        <div class="ltier">
-          <span class="lname">Pārbaude</span><span class="lfee">Fiksēta maksa</span>
-          <ul class="lchecks">
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Piedāvājums salīdzināts ar tirgus likmi</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Izmaksas pārbaudītas, vai nav uzpūstas</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Trūkstošās izmaksas atklātas</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>HS kods pārbaudīts</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Incoterm noteikums pārbaudīts</li>
-            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Vairāku maršrutu izmaksu pārskats</li>
-            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Pārmaksātā muitas nodokļa atgūšanas pārbaude (1–3 gadi)</li>
+  <!-- SECTORS -->
+  <section id="sectors" class="alt">
+    <div class="wrap">
+      <p class="sec-label">What we look for</p>
+      <h2>Manufacturers we want to hear from.</h2>
+      <p class="intro">We represent a small number of European manufacturers at a time, so each partner gets real attention. We look for durable B2B products where local documentation, specification and delivery make the difference.</p>
+      <div class="grid2">
+        <div class="card">
+          <h3>A good fit</h3>
+          <ul class="ticks">
+            <li>B2B products sold through projects, contractors, dealers or tenders</li>
+            <li>Clear technical documentation, and certificates where required</li>
+            <li>No current representation in the Baltic states</li>
+            <li>Able to supply within the EU on agreed lead times</li>
           </ul>
         </div>
-        <div class="ltier">
-          <span class="lname">Pilns audits</span><span class="lfee">Fiksēta maksa</span>
-          <ul class="lchecks">
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Piedāvājums salīdzināts ar tirgus likmi</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Izmaksas pārbaudītas, vai nav uzpūstas</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Trūkstošās izmaksas atklātas</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>HS kods pārbaudīts</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Incoterm noteikums pārbaudīts</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Vairāku maršrutu izmaksu pārskats</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Pārmaksātā muitas nodokļa atgūšanas pārbaude (1–3 gadi)</li>
+        <div class="card">
+          <h3>Not right now</h3>
+          <ul class="ticks no">
+            <li>Food, chemicals and hazardous goods</li>
+            <li>Consumer retail products</li>
+            <li>Excise or licensed products</li>
+            <li>Products without verifiable documentation</li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="ladder rv d1">
-      <p class="lfor">Sūtījumam, ko vēl neesat veicis.</p>
-      <div class="ltiers">
-        <div class="ltier">
-          <span class="lname">Kartēšana</span><span class="lfee">Fiksēta maksa</span>
-          <ul class="lchecks">
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Maršruta un transporta veida varianti izkartēti</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Reālistisks izmaksu novērtējums katram variantam</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Muitas un dokumentu prasības katrā robežā</li>
-            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Pārvadātāju saraksts ar aktuāliem piedāvājumiem</li>
-            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Pārvadātāju kontakti iekļauti</li>
+  </section>
+
+  <!-- PARTNERSHIP MODELS -->
+  <section id="models">
+    <div class="wrap">
+      <p class="sec-label">Partnership</p>
+      <h2>Start small, grow with results.</h2>
+      <p class="intro">We agree every partnership in writing and choose the model that suits your stage in the market.</p>
+      <div class="models">
+        <div class="model"><span class="step">Start</span><h3>Non-exclusive distributor</h3><p>A flexible way to test the market, with no territory commitment on your side.</p></div>
+        <div class="model"><span class="step">Grow</span><h3>Exclusive for Latvia</h3><p>Once first projects are delivered and targets are agreed together.</p></div>
+        <div class="model"><span class="step">Scale</span><h3>Baltic distributor</h3><p>Latvia, Lithuania and Estonia under one partner, with shared targets.</p></div>
+      </div>
+      <div class="grid2" style="margin-top:16px">
+        <div class="card">
+          <h3>What you get</h3>
+          <ul class="ticks">
+            <li>An active local presence<span>Someone on the ground working your range into projects.</span></li>
+            <li>Documents buyers can use<span>Your materials localised and mapped to local standards.</span></li>
+            <li>Access to public projects<span>Tender monitoring and technical support for bidders.</span></li>
+            <li>Clear written terms<span>Non-exclusive to start, with defined warranty and return handling.</span></li>
           </ul>
         </div>
-        <div class="ltier">
-          <span class="lname">Kartēšana + atlase</span><span class="lfee">Fiksēta maksa</span>
-          <ul class="lchecks">
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Maršruta un transporta veida varianti izkartēti</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Reālistisks izmaksu novērtējums katram variantam</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Muitas un dokumentu prasības katrā robežā</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Pārvadātāju saraksts ar aktuāliem piedāvājumiem</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Pārvadātāju kontakti iekļauti</li>
+        <div class="card">
+          <h3>What we ask from you</h3>
+          <ul class="ticks">
+            <li>Technical files<span>Datasheets, drawings and certificates where required.</span></li>
+            <li>Distributor terms<span>Price list, minimum quantities and lead times.</span></li>
+            <li>A named technical contact<span>Someone at the factory for product questions.</span></li>
+            <li>Brand materials with permission<span>Images and logos, used only to sell your products.</span></li>
           </ul>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ CARGO SCOPE ============ -->
-<section id="cargo">
-  <div class="wrap">
-    <div class="shead rv">
-      <div class="kick">Tvērums</div>
-      <h2>Ar kādām kravām strādājam</h2>
-      <p>Standarta, bīstamībai nepakļautas kravas jebkurā apjomā. Ja tās pārvadāšanai nepieciešama īpaša licence vai sertifikācija, tas ir ārpus mūsu pārbaudes jomas.</p>
-    </div>
-    <div class="ladder rv">
-      <div class="ltiers">
-        <div class="ltier">
-          <span class="lname">Strādājam</span>
-          <ul class="lchecks">
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Sīkpakas un mazas sūtījumu vienības (e-komercija, FBA sagatavošana)</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Paletētas vispārējas kravas</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Pilna konteinera krava (FCL)</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Nepilna konteinera krava (LCL) / konsolidētas kravas</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Bīstamībai nepakļautas beramkravas</li>
-            <li class="y"><svg viewBox="0 0 24 24"><use href="#ck"/></svg>Negabarīta / projektu / smagsvara kravas</li>
-          </ul>
-        </div>
-        <div class="ltier">
-          <span class="lname">Ārpus mūsu darbības jomas</span>
-          <ul class="lchecks">
-            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Bīstamas kravas (DG)</li>
-            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Temperatūru kontrolētas / ātrbojīgas preces</li>
-            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Dzīvi dzīvnieki</li>
-            <li class="n"><svg viewBox="0 0 24 24"><use href="#xk"/></svg>Ierobežotas vai licencējamas preces (ieroči, prekursori)</li>
-          </ul>
-        </div>
+  <!-- PROCESS -->
+  <section class="alt">
+    <div class="wrap">
+      <p class="sec-label">Getting started</p>
+      <h2>From first call to first project.</h2>
+      <div class="steps" style="margin-top:32px">
+        <div class="st"><span class="num">01</span><h4>Introductory call</h4><p>20 minutes: your products, certificates and goals for the region.</p></div>
+        <div class="st"><span class="num">02</span><h4>Market check</h4><p>We check fit against local standards, competing products and live projects.</p></div>
+        <div class="st"><span class="num">03</span><h4>Agreement</h4><p>Written partner terms, starting non-exclusive.</p></div>
+        <div class="st"><span class="num">04</span><h4>Launch</h4><p>Localised documents, designer outreach and the first quotes.</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ PRICING ============ -->
-<section style="padding-top:0;">
-  <div class="wrap">
-    <div class="shead rv">
-      <div class="kick">Cenas</div>
-      <h2>Kā veidojas cena</h2>
-      <p>Cenrādi nepublicējam, jo darbi atšķiras pārāk daudz, lai tāds būtu godīgs. Tā vietā varat paļauties uz šo.</p>
-    </div>
-    <div class="price rv d1">
-      <div class="prow"><span class="pn">Fiksēta un rakstiski saskaņota iepriekš</span><span class="pv">vienmēr</span></div>
-      <div class="prow"><span class="pn">Pats cenu piedāvājums</span><span class="pv">bez maksas</span></div>
-      <div class="prow"><span class="pn">Cena pēc maršrutiem un preču grupām</span><span class="pv">ne pēc stundām</span></div>
-      <div class="prow"><span class="pn">Daļa no jūsu ietaupījuma</span><span class="pv">nekad</span></div>
-      <div class="pfoot">Atsūtiet piedāvājumu vai rēķinu, par kuru jautājat, un vienas darba dienas laikā saņemsiet precīzu summu — nekas nav jāmaksā, ja izlemjat neturpināt. Ja neuzskatīsim, ka atradīsim pietiekami, lai attaisnotu samaksu, pateiksim to cenas vietā.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ HOW ============ -->
-<section style="padding-top:0;">
-  <div class="wrap">
-    <div class="shead rv">
-      <div class="kick">Kā tas notiek</div>
-      <h2>Trīs soļi, bez tikšanās</h2>
-      <p>Viss notiek e-pastā, jums ērtā laikā.</p>
-    </div>
-    <div class="steps">
-      <div class="step rv"><span class="n mono">01</span><div><h4>Jūs atsūtat informāciju</h4><p>Piedāvājumu vai rēķinu, kādas ir preces un aptuveni cik daudz vedat.</p></div></div>
-      <div class="step rv d1"><span class="n mono">02</span><div><h4>Mēs pārbaudām</h4><p>Iegūstam salīdzinošos piedāvājumus, pārbaudām muitas klasifikāciju un izlasām noteikumus aiz cenas.</p></div></div>
-      <div class="step rv d2"><span class="n mono">03</span><div><h4>Saņemat rakstisku atbildi</h4><p>Ko atradām, ko darītu un ar ko sazināties. Tālāk rīkojaties pats.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section id="faq" style="padding-top:0;">
-  <div class="wrap">
-    <div class="shead rv">
-      <div class="kick">Jautājumi</div>
-      <h2>Pirms sazināties</h2>
-    </div>
-    <div class="faq rv d1">
-      <details>
-        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Vai jūs esat ekspeditors vai muitas brokeris?</summary>
-        <div class="fa">Nē. Mēs nepārvadājam kravas un neiesniedzam muitas deklarācijas — to turpina darīt jūsu ekspeditors un brokeris. Mēs esam neatkarīgs viedoklis par to, ko viņi jums rēķina un vai kopējā shēma ir jēdzīga.</div>
-      </details>
-      <details>
-        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Kāpēc nepublicējat cenas?</summary>
-        <div class="fa">Tāpēc, ka cenrādis lielākajai daļai lasītāju būtu nepareizs. Pārbaudīt vienu piedāvājumu vienā maršrutā un izskatīt gada importu sešās preču grupās ir ļoti atšķirīgi darbi, un vienāda cena nozīmētu pārmaksu pirmajā, lai segtu otro. Atsūtiet, par ko jautājat, un darba dienas laikā saņemsiet fiksētu summu — bez maksas un bez saistībām.</div>
-      </details>
-      <details>
-        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Ko darīt, ja neko neatradīsiet?</summary>
-        <div class="fa">Tad mēs to arī pasakām rakstiski, pievienojot salīdzinājumus, kas mūs pie tā noveda. Apstiprinājums, ka jau maksājat samērīgu cenu, ir noderīga atbilde, un mēs to sniegsim labprātāk nekā izdomāsim problēmu.</div>
-      </details>
-      <details>
-        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Vai mans ekspeditors to uzzinās?</summary>
-        <div class="fa">No mums ne. Strādājam ar jūsu atsūtītajiem dokumentiem un salīdzinošos piedāvājumus iegūstam neatkarīgi. Ko ar atskaiti darāt tālāk, ir tikai jūsu lēmums.</div>
-      </details>
-      <details>
-        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Vai strādājat ar maziem importētājiem un interneta tirgotājiem?</summary>
-        <div class="fa">Jā — tostarp ar Amazon un tiešās tirdzniecības pārdevējiem, kas importē no Āzijas un kuriem parasti nav sava loģistikas darbinieka, kas kaut ko pārbaudītu. Mazā sūtījumā ir tieši tādas pašas klasifikācijas un līguma noteikumu kļūdas kā lielā, un tās atkārtojas katrā pasūtījumā.</div>
-      </details>
-      <details>
-        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Kas jums vajadzīgs, lai sāktu?</summary>
-        <div class="fa">Tas, kas jums jau ir: cenu piedāvājums, nesens rēķins, iepakojuma saraksts vai vienkārši preču un maršruta apraksts. Ja kaut kā pietrūks, pirms cenas nosaukšanas pateiksim, kas vēl nepieciešams.</div>
-      </details>
-      <details>
-        <summary><svg class="pl" viewBox="0 0 24 24"><use href="#pl"/></svg>Kas mēs esam?</summary>
-        <div class="fa">Verion Logistics SIA ir Latvijas uzņēmums, reģistrēts 2024. gadā un ar PVN numuru LV40203552228 — abus var pārbaudīt Latvijas uzņēmumu reģistrā un ES VIES sistēmā. Mēs apzināti esam mazi, un tieši tāpēc mūsu cenas ir fiksētas un nosauktas iepriekš, tāpēc no pārvadātājiem neko nesaņemam un tāpēc visas attiecības ar pārvadātājiem paliek jūsu rokās.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="shead rv">
-      <div class="kick">Sazināties</div>
-      <h2>Atsūtiet to, ko maksājat šobrīd</h2>
-      <p>Tikko saņemtu piedāvājumu vai nesenu rēķinu. Pateiksim, cik maksātu to kārtīgi izskatīt — un vai, mūsuprāt, tas ir tā vērts.</p>
-    </div>
-
-    <div class="direct rv d1">
-      <div class="dline-r">
-        <svg viewBox="0 0 24 24"><use href="#ml"/></svg>
-        <a href="mailto:info@verionlogistics.lv" id="mailLink">info@verionlogistics.lv</a>
-        <button class="copy" id="copyBtn" type="button">Kopēt</button>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <p class="sec-label">About us</p>
+        <h2>Small on purpose, built on logistics.</h2>
+        <p>Verion Logistics is a Latvian company based in Kurzeme, western Latvia, founded by a freight forwarder with around fifteen years of experience moving goods across Europe and beyond. We know what it takes for an order to arrive on time, correctly documented and at the right cost.</p>
+        <p>We work with a small number of manufacturers so each one gets real attention, and every partner deals with one accountable person.</p>
       </div>
-      <p class="fnote">Pievienojiet piedāvājumu vai rēķinu — PDF ir ātrākais veids, kā varam nosaukt cenu. Pastāstiet, preces tips, no kurienes tās nāk un apmēram cik bieži vedat. Atbildam divu darba dienu laikā, nekādos sarakstos jūs neiekļaujam un jūsu datus pārvadātājiem nenododam.</p>
+      <div class="facts">
+        <div class="fact"><span>Company</span><span>Verion Logistics SIA</span></div>
+        <div class="fact"><span>Registration no.</span><span>40203552228</span></div>
+        <div class="fact"><span>EU VAT no.</span><span>LV40203552228</span></div>
+        <div class="fact"><span>Founded</span><span>2024</span></div>
+        <div class="fact"><span>Based in</span><span>Kurzeme, Latvia, EU</span></div>
+        <div class="fact"><span>Markets</span><span>LV · LT · EE</span></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- FAQ -->
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <p class="sec-label">Questions</p>
+      <h2>Before you get in touch.</h2>
+      <details><summary>Which markets do you cover?</summary><p>Latvia first, with Lithuania and Estonia as agreed with each partner. Our base is in western Latvia.</p></details>
+      <details><summary>Do you require exclusivity?</summary><p>No. We start non-exclusive. Exclusivity for Latvia or the Baltic states can follow once results are agreed together.</p></details>
+      <details><summary>We already sell to the Baltics directly. Why add a partner?</summary><p>Direct sales reach the buyers who already know you. We work on the ones who don't: local designers who write specifications, contractors bidding public tenders, and municipalities that need documents in Latvian.</p></details>
+      <details><summary>How are terms agreed?</summary><p>Each partnership is set out in a written agreement covering pricing, delivery, payment, warranty and returns, tailored to your products.</p></details>
+      <details><summary>Will you use our brand and images?</summary><p>Only with your written permission, and only to sell your products. Your brand stays yours.</p></details>
+      <details><summary>Who handles warranty and technical questions?</summary><p>We are the customer's first point of contact and coordinate with your technical team, following the warranty terms agreed with you.</p></details>
+      <details><summary>What do you need to start?</summary><p>A product overview, technical documentation, distributor terms and your usual delivery terms. That is enough for us to judge the fit and reply.</p></details>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <p class="sec-label">Contact</p>
+      <h2>Tell us what you make.</h2>
+      <div class="mailrow">
+        <a class="mail" href="mailto:info@verionlogistics.lv?subject=Partnership%20enquiry">info@verionlogistics.lv</a>
+        <button class="btn ghost small" id="copy" type="button">Copy</button>
+      </div>
+      <div class="send">
+        To speed things up, include:
+        <ol>
+          <li>Your company name, website and country</li>
+          <li>Product range and technical documentation</li>
+          <li>Distributor or export terms, MOQ and lead times</li>
+          <li>Whether you already sell in the Baltic states</li>
+        </ol>
+      </div>
+      <p class="small-note" style="margin-top:18px">We reply within two working days. We reply in English or Latvian. We use your email only to answer your enquiry, and this page uses no tracking cookies.</p>
+    </div>
+  </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="fl">
-      <svg viewBox="0 0 96 96" aria-hidden="true"><use href="#vmark"/></svg>
-      <b>Verion Logistics</b>
-    </div>
-    <p>Neatkarīgas konsultācijas par kravām, muitu un maršrutiem. Tikai konsultācijas — kravas neapstrādājam, deklarācijas neiesniedzam un komisiju no pārvadātājiem nesaņemam.</p>
-    <p style="margin-top:14px;">Verion Logistics SIA · Dibināts 2024. gadā · Reģ. Nr. 40203552228 · PVN LV40203552228 · Latvija, Eiropas Savienība</p>
+    <svg class="seal" role="img" aria-label="Verion Logistics seal, established 2024, Latvia" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" stroke="#2F5D50" stroke-width="1.3"/><circle cx="24" cy="24" r="13" fill="none" stroke="#2F5D50" stroke-width=".9"/><circle cx="6.5" cy="24" r=".9" fill="#2F5D50"/><circle cx="41.5" cy="24" r=".9" fill="#2F5D50"/><g fill="none" stroke="#2F5D50" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 19 L20.5 29 L24.5 19"/><path d="M28 19 L28 29 L32.5 29"/></g><path fill="#2F5D50" d="M4.920553113147564 20.7814878649516 7.16955116140017 20.545088088294566 7.1748632575739295 20.519315931925167 5.202932962384263 19.41149428952553 5.33713328677398 18.760408233877495 7.91771414708238 20.290635358122607 7.761706269979333 21.047522897813447 4.786073204748702 21.433930349882235Z M8.469601435781648 18.34708815589282 5.864343508655656 17.225665037336256 6.619989945964276 15.470168973159563 7.0741291451752035 15.66565142107201 6.555580466819215 16.870328792648337 7.176364582267206 17.13754289511689 7.656035798993548 16.023184523943858 8.110174998204476 16.218666971856308 7.630503781478134 17.333025343029338 8.252559995523354 17.600787015380003 8.773298953407773 16.39102124941476 9.2274381526187 16.586503697327206Z M9.788870524247818 15.55244210784711 7.446078871751531 13.953603169529785 8.07687079663454 13.02929865038086Q8.257989270115798 12.763904283496515 8.480786788027977 12.640132303797072Q8.703584305940158 12.51636032409763 8.943276548061808 12.534902209974499Q9.182968790183459 12.553444095851368 9.41518886120726 12.71192276014747Q9.648552873467633 12.871182107518923 9.747440153994381 13.086219006875934Q9.846327434521129 13.301255906232946 9.805961460465483 13.552043431380962Q9.802730394658262 13.566605576048067 9.801423953162962 13.580804462553953L11.049673690938482 13.70497701078583L10.676507180921059 14.251780921866507L9.54310080993501 14.128854208951555L9.29640495812433 14.490339639707818L10.126906295874479 15.057115552412105ZM8.898313407797813 14.218661929485929 9.12783423195079 13.882343205934216Q9.22463893329422 13.740494492599481 9.249760943429546 13.620148086638796Q9.274882953564871 13.49980168067811 9.228712614029767 13.400385611473187Q9.182542274494661 13.300969542268266 9.067004209601045 13.222120551657891Q8.95032220347086 13.142490877972165 8.838628652359242 13.13417268277875Q8.726935101247625 13.125854487585336 8.620774892396408 13.191734707352113Q8.51461468354519 13.25761492711889 8.417029299126408 13.400607581690199L8.189069841124132 13.73463842276877Z M10.082348010402095 10.57303417979848 12.15383981133379 12.510527507879564 11.744203770777585 12.948494280244516 9.67271196984589 11.011000952163432Z M14.201166982455955 8.939849884292126Q14.482248798440981 9.30896795622196 14.540042203388317 9.674041378984994Q14.597835608335652 10.039114801748028 14.461807022154794 10.357686075957215Q14.325778435973934 10.676257350166402 14.027178443457561 10.903639953545333Q13.726374760959517 11.132700657318205 13.383232173523945 11.178145771197165Q13.040089586088373 11.223590885076124 12.704080320955118 11.070377637048072Q12.368071055821863 10.91716438902002 12.087828290033807 10.549148162081023Q11.806746474048781 10.18003009015119 11.748402146606029 9.81537619248664Q11.690057819163275 9.450722294822091 11.825535482848718 9.132570545711388Q11.961013146534158 8.814418796600688 12.261816829032202 8.585358092827814Q12.560416821548575 8.357975489448883 12.90369080638108 8.31155992797602Q13.246964791213585 8.265144366503158 13.583524978842258 8.417938089432726Q13.92008516647093 8.570731812362293 14.201166982455955 8.939849884292126ZM13.717457031479249 9.308192920762057Q13.535383138736709 9.06909255775079 13.339295657479267 8.959036391820907Q13.143208176221826 8.848980225891024 12.949685447127386 8.862307034642221Q12.756162718032945 8.875633843393418 12.5831730544718 9.007364724317743Q12.410183390910653 9.139095605242069 12.345874392149629 9.322106542581906Q12.281565393388604 9.505117479921742 12.33551487082829 9.723411121260785Q12.389464348267975 9.941704762599828 12.571538241010513 10.180805125611093Q12.753612133753053 10.419905488622357 12.949699615010495 10.529961654552242Q13.145787096267938 10.640017820482125 13.339309825362378 10.626691011730927Q13.532832554456819 10.61336420297973 13.705822218017964 10.481633322055405Q13.878811881579109 10.349902441131078 13.943120880340135 10.166891503791241Q14.00742987910116 9.983880566451406 13.953480401661475 9.765586925112363Q13.89953092422179 9.547293283773321 13.717457031479249 9.308192920762057Z M17.032974114268235 5.923469741719225 18.213066998900022 8.50268269557305 17.742058383303668 8.71818793915327 15.877205614663955 7.608254961950799 15.858314894787096 7.616898220383161 16.60105890274138 9.240240748467917 16.055746788962715 9.489742808548758 14.875653904330928 6.910529854694934 15.354218807878024 6.69156730774177 17.209679690013047 7.804274424220885 17.232348553865275 7.793902514102051 16.490180763139815 6.171819367342418Z M20.918769260462025 7.7674492872019165 20.535591078565496 4.957087538493324 21.129774006881327 4.876073792027896 21.446157945156244 7.196543380439141 22.650990765159243 7.0322707028487335 22.717785008780858 7.5221628631460815Z M26.514008333791658 6.209412260664537Q26.483227374862842 6.672346025764967 26.286825444613658 6.985467349627969Q26.090423514364474 7.298588673490971 25.778514432761334 7.449267662813017Q25.466605351158194 7.5999466521350625 25.092112663569488 7.575046234613541Q24.714856192308538 7.549962050173043 24.42637921284699 7.358668751784964Q24.137902233385436 7.167375453396884 23.985376475014146 6.831053556012908Q23.832850716642856 6.4947316586289325 23.863539792112185 6.033179785364623Q23.894320751041 5.570246020264193 24.090031735372122 5.257078754671447Q24.285742719703247 4.9439114890787 24.59696085538833 4.79318655802691Q24.90817899107341 4.64246162697512 25.285435462334355 4.667545811415618Q25.65992814992306 4.692446228937139 25.94914201703242 4.8830945231369025Q26.238355884141775 5.073742817336665 26.391572588431124 5.410110656450386Q26.544789292720477 5.746478495564107 26.514008333791658 6.209412260664537ZM25.907357817734677 6.169075421948863Q25.927296528443794 5.869204893510674 25.851855140477873 5.657376526791651Q25.77641375251195 5.445548160072628 25.621807434066483 5.328392123931121Q25.467201115621016 5.211236087789615 25.250244097350066 5.196810384649841Q25.03328707907912 5.182384681510067 24.864530707872348 5.278039988131146Q24.695774336665572 5.373695294752225 24.592951677771925 5.573670695197166Q24.490129018878278 5.773646095642108 24.470190308169165 6.0735166240802965Q24.45025159746005 6.373387152518486 24.52569298542597 6.585215519237509Q24.601134373391893 6.797043885956532 24.75574069183736 6.914199922098039Q24.910347010282827 7.031355958239545 25.127304028553777 7.045781661379319Q25.344261046824723 7.060207364519093 25.513017418031495 6.964552057898015Q25.68177378923827 6.868896751276935 25.784596448131918 6.668921350831994Q25.887419107025565 6.468945950387052 25.907357817734677 6.169075421948863Z M29.90388499684436 6.540389248777072Q29.905044129353552 6.435194635981857 29.877090816002443 6.345132139561962Q29.84913750265133 6.255069643142068 29.792536315485805 6.181001357420998Q29.735935128320275 6.1069330716999275 29.652079783477973 6.051445279648192Q29.56822443863567 5.995957487596456 29.456784463607242 5.962565616276329Q29.248497843613627 5.900154618689903 29.060281141186973 5.956528205603982Q28.87206443876032 6.012901792518061 28.72547240015419 6.183675278048938Q28.578880361548055 6.354448763579814 28.49381059413726 6.638355366628435Q28.408740826726458 6.922261969677056 28.43534579909347 7.147100873130304Q28.461950771460483 7.3719397765835515 28.588618570624213 7.523388237617204Q28.715286369787943 7.674836698650856 28.93020632162849 7.7392353076253855Q29.125226277928242 7.797671082435606 29.284732833104165 7.769562176054185Q29.444239388280092 7.741453269672763 29.556694843617286 7.636354545758451Q29.66185602208883 7.536299064580586 29.714731261344316 7.37431166797896L29.13099805881444 7.199401865825918L29.26059032131874 6.766908629406056L30.39754339988261 7.107585221326867L30.294982652256508 7.449865144628475Q30.187651637298963 7.808065064362717 29.959491110469372 8.01945746719018Q29.73133058363978 8.230849870017645 29.42445623175122 8.28998205009438Q29.117581879862655 8.349114230171114 28.775301956561048 8.246553482545012Q28.393222042177857 8.132067066590295 28.15469286404831 7.8762572479722905Q27.916163685918765 7.620447429354285 27.848590218417996 7.2597185426329665Q27.781016750917228 6.898989655911648 27.909813968866285 6.4691497522305585Q28.008797015993803 6.138809826253425 28.18269593304911 5.908266916165936Q28.35659485010442 5.6777240060784475 28.58445117425039 5.549372798210233Q28.81230749839636 5.4210215903420185 29.071371528380595 5.395997154421583Q29.330435558364833 5.370972718501146 29.599748831350208 5.451669740858117Q29.830588779623387 5.5208386171640935 30.00951386001146 5.647463610461173Q30.188438940399536 5.774088603758252 30.306423522891922 5.9424532550845655Q30.42440810538431 6.110817906410879 30.47229484859988 6.308057850682138Q30.52018159181545 6.505297794953398 30.487618199374236 6.715299050930113Z M32.793898774840955 6.776417550977696 31.543346913638903 9.322213835076257 31.005099945370016 9.057814930827972 32.25565180657207 6.512018646729412Z M35.0200505965693 9.106019976982795Q35.1023653047893 8.959108716263952 35.05215832222309 8.810875850917032Q35.001951339656884 8.66264298557011 34.82481208882557 8.538950708774271Q34.704448238901726 8.45490339248992 34.59816562687504 8.430519236678556Q34.49188301484835 8.406135080867195 34.40693519721765 8.434654878217122Q34.32198737958695 8.46317467556705 34.26965603171179 8.538118204764913Q34.22377555911285 8.598985347342675 34.22022214595624 8.665760105947662Q34.21666873279963 8.732534864552647 34.24437606691458 8.801712815548395Q34.27208340102953 8.870890766544143 34.32203104108041 8.94208524233791Q34.37197868113129 9.01327971813168 34.43616423019386 9.083436585489313L34.61021014028325 9.279292392970163Q34.738581238408386 9.419606127685432 34.826113175929635 9.565186240138637Q34.91364511345089 9.71076635259184 34.94887512859238 9.85867617315559Q34.98410514373386 10.006585993719339 34.95727373674692 10.155078201581588Q34.93044232975998 10.30357040944384 34.830086738868715 10.4497083349772Q34.679886179327376 10.66239094317907 34.46355703020566 10.74359432030791Q34.24722788108395 10.824797697436752 33.985811317490075 10.769788942991257Q33.7243947538962 10.714780188545761 33.44051774935883 10.516555385988326Q33.15891176085777 10.319916381851352 33.0108063795048 10.088120767394834Q32.86270099815184 9.856325152938318 32.864849858220865 9.605294535176425Q32.866998718289885 9.354263917414531 33.03655190365991 9.09935214935235L33.51232976326454 9.431576918438612Q33.43860970073792 9.554084538779616 33.44391027579003 9.673494046559917Q33.449210850842135 9.792903554340215 33.522348287695436 9.902250161071704Q33.595485724548745 10.011596767803193 33.72266262258148 10.100401479348923Q33.84756850457792 10.187620392474194 33.965485182784455 10.215905421527136Q34.08340186099099 10.244190450580076 34.17969497679081 10.215146958005896Q34.27598809259063 10.186103465431714 34.334662634147634 10.102075872088655Q34.38937267965348 10.023725818836342 34.38065086779923 9.938244523969011Q34.371929055944975 9.852763229101683 34.31009285847597 9.753841775709946Q34.24825666100697 9.654920322318208 34.14248804165043 9.535456894282442L33.93367210937597 9.29505192138484Q33.68952818291973 9.01815402079192 33.625450474368094 8.74706106482543Q33.561372765816465 8.475968108858941 33.74249639455676 8.219000687949244Q33.888840139641346 8.007003297363214 34.1131716856873 7.928854053468528Q34.33750323173325 7.850704809573841 34.59919878132548 7.901685445158617Q34.8608943309177 7.952666080743393 35.11524812698318 8.130275503834856Q35.37414395512126 8.311056523767236 35.505901933817825 8.534815464527066Q35.637659912514394 8.758574405286895 35.635320184016656 8.991735444781495Q35.63298045551892 9.224896484276096 35.491286424101325 9.435073149228137Z M36.8212612239737 10.143935057495874 37.17880905670559 9.80244516451145 38.787733426452924 11.48702626998776 38.430185593721035 11.828516162972182 37.830426033773605 11.20055400296407 36.136831117388084 12.818087361610171 35.727425867535615 12.389430576150087 37.42102078392113 10.771897217503986Z M40.04344106204856 13.202201755496983 37.71516237536537 14.82210207181979 37.37267368543969 14.329843931520072 39.700952372122885 12.709943615197265Z M41.119709168918476 17.288883246441934 40.85946709032454 16.740938153919977Q40.95867354676573 16.675422359877174 41.01988220371718 16.58962312095067Q41.08109086066863 16.503823882024168 41.105427341924525 16.40333942298264Q41.129763823180426 16.302854963941115 41.11618014824711 16.193549241451947Q41.102596473313795 16.08424351896278 41.05031039359629 15.974154093981198Q40.95583895410671 15.775242519298569 40.787523303337174 15.674264168275812Q40.61920765256764 15.573285817253057 40.39356033192691 15.58079668422992Q40.16791301128619 15.588307551206782 39.90144656218304 15.71486363052301Q39.62747401592206 15.844984669819974 39.47999008295889 16.015456069981354Q39.33250614999572 16.185927470142733 39.30753979895101 16.378703540669513Q39.282573447906294 16.571479611196292 39.374668247408714 16.76538712110703Q39.426360167129424 16.87422552989564 39.49939845932863 16.953760556345927Q39.57243675152784 17.03329558279621 39.662568251928924 17.07941440213147Q39.75269975233001 17.12553322146673 39.85563994855666 17.135671105101622Q39.958580144783305 17.14580898873652 40.070075872558895 17.115853111894342L40.32781591876688 17.664986524409876Q40.14132191561233 17.727495808676707 39.93795850264611 17.720590095232133Q39.734595089679885 17.713684381787555 39.53892877026456 17.63259544355613Q39.34326245084924 17.551506505324706 39.17584094786977 17.391074990933504Q39.00841944489031 17.230643476542298 38.89136992552272 16.984193286526715Q38.72857008640231 16.64141484965225 38.7556546150227 16.29814502046474Q38.78273914364309 15.95487519127723 39.002755029391295 15.659496076006551Q39.222770915139506 15.364116960735872 39.64061032359232 15.165667521808079Q40.05970074823811 14.966623922883496 40.42855371318216 14.98462436395243Q40.797406678126215 15.002624805021362 41.08024573726492 15.199465543099883Q41.36308479640362 15.396306281178404 41.52350799553686 15.73408065328098Q41.62926847496545 15.956761535630086 41.65732706482727 16.177249504897883Q41.685385654689085 16.39773747416568 41.63602448788141 16.60209966462986Q41.58666332107373 16.806461855094042 41.45828800620436 16.981656641027485Q41.329912691335 17.15685142696093 41.119709168918476 17.288883246441934Z M42.13107467619387 20.187351686391153Q42.29019368585688 20.13221757282063 42.351132601830884 19.988064279458058Q42.41207151780488 19.84391098609549 42.36182865397884 19.633783053257954Q42.32768927214832 19.491003816842706 42.2644424575457 19.402175774443528Q42.20119564294308 19.31334773204435 42.11875331752734 19.27823685707454Q42.03631099211161 19.243125982104726 41.94741071283419 19.26438257833882Q41.872683007489854 19.27940246067701 41.8256698522413 19.326955151088708Q41.77865669699274 19.374507841500407 41.753414099899565 19.444622722657826Q41.72817150280639 19.514737603815245 41.71821367209953 19.601133562851622Q41.70825584139267 19.687529521888 41.70962989833999 19.782607819692522L41.70962385923192 20.0446220866826Q41.712371973126565 20.234778682291648 41.68109507637426 20.4017432442731Q41.64981817962195 20.56870780625455 41.57789879331808 20.702670752100573Q41.5059794070142 20.836633697946592 41.387283156714005 20.92980590604202Q41.26858690641381 21.022978114137445 41.09649631321266 21.06555000197444Q40.842943145024954 21.12475212034918 40.627298648892115 21.041747659598755Q40.411654152759276 20.958743198848335 40.252790260077504 20.743971584362463Q40.093926367395724 20.52919996987659 40.013408957418086 20.192456487765153Q39.93353568672027 19.85840695351061 39.97680592635856 19.586759945007614Q40.02007616599685 19.31511293650462 40.188436630208656 19.1288986976723Q40.356797094420465 18.942684458839985 40.65286798440742 18.864772198777526L40.78781516352994 19.429154274796293Q40.65133133637941 19.4717562652062 40.57597227837618 19.564534166783474Q40.50061322037295 19.657312068360746 40.48264578297365 19.787630663605107Q40.464678345574356 19.91794925884947 40.50075014524434 20.068810338835394Q40.5361778056345 20.216977470964427 40.605529646997475 20.316449617655614Q40.67488148836045 20.415921764346805 40.766152136077835 20.458177621651963Q40.857422783795215 20.50043347895712 40.957098854500195 20.47660032560374Q41.05004005556295 20.454377520449913 41.10030400978353 20.384687803272065Q41.1505679640041 20.314998086094214 41.17005770654974 20.19997930852262Q41.18954744909538 20.08496053095103 41.189843945493436 19.92540357068752L41.19345295578634 19.60699248480913Q41.19489627654159 19.237835850027317 41.32708033696674 18.992632429012442Q41.459264397391884 18.747429007997567 41.76534954878898 18.67566617366632Q42.01556462983998 18.614414246714507 42.23516200470495 18.705017446575738Q42.454759379569914 18.79562064643697 42.61650760261294 19.007566625930394Q42.77825582565596 19.219512605423823 42.85039942499593 19.521234765395672Q42.923831302895536 19.828344821081302 42.87368021008152 20.083125307794322Q42.8235291172675 20.337905794507343 42.666896357005044 20.510635997657253Q42.51026359674258 20.683366200807168 42.26473357675675 20.74634586669614Z"/><path fill="#2F5D50" d="M5.330303700719003 30.34584232332434 7.8379344855054605 29.36973803446559 8.472783564001483 31.000677587852095 8.091986115725806 31.148904362185625 7.633960616900971 29.97222800272284 6.953178040562461 30.237225065518476 7.378317213248987 31.329415817486016 6.997519764973308 31.477642591819546 6.572380592286783 30.385451839852006 5.88792472866587 30.651878742914526 6.3497631348690575 31.838350535130385 5.96896568659338 31.986577309463915Z M8.951001699002362 33.42476284566655Q9.09022872348308 33.32190015012478 9.104265124411945 33.15607981275609Q9.118301525340812 32.9902594753874 9.008734046076839 32.80318769104378Q8.931704787927622 32.67167055780827 8.836907131982553 32.600809367952024Q8.742109476037486 32.52994817809577 8.644865378169413 32.51990508866983Q8.547621280301342 32.50986199924388 8.45965706894545 32.559859721177105Q8.387095891987926 32.60235862222495 8.353398114861484 32.66701492018582Q8.319700337735043 32.73167121814669 8.3167191768338 32.81107487922307Q8.313738015932557 32.890478540299455 8.329965921743508 32.97538117771225Q8.346193827554458 33.060283815125054 8.371022157424008 33.141671903625706L8.444097977849397 33.39122961028416Q8.490515489469658 33.54067596739923 8.509747016385237 33.69310215444821Q8.528978543300816 33.845528341497186 8.506390631622128 33.98894871185996Q8.48380271994344 34.13236908222273 8.404761915780899 34.25479798927918Q8.325721111618355 34.37722689633563 8.1749299157535 34.465544925075676Q7.970851605560464 34.58507308427274 7.755000050074469 34.5714085797874Q7.539148494588474 34.55774407530207 7.337203348197045 34.411834727302534Q7.135258201805616 34.26592537930299 6.971903050902967 33.987018355372506Q6.813196217302426 33.71604771017175 6.780555122942429 33.46793200339697Q6.747914028582433 33.21981629662219 6.843500675062993 33.0138456735111Q6.9390873215435525 32.80787505040001 7.16506371046468 32.66333965619032L7.407440255503164 33.077165118526196Q7.291439400408283 33.15728811583525 7.249456473795638 33.27019390080296Q7.207473547182993 33.38309968577067 7.2298798917839315 33.512348616742585Q7.25228623638487 33.64159754771451 7.329315494534086 33.77311468095002Q7.409664979327665 33.91030065613534 7.5118076731530925 33.98980280931295Q7.61395036697852 34.06930496249056 7.722742553622359 34.0847659497274Q7.831534740266198 34.10022693696424 7.931970403911666 34.04292471641342Q8.0220078297797 33.98866732171365 8.05098458512453 33.901651596009614Q8.07996134046936 33.81463587030559 8.065426378681002 33.697526368958805Q8.050891416892643 33.58041686761202 8.009591945635577 33.43710907550784L7.922895487405951 33.133098320914506Q7.82858696454868 32.80309197187758 7.881528635538724 32.54900889667263Q7.934470306528769 32.294925821467686 8.183899352320259 32.14883584911572Q8.389111430903256 32.028643644589785 8.60871239683194 32.050009666274306Q8.828313362760627 32.071375687958835 9.02680058211104 32.213980891922375Q9.225287801461455 32.35658609588592 9.368057547169055 32.600346299727605Q9.512819428863272 32.847507808739174 9.536455372020729 33.08414813121769Q9.560091315178184 33.3207884536962 9.471153496032368 33.51601273375705Q9.382215676886554 33.7112370138179 9.188065881409866 33.829518160882735Z M9.9179728651891 34.306591677991065 10.232248905327078 34.04542421478445 11.604427795615251 35.69663659287273 11.290151755477273 35.957804056079354 10.758579394674083 35.31813610300109 9.00328202580055 36.776810969849656 8.694247857118759 36.4049344979179 10.44954522599229 34.94625963106933Z M10.586985874643037 38.46792292951078Q10.499303229370176 38.38663354434308 10.493843325062446 38.26690278243798Q10.488383420754717 38.14717202053289 10.57152964142176 38.05941911965448Q10.65096219109011 37.971806729987165 10.770763208600755 37.968203661178784Q10.8905642261114 37.9646005923704 10.978246871384261 38.045889977538096Q11.063038879999777 38.124499492865105 11.06898055708373 38.244676899743645Q11.074922234167685 38.364854306622185 10.995489684499335 38.4524666962895Q10.940035452186121 38.51034968504199 10.865982815491538 38.53128161928406Q10.791930178796953 38.55221355352613 10.71788262051724 38.53642029495194Q10.64383506223753 38.52062703637774 10.586985874643037 38.46792292951078Z M13.187612435586967 40.49276722592357 13.366871197386915 40.18967926279127 14.637165595751204 39.87699519315152Q14.821414195396313 39.82873524352827 14.951827189564195 39.783744791109655Q15.082240183732077 39.738754338691045 15.170857340006311 39.676676729236846Q15.259474496280543 39.61459911978265 15.316328954314107 39.518470474759354Q15.381209924070058 39.408770726909225 15.377936094097205 39.300740880055145Q15.37466226412435 39.19271103320107 15.31299830810648 39.09823242403084Q15.251334352088609 39.0037538148606 15.140503679002917 38.938203969127784Q15.02628023021052 38.87064749546437 14.912571559267413 38.86674631849868Q14.798862888324305 38.862845141532986 14.701094916806445 38.921037106396255Q14.603326945288586 38.97922907125953 14.53309496771771 39.097976220994205L14.133878359562104 38.86186300116069Q14.264309175050872 38.641332580224876 14.46127966168508 38.53800930824407Q14.658250148319285 38.43468603626326 14.888081149858095 38.45002203303281Q15.117912151396904 38.46535802980237 15.347489974217266 38.601139853106055Q15.580460572744334 38.73892830434035 15.705381459274346 38.93035419987012Q15.830302345804357 39.12178009539989 15.83849799778104 39.3311818489649Q15.846693649757725 39.54058360252992 15.731646981736862 39.73510274304766Q15.654726244397333 39.865159145138016 15.530720300600262 39.96126130330401Q15.406714356803189 40.05736346147002 15.191448861396054 40.1361275728281Q14.976183365988918 40.214891684186185 14.622705056552658 40.29892301001907L13.983361972702346 40.46881194975457L13.973997709026229 40.484644903052526L14.982783019153143 41.08128227441653L14.775431466324846 41.4318690974427Z M16.811519488258792 42.396666652884115Q16.509238567824937 42.278550662275066 16.353250609787935 42.0405598612348Q16.197262651750936 41.80256906019452 16.195185731866932 41.466724203046354Q16.193108811982928 41.130879345898194 16.353306613011405 40.72090319875107Q16.514728223434346 40.31140525399506 16.742994874322733 40.068388267559364Q16.97126152521112 39.825371281123665 17.246560979835 39.75802163824391Q17.52186043445888 39.690671995364156 17.822917545498264 39.80830978358208Q18.12397465653765 39.9259475718 18.28129182285858 40.162341759944134Q18.43860898917951 40.398735948088266 18.441403212650208 40.73274509114472Q18.44419743612091 41.066754234201184 18.284477837483564 41.47550657195385Q18.123801834063958 41.88670652849545 17.89457877839331 42.132171133720085Q17.665355722722666 42.37763573894472 17.389578065707656 42.44620919121894Q17.113800408692647 42.51478264349317 16.811519488258792 42.396666652884115ZM16.96119683668241 42.01361431241531Q17.19616824042047 42.10542917151222 17.42324234102286 41.92683685787131Q17.65031644162525 41.74824454423039 17.826773123952137 41.29665887767131Q17.943454507387802 40.99804938542086 17.96042182519742 40.77050870399138Q17.977389143007045 40.5429680225619 17.90398297137189 40.395083306354195Q17.830576799736733 40.247198590146496 17.675153006639164 40.18646688647301Q17.441405412295577 40.09513022976723 17.21494321639042 40.27396164460371Q16.988481020485263 40.45279305944019 16.812235135937296 40.90022909542473Q16.693851740716035 41.199584194678515 16.67579431581805 41.4281095843069Q16.657736890920063 41.65663497393529 16.73114306255522 41.804519690142996Q16.804549234190375 41.952404406350695 16.96119683668241 42.01361431241531Z M18.985447020568284 43.072843365058205 19.05916536432025 42.728515581003236 20.164384543641905 42.028580047127626Q20.32376672043317 41.924302096773296 20.433138947358152 41.840222338007386Q20.542511174283135 41.75614257924148 20.606824683384875 41.66913451910507Q20.671138192486616 41.58212645896867 20.69451901046765 41.472918019996015Q20.721200649810715 41.34829191905075 20.683786479632893 41.24689494846528Q20.646372309455067 41.145497977879806 20.55789491277724 41.07549511122686Q20.469417516099412 41.00549224457391 20.34350660998976 40.97853553678401Q20.213741288386956 40.950753623653604 20.104680755350074 40.98316783601604Q19.995620222313192 41.01558204837846 19.921395606031734 41.10181190032798Q19.847170989750275 41.1880417522775 19.818288802832527 41.32294629453784L19.364752579804904 41.225847132804844Q19.418390926937864 40.97531012574992 19.5723484429124 40.81477927384697Q19.726305958886936 40.654248421944025 19.949108374413086 40.595797025887464Q20.171910789939233 40.537345629830895 20.432726238309225 40.59318452453854Q20.697396102172373 40.649848624586696 20.876645437409962 40.79168929995065Q21.055894772647548 40.9335299753146 21.1301712474908 41.12948728799337Q21.20444772233405 41.32544460067214 21.15713594947831 41.54643108894623Q21.1255030780922 41.69418368285041 21.038439053260532 41.824694044436285Q20.951375028428867 41.95520440602216 20.772269817441593 42.09825803983868Q20.59316460645432 42.24131167365521 20.284675236949408 42.43325564429667L19.732389441507763 42.7974015365776L19.728538483252066 42.81538880887898L20.874584689882777 43.06074986345642L20.789313471363712 43.45903946441553Z M22.011608991597605 43.12584227034445 22.030754027674423 42.738708840034455 23.2602627919892 40.99329472659422 23.86655311335604 41.02327780004334 23.7780965568384 42.81196547974681 24.12192353562219 42.82896886772012 24.10212951527158 43.22922546515927 23.75830253648779 43.21222207718596 23.73364113408375 43.71090242809375 23.269081017711756 43.687928384801566 23.293742420115795 43.189248033893776ZM23.318785707318064 42.789251030164145 23.379984924336505 41.55173636988507 23.35898785692986 41.55069799504701 22.53112173769407 42.72925000790269 22.530083362856004 42.75024707530934Z M27.149633448765197 42.54491334375426Q27.03175470685054 42.5649336491367 26.933475390708466 42.496330136689664Q26.83519607456639 42.42772662424263 26.816251136618373 42.308332508181856Q26.795155463801517 42.19196914041331 26.86527435039467 42.09476519170566Q26.935393236987824 41.99756124299801 27.053271978902483 41.97754093761557Q27.16726460844633 41.95818064230069 27.26619160998354 42.02667415306979Q27.36511861152075 42.0951676638389 27.386214284337605 42.211531031607436Q27.398339118254242 42.29076865316982 27.369830476943523 42.36224729503682Q27.341321835632804 42.433725936903826 27.283691080511993 42.48282954133144Q27.226060325391185 42.531933145759055 27.149633448765197 42.54491334375426Z M30.516179444577748 42.607541202154714 29.52679888777715 40.10511880588302 29.980118569914257 39.92589019915792 30.819256278489764 42.048306069433266 31.921397392472706 41.61255349998301 32.071640240697796 41.992560025979344Z M33.47369289084164 41.28782805301174 33.026945629087 41.554552595885056 32.46091762888635 38.75847484971039 32.97761016899652 38.44999040365994 35.17155811543946 40.274140080728046 34.724810853684815 40.54086462360136 34.192884266186546 40.085652010223505 33.32420903499697 40.60428306581051ZM33.879352347116566 39.8168180968004 33.01117876283242 39.072667105457796 32.99312836841809 39.0834438546648 33.2363070461061 40.20073978729987Z M34.52228480551593 37.921596270327406 34.256307300576175 37.61138047429404 35.88618707780615 36.21392953194177 36.1521645827459 36.52414532797514 35.520760727796954 37.06550790233805 37.006300683039235 38.79812795928325 36.63922861570715 39.11285375290971 35.153688660464866 37.380233695964506Z M36.64707537888122 35.39603796868201 38.72517756580276 36.207229268496015 38.7427728148891 36.185975001645936 37.55700111734646 34.29688874014924 37.89885167102401 33.88394869849053 39.36670732191094 36.33064635537586 38.98296331802781 36.79419179429668 36.30606269420778 35.80796590239549Z M38.56633875325475 32.78582238395736 40.85035168272152 34.20859315733085 40.592613422505906 34.62234745265906 38.30860049303914 33.19957667928556Z M41.66729778450487 32.74565290725128 41.45384248729776 33.2201652187359 39.38843858670639 31.252286872118333 39.63531365266814 30.703482229037636 42.47853571959751 30.942266470927148 42.26508042239041 31.41677878241177 41.56832254909511 31.348274155802677 41.15327058230352 32.27093698368944ZM41.157337199238725 31.307469995653047 40.01945898130645 31.194690425161586 40.01083452485364 31.213862639767022 40.85009093810729 31.99048014097182Z"/></svg>
+    <a class="logo" href="#top"><span>Verion<i>Logistics</i></span></a>
+    <p>Manufacturer representation and B2B distribution in Latvia, Lithuania and Estonia.</p>
+    <p>Verion Logistics SIA · Reg. no. 40203552228 · VAT LV40203552228 · Latvia, European Union · <a href="mailto:info@verionlogistics.lv">info@verionlogistics.lv</a></p>
   </div>
 </footer>
 
-<div class="dock" id="dock">
-  <div class="t"><b>Fiksēta, iepriekš zināma cena</b><span>Atbilde divu darba dienu laikā</span></div>
-  <a href="#finder">Sākt</a>
-</div>
-
 <script>
 (function(){
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  },{threshold:.1,rootMargin:'0px 0px -5% 0px'});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
-
-  var Q=[
-    { q:"Kas ir šī jautājuma iemesls?", h:"Izvēlieties tuvāko.",
-      o:[
-        {k:"quote", t:"Man ir dots cenu piedāvājums", s:"Un gribu zināt, vai cena ir samērīga."},
-        {k:"regular", t:"Importēju regulāri", s:"Un neviens no malas izmaksas nekad nav pārbaudījis."},
-        {k:"new", t:"Plānoju jaunu sūtījumu", s:"Jauns piegādātājs, jauna valsts vai pirmais pārvadājums."},
-        {k:"odd", t:"Kaut kas izskatās nepareizi", s:"Neatpazīstamas izmaksas vai pārāk augsts nodoklis."}
-      ]},
-    { q:"No kurienes nāk preces?", h:"Tas maina, kurus noteikumus un izmaksas pārbaudām.",
-      o:[
-        {k:"asia", t:"Āzija", s:"Ķīna, Vjetnama, Indija, Turcija un līdzīgas valstis."},
-        {k:"eu", t:"Eiropas robežās", s:"ES, Apvienotā Karaliste vai Baltija."},
-        {k:"other", t:"Citur vai no vairākām vietām", s:"Vai dažādas izcelsmes."}
-      ]},
-    { q:"Cik bieži vedat?", h:"Tas maina, ko ir vērts pārbaudīt.",
-      o:[
-        {k:"once", t:"Šis ir vienreizējs sūtījums", s:"Vai pirmā reize."},
-        {k:"few", t:"Dažas reizes gadā", s:"Neregulāri, ne ikdienā."},
-        {k:"often", t:"Reizi mēnesī vai biežāk", s:"Tā ir regulāra biznesa daļa."}
-      ]}
-  ];
-
-  var ORIGIN={
-    asia:{
-      quote:"Galamērķa apstrādes un dekonsolidācijas izmaksas, kas bieži atsver pievilcīgu jūras frakts likmi",
-      review:"Vai jūsu izcelsmei piemērojama pazemināta nodokļa likme un vai piegādātāja dokumenti ļauj to pieprasīt",
-      source:"Pārkraušanas iespējas un izvēle starp konsolidētu un ekspress aviopārvadājumu šajā virzienā",
-      codes:"Vai HS kodu noteicis jūsu piegādātājs — biežākais atkārtotas nodokļu pārmaksas cēlonis Āzijas importā"
-    },
-    eu:{
-      quote:"Vai auto, dzelzceļa vai jūras pārvadājums šim maršrutam ir novērtēts samērīgi",
-      review:"Vai par brīvā apgrozībā esošām precēm netiek rēķināta nevajadzīga noformēšana",
-      source:"Auto un dzelzceļa varianti, tranzīta laiki un atļaujas, ja krava ir netipiska",
-      codes:"Akcīzes vai ierobežotu preču klasifikācija un jūsu piegādes līguma noteikumi"
-    },
-    other:{
-      quote:"Kuras izmaksas pēc jūsu noteikumiem attiecas uz izcelsmi un kuras uz galamērķi",
-      review:"Kā nodoklis tiek rēķināts dažādām izcelsmēm un vai kādai pienākas zemāka likme",
-      source:"Multimodālie varianti un muitas režīms katrā robežā, ko šķērsotu",
-      codes:"Vai viena prece dažādās izcelsmēs klasificēta atšķirīgi — bieža un dārga nekonsekvence"
-    }
-  };
-
-  var SVC={
-    check:{key:"quote",n:"Pārbaude",
-      w:"Jums priekšā ir konkrēta cena, tāpēc ātrākais noderīgais solis ir salīdzināt to ar tirgu, pirms to pieņemat.",
-      l:["Piedāvājums salīdzināts ar tirgus likmi","Izmaksas pārbaudītas, vai nav uzpūstas","Trūkstošās izmaksas atklātas","HS kods pārbaudīts","Incoterm noteikums pārbaudīts"],
-      send:"Cenu piedāvājumu", get:"Rakstisku vērtējumu"},
-    fullAudit:{key:"review",n:"Pilns audits",
-      w:"Vedat pietiekami bieži, lai jebkura kļūda atkārtotos katrā sūtījumā, tāpēc ir vērts izskatīt visu izmaksu bāzi, nevis vienu piedāvājumu.",
-      l:["Piedāvājums salīdzināts ar tirgus likmi","Izmaksas pārbaudītas, vai nav uzpūstas","Trūkstošās izmaksas atklātas","HS kods pārbaudīts","Incoterm noteikums pārbaudīts","Vairāku maršrutu izmaksu pārskats","Pārmaksātā muitas nodokļa atgūšanas pārbaude (1–3 gadi)"],
-      send:"Nesenus rēķinus", get:"Rakstisku audita atskaiti"},
-    mapping:{key:"source",n:"Kartēšana",
-      w:"Vēl nav ar ko salīdzināt, tāpēc noderīgākais ir izkartēt saprātīgos maršruta variantus un to, cik katram vajadzētu maksāt.",
-      l:["Maršruta un transporta veida varianti izkartēti","Reālistisks izmaksu novērtējums katram variantam","Muitas un dokumentu prasības katrā robežā"],
-      send:"Sūtījuma informāciju", get:"Maršruta karti"},
-    mappingSourcing:{key:"codes",n:"Kartēšana + atlase",
-      w:"Kad maršruts ir izkartēts, nākamais noderīgais solis ir atrast pārvadātājus, kas to reāli var izdarīt jūsu budžeta ietvaros.",
-      l:["Maršruta un transporta veida varianti izkartēti","Reālistisks izmaksu novērtējums katram variantam","Muitas un dokumentu prasības katrā robežā","Pārvadātāju saraksts ar aktuāliem piedāvājumiem","Pārvadātāju kontakti iekļauti"],
-      send:"Sūtījuma informāciju", get:"Maršruta karti un pārvadātāju sarakstu"}
-  };
-
-  var i=0, ans=[],
-      qEl=document.getElementById('q'), hEl=document.getElementById('qh'),
-      oEl=document.getElementById('opts'), bar=document.getElementById('bar'),
-      stepn=document.getElementById('stepn'), back=document.getElementById('back'),
-      quiz=document.getElementById('quiz'), res=document.getElementById('res');
-
-  function paint(){
-    var s=Q[i];
-    qEl.textContent=s.q; hEl.textContent=s.h;
-    oEl.innerHTML=s.o.map(function(o){
-      return '<button class="opt" data-k="'+o.k+'"><span class="dot"></span><span><b>'+o.t+'</b><span class="s">'+o.s+'</span></span></button>';
-    }).join('');
-    bar.style.width=(i/Q.length*100)+'%';
-    stepn.textContent=(i+1)+' / '+Q.length;
-    back.hidden = i===0;
-  }
-  function decide(){
-    var a=ans[0], freq=ans[2];
-    if(a==='quote') return (freq==='often') ? SVC.fullAudit : SVC.check;
-    if(a==='regular') return SVC.fullAudit;
-    if(a==='new') return (freq==='once') ? SVC.mapping : SVC.mappingSourcing;
-    return SVC.check;
-  }
-  function label(step,key){
-    var m=Q[step].o.filter(function(o){return o.k===key;});
-    return m.length?m[0].t:'';
-  }
-  function finish(){
-    var r=decide(), origin=ans[1]||'other';
-    var bullets=r.l.slice();
-    var extra=ORIGIN[origin] && ORIGIN[origin][r.key];
-    if(extra) bullets.push(extra);
-    document.getElementById('rname').textContent=r.n;
-    document.getElementById('rwhy').textContent=r.w;
-    document.getElementById('rlist').innerHTML=bullets.map(function(x){
-      return '<div><svg viewBox="0 0 24 24"><use href="#ck"/></svg><span>'+x+'</span></div>';
-    }).join('');
-    document.getElementById('rsend').textContent=r.send;
-    document.getElementById('rget').textContent=r.get;
-    var body="Labdien,%0D%0A%0D%0AVēlētos jautāt par pakalpojumu \""+encodeURIComponent(r.n)+"\"."
-      +"%0D%0A%0D%0ASituācija: "+encodeURIComponent(label(0,ans[0]))
-      +"%0D%0AIzcelsme: "+encodeURIComponent(label(1,ans[1]))
-      +"%0D%0ABiežums: "+encodeURIComponent(label(2,ans[2]))
-      +"%0D%0A%0D%0ADetaļas:%0D%0A%0D%0A";
-    document.getElementById('rcta').href="mailto:info@verionlogistics.lv?subject="
-      +encodeURIComponent(r.n)+"&body="+body;
-    bar.style.width='100%'; stepn.textContent='Gatavs';
-    quiz.style.display='none'; res.classList.add('on');
-  }
-  oEl.addEventListener('click',function(e){
-    var b=e.target.closest('.opt'); if(!b) return;
-    ans[i]=b.dataset.k; i++;
-    if(i<Q.length) paint(); else finish();
+  var c=document.getElementById('copy');
+  if(!c)return;
+  c.addEventListener('click',function(){
+    var t='info@verionlogistics.lv';
+    function done(){c.textContent='Copied';setTimeout(function(){c.textContent='Copy'},1500)}
+    function fb(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');done()}catch(e){}document.body.removeChild(a)}
+    try{navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(t).then(done,fb):fb()}catch(e){fb()}
   });
-  back.addEventListener('click',function(){ if(i>0){i--;paint();} });
-  document.getElementById('again').addEventListener('click',function(){
-    i=0;ans=[];res.classList.remove('on');quiz.style.display='';paint();
-  });
-  paint();
-
-  var cb=document.getElementById('copyBtn');
-  if(cb){
-    cb.addEventListener('click',function(){
-      var v=document.getElementById('mailLink').textContent.trim();
-      var done=function(){ cb.textContent='Nokopēts'; cb.classList.add('done');
-        setTimeout(function(){cb.textContent='Kopēt';cb.classList.remove('done');},1800); };
-      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(v).then(done,done); }
-      else{
-        var t=document.createElement('textarea'); t.value=v; document.body.appendChild(t);
-        t.select(); try{document.execCommand('copy');}catch(e){} document.body.removeChild(t); done();
-      }
-    });
-  }
-
-  var dock=document.getElementById('dock'), foot=document.getElementById('contact'), tk=false;
-  function sc(){
-    var y=window.scrollY||window.pageYOffset;
-    var near=foot.getBoundingClientRect().top < window.innerHeight;
-    dock.classList.toggle('up', y>420 && !near);
-    tk=false;
-  }
-  window.addEventListener('scroll',function(){if(!tk){requestAnimationFrame(sc);tk=true;}},{passive:true});
-  sc();
 })();
 </script>
-
 </body>
 </html>
